@@ -6,7 +6,6 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -37,6 +36,9 @@
                                         <state key="normal" image="magnifyingglass" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="19"/>
                                         </state>
+                                        <connections>
+                                            <action selector="touchSearchButton:" destination="xnj-y1-iNc" eventType="touchUpInside" id="q5I-rb-e7x"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="LightGray3"/>
@@ -61,6 +63,9 @@
                                     <imageReference key="image" image="bell" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="12" scale="default"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchNotificationButton:" destination="xnj-y1-iNc" eventType="touchUpInside" id="XAm-P1-tEa"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 43개의 상품" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHy-sb-Ueb">
                                 <rect key="frame" x="20" y="104" width="74" height="14.5"/>
@@ -90,9 +95,9 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zhw-qV-Vc7">
-                                <rect key="frame" x="20" y="118.5" width="374" height="743.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zhw-qV-Vc7">
+                                <rect key="frame" x="0.0" y="118.5" width="414" height="743.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zpz-n8-ELJ">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -116,10 +121,17 @@
                             <constraint firstItem="aHy-sb-Ueb" firstAttribute="leading" secondItem="mWY-gF-7WR" secondAttribute="leading" constant="20" id="hef-m8-D6Z"/>
                             <constraint firstItem="mWY-gF-7WR" firstAttribute="trailing" secondItem="QEl-7Y-J2I" secondAttribute="trailing" constant="20" id="mRi-Ko-ul3"/>
                             <constraint firstItem="aHy-sb-Ueb" firstAttribute="top" secondItem="Sdx-W3-5Ic" secondAttribute="bottom" constant="25" id="oX0-bb-CrZ"/>
-                            <constraint firstItem="Zhw-qV-Vc7" firstAttribute="leading" secondItem="mWY-gF-7WR" secondAttribute="leading" constant="20" id="qP5-Un-mHZ"/>
-                            <constraint firstItem="mWY-gF-7WR" firstAttribute="trailing" secondItem="Zhw-qV-Vc7" secondAttribute="trailing" constant="20" id="smh-oO-Gr4"/>
+                            <constraint firstItem="Zhw-qV-Vc7" firstAttribute="leading" secondItem="mWY-gF-7WR" secondAttribute="leading" id="qP5-Un-mHZ"/>
+                            <constraint firstItem="mWY-gF-7WR" firstAttribute="trailing" secondItem="Zhw-qV-Vc7" secondAttribute="trailing" id="smh-oO-Gr4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="HomeCollectionView" destination="Zhw-qV-Vc7" id="k0E-2X-d4O"/>
+                        <outlet property="notificationButton" destination="Z19-70-IQh" id="pwc-hm-8Gq"/>
+                        <outlet property="searchBackgroundView" destination="Sdx-W3-5Ic" id="4xJ-Cz-UAa"/>
+                        <outlet property="searchTextField" destination="pTX-Fo-TLZ" id="Nb4-5B-hdn"/>
+                        <outlet property="totalLabel" destination="aHy-sb-Ueb" id="KAH-zn-R0L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RqS-00-zTq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,8 +151,5 @@
         <namedColor name="LightGray3">
             <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

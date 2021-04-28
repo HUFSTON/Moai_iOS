@@ -22,6 +22,8 @@
 		2459ABF52639B81B009E3A82 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459ABF42639B81B009E3A82 /* HomeViewController.swift */; };
 		2459ABFC2639BDC6009E3A82 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459ABFA2639BDC6009E3A82 /* HomeCollectionViewCell.swift */; };
 		2459ABFD2639BDC6009E3A82 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2459ABFB2639BDC6009E3A82 /* HomeCollectionViewCell.xib */; };
+		2459AC012639C4DC009E3A82 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459AC002639C4DC009E3A82 /* UIColor+Extension.swift */; };
+		2459AC042639C90F009E3A82 /* APPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459AC032639C90F009E3A82 /* APPConstants.swift */; };
 		8B56229E3B65F1E7002C6057 /* Pods_Moai_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0F0D8E38431363094CB1BA /* Pods_Moai_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		2459ABF42639B81B009E3A82 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2459ABFA2639BDC6009E3A82 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		2459ABFB2639BDC6009E3A82 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		2459AC002639C4DC009E3A82 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		2459AC032639C90F009E3A82 /* APPConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPConstants.swift; sourceTree = "<group>"; };
 		5B0F0D8E38431363094CB1BA /* Pods_Moai_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moai_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F6CF31E25082E4447645BE /* Pods-Moai_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moai_iOS.release.xcconfig"; path = "Target Support Files/Pods-Moai_iOS/Pods-Moai_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		C500E7C89DAA198CAEA182CC /* Pods-Moai_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moai_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Moai_iOS/Pods-Moai_iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 		242A314026394ABF00BCC87C /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				2459AC032639C90F009E3A82 /* APPConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				242A314C26394BBA00BCC87C /* extension.swift */,
+				2459AC002639C4DC009E3A82 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -324,6 +330,8 @@
 				242A312A2639482900BCC87C /* AppDelegate.swift in Sources */,
 				242A314D26394BBA00BCC87C /* extension.swift in Sources */,
 				242A312C2639482900BCC87C /* SceneDelegate.swift in Sources */,
+				2459AC012639C4DC009E3A82 /* UIColor+Extension.swift in Sources */,
+				2459AC042639C90F009E3A82 /* APPConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
