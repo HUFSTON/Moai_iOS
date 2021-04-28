@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		242A315026394BC300BCC87C /* cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A314F26394BC300BCC87C /* cell.swift */; };
 		242A315326394BCB00BCC87C /* apiservices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A315226394BCB00BCC87C /* apiservices.swift */; };
 		242A315626394BD400BCC87C /* apimodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A315526394BD400BCC87C /* apimodel.swift */; };
+		2459ABEC2639B440009E3A82 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2459ABEB2639B440009E3A82 /* Colors.xcassets */; };
 		8B56229E3B65F1E7002C6057 /* Pods_Moai_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0F0D8E38431363094CB1BA /* Pods_Moai_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		242A314F26394BC300BCC87C /* cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cell.swift; sourceTree = "<group>"; };
 		242A315226394BCB00BCC87C /* apiservices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiservices.swift; sourceTree = "<group>"; };
 		242A315526394BD400BCC87C /* apimodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apimodel.swift; sourceTree = "<group>"; };
+		2459ABEB2639B440009E3A82 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		5B0F0D8E38431363094CB1BA /* Pods_Moai_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moai_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F6CF31E25082E4447645BE /* Pods-Moai_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moai_iOS.release.xcconfig"; path = "Target Support Files/Pods-Moai_iOS/Pods-Moai_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		C500E7C89DAA198CAEA182CC /* Pods-Moai_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moai_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Moai_iOS/Pods-Moai_iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		242A313E26394A0800BCC87C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2459ABEB2639B440009E3A82 /* Colors.xcassets */,
 				242A31322639482A00BCC87C /* Assets.xcassets */,
 				242A31372639482A00BCC87C /* Info.plist */,
 				242A314126394AC500BCC87C /* Storyboards */,
@@ -175,7 +178,6 @@
 				C500E7C89DAA198CAEA182CC /* Pods-Moai_iOS.debug.xcconfig */,
 				99F6CF31E25082E4447645BE /* Pods-Moai_iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -246,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2459ABEC2639B440009E3A82 /* Colors.xcassets in Resources */,
 				242A31362639482A00BCC87C /* LaunchScreen.storyboard in Resources */,
 				242A31332639482A00BCC87C /* Assets.xcassets in Resources */,
 				242A31312639482900BCC87C /* Main.storyboard in Resources */,
