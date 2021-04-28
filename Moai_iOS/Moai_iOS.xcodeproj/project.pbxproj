@@ -13,6 +13,12 @@
 		242A31312639482900BCC87C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242A312F2639482900BCC87C /* Main.storyboard */; };
 		242A31332639482A00BCC87C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 242A31322639482A00BCC87C /* Assets.xcassets */; };
 		242A31362639482A00BCC87C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242A31342639482A00BCC87C /* LaunchScreen.storyboard */; };
+		242A314926394BB100BCC87C /* view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A314826394BB100BCC87C /* view.swift */; };
+		242A314D26394BBA00BCC87C /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A314C26394BBA00BCC87C /* extension.swift */; };
+		242A315026394BC300BCC87C /* cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A314F26394BC300BCC87C /* cell.swift */; };
+		242A315326394BCB00BCC87C /* apiservices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A315226394BCB00BCC87C /* apiservices.swift */; };
+		242A315626394BD400BCC87C /* apimodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A315526394BD400BCC87C /* apimodel.swift */; };
+		8B56229E3B65F1E7002C6057 /* Pods_Moai_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0F0D8E38431363094CB1BA /* Pods_Moai_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,14 @@
 		242A31322639482A00BCC87C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		242A31352639482A00BCC87C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		242A31372639482A00BCC87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		242A314826394BB100BCC87C /* view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view.swift; sourceTree = "<group>"; };
+		242A314C26394BBA00BCC87C /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		242A314F26394BC300BCC87C /* cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cell.swift; sourceTree = "<group>"; };
+		242A315226394BCB00BCC87C /* apiservices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiservices.swift; sourceTree = "<group>"; };
+		242A315526394BD400BCC87C /* apimodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apimodel.swift; sourceTree = "<group>"; };
+		5B0F0D8E38431363094CB1BA /* Pods_Moai_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moai_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99F6CF31E25082E4447645BE /* Pods-Moai_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moai_iOS.release.xcconfig"; path = "Target Support Files/Pods-Moai_iOS/Pods-Moai_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		C500E7C89DAA198CAEA182CC /* Pods-Moai_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moai_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Moai_iOS/Pods-Moai_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B56229E3B65F1E7002C6057 /* Pods_Moai_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +57,8 @@
 			children = (
 				242A31282639482900BCC87C /* Moai_iOS */,
 				242A31272639482900BCC87C /* Products */,
+				3E7C69C006862899EAF1870E /* Pods */,
+				EC7315F07948F54BF63737A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +124,7 @@
 		242A314226394B0700BCC87C /* APIModels */ = {
 			isa = PBXGroup;
 			children = (
+				242A315526394BD400BCC87C /* apimodel.swift */,
 			);
 			path = APIModels;
 			sourceTree = "<group>";
@@ -114,6 +132,7 @@
 		242A314326394B0E00BCC87C /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
+				242A315226394BCB00BCC87C /* apiservices.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -121,6 +140,7 @@
 		242A314426394B1600BCC87C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				242A314F26394BC300BCC87C /* cell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -128,6 +148,7 @@
 		242A314526394B1B00BCC87C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				242A314C26394BBA00BCC87C /* extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -135,6 +156,7 @@
 		242A314626394B2600BCC87C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				242A314826394BB100BCC87C /* view.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -147,6 +169,24 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		3E7C69C006862899EAF1870E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C500E7C89DAA198CAEA182CC /* Pods-Moai_iOS.debug.xcconfig */,
+				99F6CF31E25082E4447645BE /* Pods-Moai_iOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EC7315F07948F54BF63737A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B0F0D8E38431363094CB1BA /* Pods_Moai_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,9 +194,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 242A313A2639482A00BCC87C /* Build configuration list for PBXNativeTarget "Moai_iOS" */;
 			buildPhases = (
+				AF6669ADE470362397784B7F /* [CP] Check Pods Manifest.lock */,
 				242A31222639482900BCC87C /* Sources */,
 				242A31232639482900BCC87C /* Frameworks */,
 				242A31242639482900BCC87C /* Resources */,
+				E2B76E15403949878C3C8450 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,13 +254,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AF6669ADE470362397784B7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Moai_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2B76E15403949878C3C8450 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Moai_iOS/Pods-Moai_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Moai_iOS/Pods-Moai_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Moai_iOS/Pods-Moai_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		242A31222639482900BCC87C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				242A314926394BB100BCC87C /* view.swift in Sources */,
+				242A315026394BC300BCC87C /* cell.swift in Sources */,
 				242A312E2639482900BCC87C /* ViewController.swift in Sources */,
+				242A315326394BCB00BCC87C /* apiservices.swift in Sources */,
+				242A315626394BD400BCC87C /* apimodel.swift in Sources */,
 				242A312A2639482900BCC87C /* AppDelegate.swift in Sources */,
+				242A314D26394BBA00BCC87C /* extension.swift in Sources */,
 				242A312C2639482900BCC87C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +452,7 @@
 		};
 		242A313B2639482A00BCC87C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C500E7C89DAA198CAEA182CC /* Pods-Moai_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -381,6 +471,7 @@
 		};
 		242A313C2639482A00BCC87C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99F6CF31E25082E4447645BE /* Pods-Moai_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
