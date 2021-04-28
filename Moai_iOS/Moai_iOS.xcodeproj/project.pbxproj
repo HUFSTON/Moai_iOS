@@ -15,10 +15,13 @@
 		242A31362639482A00BCC87C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242A31342639482A00BCC87C /* LaunchScreen.storyboard */; };
 		242A314926394BB100BCC87C /* view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A314826394BB100BCC87C /* view.swift */; };
 		242A314D26394BBA00BCC87C /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A314C26394BBA00BCC87C /* extension.swift */; };
-		242A315026394BC300BCC87C /* cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A314F26394BC300BCC87C /* cell.swift */; };
 		242A315326394BCB00BCC87C /* apiservices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A315226394BCB00BCC87C /* apiservices.swift */; };
 		242A315626394BD400BCC87C /* apimodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A315526394BD400BCC87C /* apimodel.swift */; };
 		2459ABEC2639B440009E3A82 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2459ABEB2639B440009E3A82 /* Colors.xcassets */; };
+		2459ABF22639B810009E3A82 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2459ABF12639B810009E3A82 /* Home.storyboard */; };
+		2459ABF52639B81B009E3A82 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459ABF42639B81B009E3A82 /* HomeViewController.swift */; };
+		2459ABFC2639BDC6009E3A82 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459ABFA2639BDC6009E3A82 /* HomeCollectionViewCell.swift */; };
+		2459ABFD2639BDC6009E3A82 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2459ABFB2639BDC6009E3A82 /* HomeCollectionViewCell.xib */; };
 		8B56229E3B65F1E7002C6057 /* Pods_Moai_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0F0D8E38431363094CB1BA /* Pods_Moai_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,10 +36,13 @@
 		242A31372639482A00BCC87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		242A314826394BB100BCC87C /* view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view.swift; sourceTree = "<group>"; };
 		242A314C26394BBA00BCC87C /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
-		242A314F26394BC300BCC87C /* cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cell.swift; sourceTree = "<group>"; };
 		242A315226394BCB00BCC87C /* apiservices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiservices.swift; sourceTree = "<group>"; };
 		242A315526394BD400BCC87C /* apimodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apimodel.swift; sourceTree = "<group>"; };
 		2459ABEB2639B440009E3A82 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		2459ABF12639B810009E3A82 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		2459ABF42639B81B009E3A82 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2459ABFA2639BDC6009E3A82 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		2459ABFB2639BDC6009E3A82 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		5B0F0D8E38431363094CB1BA /* Pods_Moai_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moai_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F6CF31E25082E4447645BE /* Pods-Moai_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moai_iOS.release.xcconfig"; path = "Target Support Files/Pods-Moai_iOS/Pods-Moai_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		C500E7C89DAA198CAEA182CC /* Pods-Moai_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moai_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Moai_iOS/Pods-Moai_iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,8 +81,8 @@
 		242A31282639482900BCC87C /* Moai_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				242A313F26394A1300BCC87C /* Sources */,
 				242A313E26394A0800BCC87C /* Resources */,
+				242A313F26394A1300BCC87C /* Sources */,
 				242A31292639482900BCC87C /* AppDelegate.swift */,
 				242A312B2639482900BCC87C /* SceneDelegate.swift */,
 			);
@@ -120,6 +126,7 @@
 			children = (
 				242A312F2639482900BCC87C /* Main.storyboard */,
 				242A31342639482A00BCC87C /* LaunchScreen.storyboard */,
+				2459ABF12639B810009E3A82 /* Home.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -143,7 +150,8 @@
 		242A314426394B1600BCC87C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				242A314F26394BC300BCC87C /* cell.swift */,
+				2459ABFA2639BDC6009E3A82 /* HomeCollectionViewCell.swift */,
+				2459ABFB2639BDC6009E3A82 /* HomeCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -168,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				242A312D2639482900BCC87C /* ViewController.swift */,
+				2459ABF42639B81B009E3A82 /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -249,6 +258,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2459ABEC2639B440009E3A82 /* Colors.xcassets in Resources */,
+				2459ABFD2639BDC6009E3A82 /* HomeCollectionViewCell.xib in Resources */,
+				2459ABF22639B810009E3A82 /* Home.storyboard in Resources */,
 				242A31362639482A00BCC87C /* LaunchScreen.storyboard in Resources */,
 				242A31332639482A00BCC87C /* Assets.xcassets in Resources */,
 				242A31312639482900BCC87C /* Main.storyboard in Resources */,
@@ -305,10 +316,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				242A314926394BB100BCC87C /* view.swift in Sources */,
-				242A315026394BC300BCC87C /* cell.swift in Sources */,
 				242A312E2639482900BCC87C /* ViewController.swift in Sources */,
 				242A315326394BCB00BCC87C /* apiservices.swift in Sources */,
 				242A315626394BD400BCC87C /* apimodel.swift in Sources */,
+				2459ABFC2639BDC6009E3A82 /* HomeCollectionViewCell.swift in Sources */,
+				2459ABF52639B81B009E3A82 /* HomeViewController.swift in Sources */,
 				242A312A2639482900BCC87C /* AppDelegate.swift in Sources */,
 				242A314D26394BBA00BCC87C /* extension.swift in Sources */,
 				242A312C2639482900BCC87C /* SceneDelegate.swift in Sources */,
@@ -460,7 +472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Moai_iOS/Info.plist;
+				INFOPLIST_FILE = Moai_iOS/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -479,7 +491,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Moai_iOS/Info.plist;
+				INFOPLIST_FILE = Moai_iOS/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
