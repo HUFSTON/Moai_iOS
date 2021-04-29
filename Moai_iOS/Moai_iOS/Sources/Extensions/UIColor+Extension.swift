@@ -17,4 +17,6 @@ extension UIColor {
     static let LightGray3 = UIColor(named: "LightGray3")!
     static let DarkGreen = UIColor(named: "DarkGreen")!
     static let LightGreen = UIColor(named: "LightGreen")!
+    static let DarkRed = UIColor(named: "DarkRed")!
+    static let LightRed = UIColor(named: "LighRed")!
 }
