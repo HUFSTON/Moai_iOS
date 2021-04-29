@@ -16,12 +16,16 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var HomeCollectionView: UICollectionView!
     @IBOutlet weak var notificationButton: UIButton!
+    @IBOutlet weak var filterButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeViewStyle()
+        initializeMenu()
         registerCollectionViewCell()
         registerCollectionView()
+//        @available (iOS 14.0, *)
+        
     }
     // MARK: - Customize View
     private func initializeViewStyle() {
@@ -29,6 +33,15 @@ class HomeViewController: UIViewController {
         self.notificationButton.layer.borderWidth = 1
         self.notificationButton.layer.cornerRadius = 10
         self.notificationButton.layer.borderColor = UIColor.LightGray2.cgColor
+    }
+    
+    private func initializeMenu() {
+        if #available(iOS 14, *){
+            let menu1 = UIAction(title: "menu1", state: .off, handler: {_ in print("1")})
+            let menu2 = UIAction(title: "menu2", state: .off, handler: {_ in print("2")})
+            filterButton.menu = UIMenu(title: "", image: UIImage(), identifier: .none, options: .displayInline, children: [menu1,menu2])
+            filterButton.showsMenuAsPrimaryAction = true
+        }
     }
     
     // MARK: - Register Delegate and DataSource
@@ -64,8 +77,16 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 140)
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard let cell = cell as? HomeCollectionViewCell else {
+            return
+        }
+        cell.itemImageView.kf.cancelDownloadTask()
     }
     
 }
@@ -80,6 +101,7 @@ extension HomeViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Cells.HomeCollectionViewCell, for: indexPath) as? HomeCollectionViewCell else {
             return UICollectionViewCell()
         }
+        cell.initializeView("https://cdn.pixabay.com/photo/2018/07/18/19/12/spaghetti-3547078__340.jpg")
         return cell
     }
 }

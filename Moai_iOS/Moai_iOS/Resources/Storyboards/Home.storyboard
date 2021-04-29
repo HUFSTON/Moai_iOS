@@ -63,9 +63,6 @@
                                     <imageReference key="image" image="bell" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="12" scale="default"/>
                                 </state>
-                                <connections>
-                                    <action selector="touchNotificationButton:" destination="xnj-y1-iNc" eventType="touchUpInside" id="XAm-P1-tEa"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 43개의 상품" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHy-sb-Ueb">
                                 <rect key="frame" x="20" y="104" width="74" height="14.5"/>
@@ -73,28 +70,6 @@
                                 <color key="textColor" name="Charcoal"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QEl-7Y-J2I">
-                                <rect key="frame" x="304" y="104" width="90" height="15"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마감임박순" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m70-YI-Y87">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="15"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="i6N-HZ-hjb"/>
-                                            <constraint firstAttribute="height" constant="15" id="oBo-PX-hVj"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" name="Charcoal"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aCV-d0-9nB">
-                                        <rect key="frame" x="75" y="1" width="15" height="13"/>
-                                        <color key="tintColor" name="Charcoal"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="aCV-d0-9nB" secondAttribute="height" multiplier="1:1" id="xzw-gf-9NU"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zhw-qV-Vc7">
                                 <rect key="frame" x="0.0" y="118.5" width="414" height="743.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -106,20 +81,31 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zg-fl-Skm">
+                                <rect key="frame" x="325" y="104" width="69" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="tintColor" name="Charcoal"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-5" maxY="0.0"/>
+                                <state key="normal" title="마감임박순">
+                                    <color key="titleColor" name="Charcoal"/>
+                                    <imageReference key="image" image="arrow.up.arrow.down" catalog="system" symbolScale="default"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="12" scale="default"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mWY-gF-7WR"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="2Zg-fl-Skm" firstAttribute="top" secondItem="Sdx-W3-5Ic" secondAttribute="bottom" constant="25" id="4WY-sW-Xqi"/>
                             <constraint firstItem="Z19-70-IQh" firstAttribute="leading" secondItem="Sdx-W3-5Ic" secondAttribute="trailing" constant="10" id="Asp-ZJ-gJV"/>
                             <constraint firstItem="Zhw-qV-Vc7" firstAttribute="top" secondItem="aHy-sb-Ueb" secondAttribute="bottom" id="NQb-fI-NiC"/>
-                            <constraint firstItem="QEl-7Y-J2I" firstAttribute="top" secondItem="Sdx-W3-5Ic" secondAttribute="bottom" constant="25" id="NZj-sO-uHK"/>
+                            <constraint firstItem="mWY-gF-7WR" firstAttribute="trailing" secondItem="2Zg-fl-Skm" secondAttribute="trailing" constant="20" id="U9m-FC-lFr"/>
                             <constraint firstItem="Sdx-W3-5Ic" firstAttribute="top" secondItem="mWY-gF-7WR" secondAttribute="top" constant="5" id="WJn-wl-KKb"/>
                             <constraint firstItem="mWY-gF-7WR" firstAttribute="trailing" secondItem="Z19-70-IQh" secondAttribute="trailing" constant="20" id="YHG-RL-P8Q"/>
                             <constraint firstItem="Sdx-W3-5Ic" firstAttribute="leading" secondItem="mWY-gF-7WR" secondAttribute="leading" constant="20" id="Z1Q-KR-zHU"/>
                             <constraint firstItem="Z19-70-IQh" firstAttribute="top" secondItem="Sdx-W3-5Ic" secondAttribute="top" id="c2j-zU-kbS"/>
                             <constraint firstItem="mWY-gF-7WR" firstAttribute="bottom" secondItem="Zhw-qV-Vc7" secondAttribute="bottom" id="gor-Vw-Lxf"/>
                             <constraint firstItem="aHy-sb-Ueb" firstAttribute="leading" secondItem="mWY-gF-7WR" secondAttribute="leading" constant="20" id="hef-m8-D6Z"/>
-                            <constraint firstItem="mWY-gF-7WR" firstAttribute="trailing" secondItem="QEl-7Y-J2I" secondAttribute="trailing" constant="20" id="mRi-Ko-ul3"/>
                             <constraint firstItem="aHy-sb-Ueb" firstAttribute="top" secondItem="Sdx-W3-5Ic" secondAttribute="bottom" constant="25" id="oX0-bb-CrZ"/>
                             <constraint firstItem="Zhw-qV-Vc7" firstAttribute="leading" secondItem="mWY-gF-7WR" secondAttribute="leading" id="qP5-Un-mHZ"/>
                             <constraint firstItem="mWY-gF-7WR" firstAttribute="trailing" secondItem="Zhw-qV-Vc7" secondAttribute="trailing" id="smh-oO-Gr4"/>
@@ -127,6 +113,7 @@
                     </view>
                     <connections>
                         <outlet property="HomeCollectionView" destination="Zhw-qV-Vc7" id="k0E-2X-d4O"/>
+                        <outlet property="filterButton" destination="2Zg-fl-Skm" id="lUU-dg-LxW"/>
                         <outlet property="notificationButton" destination="Z19-70-IQh" id="pwc-hm-8Gq"/>
                         <outlet property="searchBackgroundView" destination="Sdx-W3-5Ic" id="4xJ-Cz-UAa"/>
                         <outlet property="searchTextField" destination="pTX-Fo-TLZ" id="Nb4-5B-hdn"/>

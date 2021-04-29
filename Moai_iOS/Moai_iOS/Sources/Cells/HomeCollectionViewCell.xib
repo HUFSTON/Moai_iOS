@@ -117,6 +117,15 @@
                 <constraint firstItem="HLC-Fg-lQI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cPm-pg-nU0"/>
             </constraints>
             <size key="customSize" width="492" height="160"/>
+            <connections>
+                <outlet property="SellerNameLabel" destination="wvh-Xh-KNT" id="kTE-zi-qtx"/>
+                <outlet property="dateLabel" destination="8JC-Ew-EZr" id="P8L-gK-4B0"/>
+                <outlet property="discountPriceLabel" destination="EKt-AV-g2M" id="KAX-Uv-Rvu"/>
+                <outlet property="discountRateLabel" destination="Bga-SF-BnW" id="UGW-aw-inw"/>
+                <outlet property="itemImageView" destination="2Kz-fn-TCX" id="o75-V0-mk1"/>
+                <outlet property="itemNameLabel" destination="QBE-ke-S5Q" id="4s8-fn-bds"/>
+                <outlet property="originalPriceLabel" destination="9vw-hp-h4q" id="yCC-8a-iS0"/>
+            </connections>
             <point key="canvasLocation" x="424.63768115942031" y="164.73214285714286"/>
         </collectionViewCell>
     </objects>
