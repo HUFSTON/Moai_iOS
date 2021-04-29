@@ -24,13 +24,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8IE-F6-uev">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1700"/>
                                         <subviews>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="klB-38-5LN">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="klB-38-5LN">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="393"/>
                                                 <color key="backgroundColor" name="DarkGray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="klB-38-5LN" secondAttribute="height" multiplier="375:356" id="tqE-R2-24S"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aBc-fh-0X7">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aBc-fh-0X7">
                                                     <size key="itemSize" width="128" height="128"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -40,6 +40,9 @@
                                             </collectionView>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ghu-QP-Gnl">
                                                 <rect key="frame" x="146" y="356.5" width="122.5" height="27.5"/>
+                                                <connections>
+                                                    <action selector="changePageControlValue:" destination="0fF-rB-nB9" eventType="valueChanged" id="Bmq-Rk-3yi"/>
+                                                </connections>
                                             </pageControl>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="nSs-cs-WFh">
                                                 <rect key="frame" x="20" y="413" width="125" height="20"/>
@@ -69,12 +72,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마감임박" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kl7-co-34a">
-                                                <rect key="frame" x="214" y="446.5" width="40" height="15"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마감임박" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kl7-co-34a">
+                                                <rect key="frame" x="214" y="444" width="45" height="20"/>
                                                 <color key="backgroundColor" name="LightGreen"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="15" id="6qe-fS-EKM"/>
-                                                    <constraint firstAttribute="width" constant="40" id="v2f-rb-Cxs"/>
+                                                    <constraint firstAttribute="height" constant="20" id="6qe-fS-EKM"/>
+                                                    <constraint firstAttribute="width" constant="45" id="v2f-rb-Cxs"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" name="DarkGreen"/>
@@ -96,8 +99,14 @@
                                                 <state key="normal" title="-">
                                                     <color key="titleColor" name="DarkGreen"/>
                                                 </state>
+                                                <state key="disabled">
+                                                    <color key="titleColor" name="Charcoal"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchMinusButton:" destination="0fF-rB-nB9" eventType="touchUpInside" id="CqQ-d3-zyA"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48Y-b4-Zg7">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48Y-b4-Zg7">
                                                 <rect key="frame" x="110" y="499" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="oQM-Ll-Ixy"/>
@@ -107,6 +116,12 @@
                                                 <state key="normal" title="+">
                                                     <color key="titleColor" name="DarkGreen"/>
                                                 </state>
+                                                <state key="disabled">
+                                                    <color key="titleColor" name="Charcoal"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchPlusButton:" destination="0fF-rB-nB9" eventType="touchUpInside" id="Pe1-lu-cJl"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRq-WE-41P">
                                                 <rect key="frame" x="60" y="509.5" width="50" height="19.5"/>
@@ -123,25 +138,25 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6,000 원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKu-tm-umI">
-                                                <rect key="frame" x="261.5" y="513" width="54" height="17"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6,000 원" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKu-tm-umI">
+                                                <rect key="frame" x="268" y="514" width="47.5" height="16"/>
+                                                <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="14"/>
                                                 <color key="textColor" name="LightGray1"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="! 재고 소진시 1,000원 환급 예정" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaE-Mk-cSG">
-                                                <rect key="frame" x="20" y="549" width="165" height="20"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="! 재고 소진시 1,000원 환급 예정" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaE-Mk-cSG">
+                                                <rect key="frame" x="20" y="549" width="175" height="25"/>
                                                 <color key="backgroundColor" name="LightRed"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="165" id="UqB-2i-8uQ"/>
-                                                    <constraint firstAttribute="height" constant="20" id="ZZM-8X-mkW"/>
+                                                    <constraint firstAttribute="width" constant="175" id="UqB-2i-8uQ"/>
+                                                    <constraint firstAttribute="height" constant="25" id="ZZM-8X-mkW"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" name="DarkRed"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXS-79-wHu">
-                                                <rect key="frame" x="20" y="586" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="591" width="374" height="50"/>
                                                 <color key="backgroundColor" name="DarkGreen"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="42c-GZ-eTL"/>
@@ -149,79 +164,83 @@
                                                 <state key="normal" title="예약하기">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="touchReserveButton:" destination="0fF-rB-nB9" eventType="touchUpInside" id="reA-To-LPc"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품 설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gn8-V7-be1">
-                                                <rect key="frame" x="20" y="666" width="52" height="17"/>
+                                                <rect key="frame" x="20" y="671" width="52" height="17"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vvq-1D-QWd">
-                                                <rect key="frame" x="20" y="693" width="374" height="289.5"/>
+                                                <rect key="frame" x="20" y="698" width="374" height="318"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LvI-IO-Sw0">
-                                                <rect key="frame" x="20" y="1069.5" width="40" height="40"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smiley" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LvI-IO-Sw0">
+                                                <rect key="frame" x="20" y="1103.5" width="40" height="39"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="6Jv-SN-vwY"/>
                                                     <constraint firstAttribute="height" constant="40" id="A18-Gb-Wvk"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="판매자 및 매장 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTt-Uc-5Ts">
-                                                <rect key="frame" x="20" y="1032.5" width="107.5" height="17"/>
+                                                <rect key="frame" x="20" y="1066" width="107.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강경욱의 두부트럭" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pd4-wH-wYC">
-                                                <rect key="frame" x="70" y="1079.5" width="122" height="20.5"/>
+                                                <rect key="frame" x="70" y="1113" width="122" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="픽업 장소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNO-Ep-jYC">
-                                                <rect key="frame" x="20" y="1159.5" width="52.5" height="17"/>
+                                                <rect key="frame" x="20" y="1193" width="52.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SzH-ad-Zzi">
-                                                <rect key="frame" x="20" y="1186.5" width="374" height="128"/>
+                                                <rect key="frame" x="20" y="1220" width="374" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="o1A-9M-f9P"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3월 25일(목) 오전 11시 이후" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mj2-as-wSH">
-                                                <rect key="frame" x="25" y="1324.5" width="139.5" height="14.5"/>
+                                                <rect key="frame" x="25" y="1358" width="139.5" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" name="DarkGray"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="외대 후문 정류장 앞 두부 트럭" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mA-Mk-dGY">
-                                                <rect key="frame" x="25" y="1344" width="164.5" height="17"/>
+                                                <rect key="frame" x="25" y="1377.5" width="164.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" name="Black1"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환급액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCj-WB-L6j">
-                                                <rect key="frame" x="20" y="1411" width="44.5" height="20.5"/>
+                                                <rect key="frame" x="20" y="1444.5" width="44.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="재고 부족 및 기타 매장 상황으로 인해 예약하신 국산콩 두부 300g 상품을 받지 못하는 경우 총 1,000원을 환급해드립니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lx7-nD-Hxm">
-                                                <rect key="frame" x="20" y="1441.5" width="374" height="33.5"/>
+                                                <rect key="frame" x="20" y="1475" width="374" height="33.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" name="Black1"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="재고 부족 및 기타 매장 상황으로 인해 예약하신 국산콩 두부 300g 상품을 받지 못하는 경우 총 1,000원을 환급해드립니다. 단순 변심 혹은 개인 과실로 인해 상품을 받지 못하는 경우에는 환급금을 지급하지 않습니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4y-Zg-v6f">
-                                                <rect key="frame" x="20" y="1500" width="374" height="67"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="단순 변심 혹은 개인 과실로 인해 상품을 받지 못하는 경우에는 환급금을 지급하지 않습니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4y-Zg-v6f">
+                                                <rect key="frame" x="20" y="1533.5" width="374" height="33.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" name="DarkGray"/>
                                                 <nil key="highlightedColor"/>
@@ -312,6 +331,30 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="1700"/>
+                    <connections>
+                        <outlet property="countLabel" destination="vRq-WE-41P" id="DLe-pT-JGH"/>
+                        <outlet property="descriptionTextView" destination="vvq-1D-QWd" id="GhG-4y-BvD"/>
+                        <outlet property="discountPrice" destination="Ut3-Ep-AYj" id="lrf-mQ-U9w"/>
+                        <outlet property="discountRateLabel" destination="Dve-7N-F9X" id="bAL-fo-hwY"/>
+                        <outlet property="imageCollectionView" destination="klB-38-5LN" id="Kbi-d6-MeM"/>
+                        <outlet property="imagePageControl" destination="ghu-QP-Gnl" id="pOg-e3-kT5"/>
+                        <outlet property="invenLabel" destination="Uz8-lU-UBX" id="tyQ-fc-D1x"/>
+                        <outlet property="itemNameLabel" destination="SwI-CQ-tsS" id="R5k-98-JE4"/>
+                        <outlet property="mapBackgroundView" destination="SzH-ad-Zzi" id="KAd-p1-gWB"/>
+                        <outlet property="minusButton" destination="dDK-KO-Pgq" id="Z2o-UU-23A"/>
+                        <outlet property="originalPrice" destination="iKu-tm-umI" id="bS6-hf-tGf"/>
+                        <outlet property="pickupPlaceLabel" destination="2mA-Mk-dGY" id="GPP-MF-z6D"/>
+                        <outlet property="pickupTimeLabel" destination="mj2-as-wSH" id="Yst-Kl-v5N"/>
+                        <outlet property="plusButton" destination="48Y-b4-Zg7" id="hgj-CC-p12"/>
+                        <outlet property="reserveButton" destination="MXS-79-wHu" id="vJj-HU-REE"/>
+                        <outlet property="returnAlertLabel" destination="gaE-Mk-cSG" id="FYa-xm-cNa"/>
+                        <outlet property="returnDetailLabel" destination="Lx7-nD-Hxm" id="gce-Br-S0r"/>
+                        <outlet property="returnWarningLabel" destination="Z4y-Zg-v6f" id="6Pg-c4-2oI"/>
+                        <outlet property="sellerImageView" destination="LvI-IO-Sw0" id="A9O-ba-dv9"/>
+                        <outlet property="sellerNameLabel" destination="Pd4-wH-wYC" id="kg8-H6-gXg"/>
+                        <outlet property="soldOutLabel" destination="kl7-co-34a" id="482-Ij-269"/>
+                        <outlet property="timeLabel" destination="cDZ-4b-oEm" id="1lY-p5-Zm5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udy-Ww-11Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -320,8 +363,12 @@
     </scenes>
     <resources>
         <image name="alarm" catalog="system" width="124" height="128"/>
+        <image name="smiley" catalog="system" width="128" height="121"/>
         <namedColor name="Black1">
             <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Charcoal">
+            <color red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="DarkGray">
             <color red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -339,7 +386,7 @@
             <color red="0.047058823529411764" green="0.63529411764705879" blue="0.45490196078431372" alpha="0.10000000149011612" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LightRed">
-            <color red="0.8784313725490196" green="0.15686274509803921" blue="0.15686274509803921" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8784313725490196" green="0.15686274509803921" blue="0.15686274509803921" alpha="0.10000000149011612" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

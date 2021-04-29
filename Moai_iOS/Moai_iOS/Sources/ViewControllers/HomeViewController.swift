@@ -24,11 +24,12 @@ class HomeViewController: UIViewController {
         initializeMenu()
         registerCollectionViewCell()
         registerCollectionView()
-//        @available (iOS 14.0, *)
+        
         
     }
     // MARK: - Customize View
     private func initializeViewStyle() {
+//        self.navigationController?.isNavigationBarHidden = true
         self.searchBackgroundView.layer.cornerRadius = 10
         self.notificationButton.layer.borderWidth = 1
         self.notificationButton.layer.cornerRadius = 10
@@ -51,7 +52,7 @@ class HomeViewController: UIViewController {
     }
     
     private func registerCollectionViewCell() {
-        self.HomeCollectionView.register(UINib(nibName: Constants.Cells.HomeCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.Cells.HomeCollectionViewCell)
+        self.HomeCollectionView.register(UINib(nibName: Constants.Cells.homeCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.Cells.homeCollectionViewCell)
     }
     
     // MARK: - IBActions
@@ -75,7 +76,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 140)
+        return CGSize(width: collectionView.frame.width, height: 160)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -98,10 +99,18 @@ extension HomeViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Cells.HomeCollectionViewCell, for: indexPath) as? HomeCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Cells.homeCollectionViewCell, for: indexPath) as? HomeCollectionViewCell else {
             return UICollectionViewCell()
         }
         cell.initializeView("https://cdn.pixabay.com/photo/2018/07/18/19/12/spaghetti-3547078__340.jpg")
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: Constants.Storyboards.itemDetail, bundle: nil)
+        guard let vc = storyboard.instantiateViewController(identifier: Constants.ViewControllers.itemDetailViewController) as? ItemDetailViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
