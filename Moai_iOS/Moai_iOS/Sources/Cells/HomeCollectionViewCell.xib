@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCell" id="gTV-IL-0wX" customClass="HomeCollectionViewCell" customModule="Moai_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="492" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="492" height="160"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLC-Fg-lQI">
+                        <rect key="frame" x="0.0" y="0.0" width="492" height="160"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Kz-fn-TCX">
+                                <rect key="frame" x="20" y="20" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="k1z-3H-gw7"/>
+                                    <constraint firstAttribute="height" constant="120" id="r5z-i3-h7U"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="~4월 15일(목) 오후 4시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JC-Ew-EZr">
+                                <rect key="frame" x="150" y="25" width="118" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="취나물 무침 500g" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBE-ke-S5Q">
+                                <rect key="frame" x="150" y="48" width="105" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회기장터 취나물 무침" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvh-Xh-KNT">
+                                <rect key="frame" x="150" y="75" width="101" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="DarkGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6,000 원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vw-hp-h4q">
+                                <rect key="frame" x="432" y="107" width="40" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" name="LightGray1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17 %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bga-SF-BnW">
+                                <rect key="frame" x="360" y="120" width="38" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" name="DarkGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5,000 원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKt-AV-g2M">
+                                <rect key="frame" x="408" y="119" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마감임박" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRb-Y0-HXB">
+                                <rect key="frame" x="265" y="48" width="47" height="17"/>
+                                <color key="backgroundColor" name="LightGreen"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="gSz-nK-Lqe"/>
+                                    <constraint firstAttribute="width" constant="47" id="iP0-vh-BoD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" name="DarkGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DHS-MC-eez">
+                                <rect key="frame" x="0.0" y="159.5" width="492" height="0.5"/>
+                                <color key="backgroundColor" name="LightGray1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.29999999999999999" id="ixQ-Ye-vsu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wvh-Xh-KNT" firstAttribute="leading" secondItem="2Kz-fn-TCX" secondAttribute="trailing" constant="10" id="0dw-nm-xRS"/>
+                            <constraint firstAttribute="bottom" secondItem="2Kz-fn-TCX" secondAttribute="bottom" constant="20" id="DiG-aX-DMo"/>
+                            <constraint firstItem="HRb-Y0-HXB" firstAttribute="centerY" secondItem="QBE-ke-S5Q" secondAttribute="centerY" id="H9r-ju-QTr"/>
+                            <constraint firstAttribute="height" constant="160" id="Uwz-9K-ciV"/>
+                            <constraint firstAttribute="bottom" secondItem="DHS-MC-eez" secondAttribute="bottom" id="VSd-Ss-d60"/>
+                            <constraint firstItem="2Kz-fn-TCX" firstAttribute="leading" secondItem="HLC-Fg-lQI" secondAttribute="leading" constant="20" symbolic="YES" id="YLA-cn-VXb"/>
+                            <constraint firstItem="8JC-Ew-EZr" firstAttribute="top" secondItem="HLC-Fg-lQI" secondAttribute="top" constant="25" id="az6-kj-LRd"/>
+                            <constraint firstItem="EKt-AV-g2M" firstAttribute="bottom" secondItem="2Kz-fn-TCX" secondAttribute="bottom" id="f11-JU-cvB"/>
+                            <constraint firstItem="8JC-Ew-EZr" firstAttribute="leading" secondItem="2Kz-fn-TCX" secondAttribute="trailing" constant="10" id="g3J-lo-jmi"/>
+                            <constraint firstItem="EKt-AV-g2M" firstAttribute="leading" secondItem="Bga-SF-BnW" secondAttribute="trailing" constant="10" id="ggd-Bu-Wgz"/>
+                            <constraint firstAttribute="trailing" secondItem="EKt-AV-g2M" secondAttribute="trailing" constant="20" id="h7U-fc-Yc9"/>
+                            <constraint firstItem="HRb-Y0-HXB" firstAttribute="leading" secondItem="QBE-ke-S5Q" secondAttribute="trailing" constant="10" id="hA2-4f-uMm"/>
+                            <constraint firstItem="Bga-SF-BnW" firstAttribute="bottom" secondItem="2Kz-fn-TCX" secondAttribute="bottom" id="hoJ-o3-dQF"/>
+                            <constraint firstItem="DHS-MC-eez" firstAttribute="leading" secondItem="HLC-Fg-lQI" secondAttribute="leading" id="jdw-Ql-0yZ"/>
+                            <constraint firstItem="QBE-ke-S5Q" firstAttribute="top" secondItem="8JC-Ew-EZr" secondAttribute="bottom" constant="8" id="kyh-N8-Q3d"/>
+                            <constraint firstAttribute="trailing" secondItem="9vw-hp-h4q" secondAttribute="trailing" constant="20" id="n2B-jO-wE0"/>
+                            <constraint firstItem="2Kz-fn-TCX" firstAttribute="top" secondItem="HLC-Fg-lQI" secondAttribute="top" constant="20" id="uxv-sO-5HL"/>
+                            <constraint firstItem="wvh-Xh-KNT" firstAttribute="top" secondItem="QBE-ke-S5Q" secondAttribute="bottom" constant="10" id="uy4-4U-tVe"/>
+                            <constraint firstAttribute="trailing" secondItem="DHS-MC-eez" secondAttribute="trailing" id="vnH-Sz-LUb"/>
+                            <constraint firstItem="EKt-AV-g2M" firstAttribute="top" secondItem="9vw-hp-h4q" secondAttribute="bottom" id="wWe-rI-uQX"/>
+                            <constraint firstItem="QBE-ke-S5Q" firstAttribute="leading" secondItem="2Kz-fn-TCX" secondAttribute="trailing" constant="10" id="yKH-mz-i4q"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="HLC-Fg-lQI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2R1-yf-LHS"/>
+                <constraint firstAttribute="trailing" secondItem="HLC-Fg-lQI" secondAttribute="trailing" id="D2x-Ad-gqu"/>
+                <constraint firstAttribute="bottom" secondItem="HLC-Fg-lQI" secondAttribute="bottom" id="RSx-ba-KEA"/>
+                <constraint firstItem="HLC-Fg-lQI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cPm-pg-nU0"/>
+            </constraints>
+            <size key="customSize" width="492" height="160"/>
+            <connections>
+                <outlet property="SellerNameLabel" destination="wvh-Xh-KNT" id="kTE-zi-qtx"/>
+                <outlet property="dateLabel" destination="8JC-Ew-EZr" id="P8L-gK-4B0"/>
+                <outlet property="discountPriceLabel" destination="EKt-AV-g2M" id="KAX-Uv-Rvu"/>
+                <outlet property="discountRateLabel" destination="Bga-SF-BnW" id="UGW-aw-inw"/>
+                <outlet property="itemImageView" destination="2Kz-fn-TCX" id="o75-V0-mk1"/>
+                <outlet property="itemNameLabel" destination="QBE-ke-S5Q" id="4s8-fn-bds"/>
+                <outlet property="originalPriceLabel" destination="9vw-hp-h4q" id="yCC-8a-iS0"/>
+            </connections>
+            <point key="canvasLocation" x="424.63768115942031" y="164.73214285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="DarkGray">
+            <color red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DarkGreen">
+            <color red="0.047058823529411764" green="0.63529411764705879" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightGray1">
+            <color red="0.67843137254901964" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightGreen">
+            <color red="0.047058823529411764" green="0.63529411764705879" blue="0.45490196078431372" alpha="0.10000000149011612" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
