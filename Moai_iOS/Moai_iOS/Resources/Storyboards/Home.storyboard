@@ -63,6 +63,9 @@
                                     <imageReference key="image" image="bell" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="12" scale="default"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchNotificationButton:" destination="xnj-y1-iNc" eventType="touchUpInside" id="I8X-KP-EDz"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 43개의 상품" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHy-sb-Ueb">
                                 <rect key="frame" x="20" y="104" width="74" height="14.5"/>
