@@ -13,18 +13,27 @@ struct Constants {
     struct Cells {
         static let homeCollectionViewCell: String = "HomeCollectionViewCell"
         static let imageCollectionViewCell: String = "ImageCollectionViewCell"
+        static let categoryCollectionViewCell: String = "CategoryCollectionViewCell"
+        static let reservedCollectionViewCell: String = "ReservedCollectionViewCell"
         
     }
     
+    struct Reusable {
+        static let reserveHeaderCollectionReusableView: String = "ReserveHeaderCollectionReusableView"
+        static let emptyCollectionReusableView: String = "EmptyCollectionReusableView"
+    }
     struct Storyboards {
         static let home: String = "Home"
         static let itemDetail: String = "ItemDetail"
+        static let reserveDetail: String = "ReserveDetail"
         
     }
     
     struct ViewControllers {
         static let homeViewController: String = "HomeViewController"
         static let itemDetailViewController: String = "ItemDetailViewController"
-        
+        static let reserveDetailViewController: String = "ReserveDetailViewController"
+        static let receivedViewController: String = "ReceivedViewController"
+        static let reserveProceedingViewController: String = "ReserveProceedingViewController"
     }
 }

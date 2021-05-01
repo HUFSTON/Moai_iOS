@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24276F57263D3D9B002B4AB9 /* ReserveProceedingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24276F56263D3D9B002B4AB9 /* ReserveProceedingViewController.swift */; };
+		24276F5A263D3DA5002B4AB9 /* ReceivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24276F59263D3DA5002B4AB9 /* ReceivedViewController.swift */; };
 		242A312A2639482900BCC87C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A31292639482900BCC87C /* AppDelegate.swift */; };
 		242A312C2639482900BCC87C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A312B2639482900BCC87C /* SceneDelegate.swift */; };
 		242A312E2639482900BCC87C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A312D2639482900BCC87C /* ViewController.swift */; };
@@ -28,10 +30,20 @@
 		24B3E804263ACA13001AF867 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3E803263ACA13001AF867 /* ItemDetailViewController.swift */; };
 		24B3E81E263AF3C6001AF867 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3E81C263AF3C6001AF867 /* ImageCollectionViewCell.swift */; };
 		24B3E81F263AF3C6001AF867 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B3E81D263AF3C6001AF867 /* ImageCollectionViewCell.xib */; };
+		24F25744263D098000384542 /* ReserveDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F25743263D098000384542 /* ReserveDetail.storyboard */; };
+		24F25747263D099E00384542 /* ReserveDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F25746263D099E00384542 /* ReserveDetailViewController.swift */; };
+		24F2574B263D0C4A00384542 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F25749263D0C4A00384542 /* CategoryCollectionViewCell.swift */; };
+		24F2574C263D0C4A00384542 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F2574A263D0C4A00384542 /* CategoryCollectionViewCell.xib */; };
+		24F25750263D141E00384542 /* ReservedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2574E263D141E00384542 /* ReservedCollectionViewCell.swift */; };
+		24F25751263D141E00384542 /* ReservedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F2574F263D141E00384542 /* ReservedCollectionViewCell.xib */; };
+		24F25756263D218900384542 /* ReserveHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F25754263D218900384542 /* ReserveHeaderCollectionReusableView.swift */; };
+		24F25757263D218900384542 /* ReserveHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F25755263D218900384542 /* ReserveHeaderCollectionReusableView.xib */; };
 		8B56229E3B65F1E7002C6057 /* Pods_Moai_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0F0D8E38431363094CB1BA /* Pods_Moai_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24276F56263D3D9B002B4AB9 /* ReserveProceedingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveProceedingViewController.swift; sourceTree = "<group>"; };
+		24276F59263D3DA5002B4AB9 /* ReceivedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedViewController.swift; sourceTree = "<group>"; };
 		242A31262639482900BCC87C /* Moai_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moai_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		242A31292639482900BCC87C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		242A312B2639482900BCC87C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +74,14 @@
 		24B3E814263AE9C0001AF867 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		24B3E81C263AF3C6001AF867 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		24B3E81D263AF3C6001AF867 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		24F25743263D098000384542 /* ReserveDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReserveDetail.storyboard; sourceTree = "<group>"; };
+		24F25746263D099E00384542 /* ReserveDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveDetailViewController.swift; sourceTree = "<group>"; };
+		24F25749263D0C4A00384542 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		24F2574A263D0C4A00384542 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		24F2574E263D141E00384542 /* ReservedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservedCollectionViewCell.swift; sourceTree = "<group>"; };
+		24F2574F263D141E00384542 /* ReservedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservedCollectionViewCell.xib; sourceTree = "<group>"; };
+		24F25754263D218900384542 /* ReserveHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		24F25755263D218900384542 /* ReserveHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReserveHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		5B0F0D8E38431363094CB1BA /* Pods_Moai_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moai_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F6CF31E25082E4447645BE /* Pods-Moai_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moai_iOS.release.xcconfig"; path = "Target Support Files/Pods-Moai_iOS/Pods-Moai_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		C500E7C89DAA198CAEA182CC /* Pods-Moai_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moai_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Moai_iOS/Pods-Moai_iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +143,7 @@
 		242A313F26394A1300BCC87C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				24F25753263D217300384542 /* ReusableView */,
 				242A314726394B2B00BCC87C /* ViewControllers */,
 				242A314626394B2600BCC87C /* View */,
 				242A314526394B1B00BCC87C /* Extensions */,
@@ -148,6 +169,7 @@
 				242A31342639482A00BCC87C /* LaunchScreen.storyboard */,
 				2459ABF12639B810009E3A82 /* Home.storyboard */,
 				24B3E800263ACA09001AF867 /* ItemDetail.storyboard */,
+				24F25743263D098000384542 /* ReserveDetail.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -175,6 +197,10 @@
 				2459ABFB2639BDC6009E3A82 /* HomeCollectionViewCell.xib */,
 				24B3E81C263AF3C6001AF867 /* ImageCollectionViewCell.swift */,
 				24B3E81D263AF3C6001AF867 /* ImageCollectionViewCell.xib */,
+				24F25749263D0C4A00384542 /* CategoryCollectionViewCell.swift */,
+				24F2574A263D0C4A00384542 /* CategoryCollectionViewCell.xib */,
+				24F2574E263D141E00384542 /* ReservedCollectionViewCell.swift */,
+				24F2574F263D141E00384542 /* ReservedCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -202,8 +228,20 @@
 				242A312D2639482900BCC87C /* ViewController.swift */,
 				2459ABF42639B81B009E3A82 /* HomeViewController.swift */,
 				24B3E803263ACA13001AF867 /* ItemDetailViewController.swift */,
+				24F25746263D099E00384542 /* ReserveDetailViewController.swift */,
+				24276F56263D3D9B002B4AB9 /* ReserveProceedingViewController.swift */,
+				24276F59263D3DA5002B4AB9 /* ReceivedViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		24F25753263D217300384542 /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				24F25754263D218900384542 /* ReserveHeaderCollectionReusableView.swift */,
+				24F25755263D218900384542 /* ReserveHeaderCollectionReusableView.xib */,
+			);
+			path = ReusableView;
 			sourceTree = "<group>";
 		};
 		3E7C69C006862899EAF1870E /* Pods */ = {
@@ -295,8 +333,12 @@
 				2459ABF22639B810009E3A82 /* Home.storyboard in Resources */,
 				242A31362639482A00BCC87C /* LaunchScreen.storyboard in Resources */,
 				242A31332639482A00BCC87C /* Assets.xcassets in Resources */,
+				24F2574C263D0C4A00384542 /* CategoryCollectionViewCell.xib in Resources */,
+				24F25757263D218900384542 /* ReserveHeaderCollectionReusableView.xib in Resources */,
 				24B3E81F263AF3C6001AF867 /* ImageCollectionViewCell.xib in Resources */,
+				24F25744263D098000384542 /* ReserveDetail.storyboard in Resources */,
 				242A31312639482900BCC87C /* Main.storyboard in Resources */,
+				24F25751263D141E00384542 /* ReservedCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,19 +391,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F25756263D218900384542 /* ReserveHeaderCollectionReusableView.swift in Sources */,
 				242A314926394BB100BCC87C /* view.swift in Sources */,
+				24F2574B263D0C4A00384542 /* CategoryCollectionViewCell.swift in Sources */,
 				242A312E2639482900BCC87C /* ViewController.swift in Sources */,
 				24B3E81E263AF3C6001AF867 /* ImageCollectionViewCell.swift in Sources */,
+				24F25750263D141E00384542 /* ReservedCollectionViewCell.swift in Sources */,
 				24B3E804263ACA13001AF867 /* ItemDetailViewController.swift in Sources */,
 				242A315326394BCB00BCC87C /* apiservices.swift in Sources */,
 				242A315626394BD400BCC87C /* apimodel.swift in Sources */,
 				2459ABFC2639BDC6009E3A82 /* HomeCollectionViewCell.swift in Sources */,
 				2459ABF52639B81B009E3A82 /* HomeViewController.swift in Sources */,
+				24F25747263D099E00384542 /* ReserveDetailViewController.swift in Sources */,
+				24276F5A263D3DA5002B4AB9 /* ReceivedViewController.swift in Sources */,
 				242A312A2639482900BCC87C /* AppDelegate.swift in Sources */,
 				24B3E7F3263AAE8F001AF867 /* UIImageView+Extension.swift in Sources */,
 				242A312C2639482900BCC87C /* SceneDelegate.swift in Sources */,
 				2459AC012639C4DC009E3A82 /* UIColor+Extension.swift in Sources */,
 				2459AC042639C90F009E3A82 /* APPConstants.swift in Sources */,
+				24276F57263D3D9B002B4AB9 /* ReserveProceedingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
