@@ -26,8 +26,8 @@ struct Constants {
         static let home: String = "Home"
         static let itemDetail: String = "ItemDetail"
         static let reserveDetail: String = "ReserveDetail"
-        static let MyTown: String = "MyTown"
-        static let MyPage: String = "MyPage"
+        static let myTown: String = "MyTown"
+        static let myPage: String = "MyPage"
     }
     
     struct ViewControllers {

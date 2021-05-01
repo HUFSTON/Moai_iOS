@@ -22,6 +22,8 @@
 		2449DEE1263D4556004CC0C4 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2449DEE0263D4556004CC0C4 /* MyPage.storyboard */; };
 		2449DEE4263D4585004CC0C4 /* MyTownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2449DEE3263D4585004CC0C4 /* MyTownViewController.swift */; };
 		2449DEE7263D4591004CC0C4 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2449DEE6263D4591004CC0C4 /* MyPageViewController.swift */; };
+		2449DEEA263D468D004CC0C4 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2449DEE9263D468D004CC0C4 /* Start.storyboard */; };
+		2449DEEE263D46D4004CC0C4 /* StartTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2449DEED263D46D4004CC0C4 /* StartTabBarController.swift */; };
 		2459ABEC2639B440009E3A82 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2459ABEB2639B440009E3A82 /* Colors.xcassets */; };
 		2459ABF22639B810009E3A82 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2459ABF12639B810009E3A82 /* Home.storyboard */; };
 		2459ABF52639B81B009E3A82 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459ABF42639B81B009E3A82 /* HomeViewController.swift */; };
@@ -63,6 +65,8 @@
 		2449DEE0263D4556004CC0C4 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		2449DEE3263D4585004CC0C4 /* MyTownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownViewController.swift; sourceTree = "<group>"; };
 		2449DEE6263D4591004CC0C4 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		2449DEE9263D468D004CC0C4 /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
+		2449DEED263D46D4004CC0C4 /* StartTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTabBarController.swift; sourceTree = "<group>"; };
 		2459ABEB2639B440009E3A82 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2459ABF12639B810009E3A82 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		2459ABF42639B81B009E3A82 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 		242A313F26394A1300BCC87C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2449DEEC263D46B1004CC0C4 /* TabBarControllers */,
 				24F25753263D217300384542 /* ReusableView */,
 				242A314726394B2B00BCC87C /* ViewControllers */,
 				242A314626394B2600BCC87C /* View */,
@@ -180,6 +185,7 @@
 				24F25743263D098000384542 /* ReserveDetail.storyboard */,
 				2449DEDD263D454C004CC0C4 /* MyTown.storyboard */,
 				2449DEE0263D4556004CC0C4 /* MyPage.storyboard */,
+				2449DEE9263D468D004CC0C4 /* Start.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -245,6 +251,14 @@
 				2449DEE6263D4591004CC0C4 /* MyPageViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2449DEEC263D46B1004CC0C4 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2449DEED263D46D4004CC0C4 /* StartTabBarController.swift */,
+			);
+			path = TabBarControllers;
 			sourceTree = "<group>";
 		};
 		24F25753263D217300384542 /* ReusableView */ = {
@@ -341,6 +355,7 @@
 			files = (
 				2459ABEC2639B440009E3A82 /* Colors.xcassets in Resources */,
 				2459ABFD2639BDC6009E3A82 /* HomeCollectionViewCell.xib in Resources */,
+				2449DEEA263D468D004CC0C4 /* Start.storyboard in Resources */,
 				24B3E801263ACA09001AF867 /* ItemDetail.storyboard in Resources */,
 				2459ABF22639B810009E3A82 /* Home.storyboard in Resources */,
 				242A31362639482A00BCC87C /* LaunchScreen.storyboard in Resources */,
@@ -419,6 +434,7 @@
 				24F25747263D099E00384542 /* ReserveDetailViewController.swift in Sources */,
 				24276F5A263D3DA5002B4AB9 /* ReceivedViewController.swift in Sources */,
 				242A312A2639482900BCC87C /* AppDelegate.swift in Sources */,
+				2449DEEE263D46D4004CC0C4 /* StartTabBarController.swift in Sources */,
 				24B3E7F3263AAE8F001AF867 /* UIImageView+Extension.swift in Sources */,
 				242A312C2639482900BCC87C /* SceneDelegate.swift in Sources */,
 				2449DEE7263D4591004CC0C4 /* MyPageViewController.swift in Sources */,
