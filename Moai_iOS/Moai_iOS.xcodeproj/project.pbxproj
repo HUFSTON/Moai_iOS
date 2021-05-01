@@ -18,6 +18,10 @@
 		242A314926394BB100BCC87C /* view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A314826394BB100BCC87C /* view.swift */; };
 		242A315326394BCB00BCC87C /* apiservices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A315226394BCB00BCC87C /* apiservices.swift */; };
 		242A315626394BD400BCC87C /* apimodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A315526394BD400BCC87C /* apimodel.swift */; };
+		2449DEDE263D454C004CC0C4 /* MyTown.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2449DEDD263D454C004CC0C4 /* MyTown.storyboard */; };
+		2449DEE1263D4556004CC0C4 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2449DEE0263D4556004CC0C4 /* MyPage.storyboard */; };
+		2449DEE4263D4585004CC0C4 /* MyTownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2449DEE3263D4585004CC0C4 /* MyTownViewController.swift */; };
+		2449DEE7263D4591004CC0C4 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2449DEE6263D4591004CC0C4 /* MyPageViewController.swift */; };
 		2459ABEC2639B440009E3A82 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2459ABEB2639B440009E3A82 /* Colors.xcassets */; };
 		2459ABF22639B810009E3A82 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2459ABF12639B810009E3A82 /* Home.storyboard */; };
 		2459ABF52639B81B009E3A82 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459ABF42639B81B009E3A82 /* HomeViewController.swift */; };
@@ -55,6 +59,10 @@
 		242A314826394BB100BCC87C /* view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view.swift; sourceTree = "<group>"; };
 		242A315226394BCB00BCC87C /* apiservices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiservices.swift; sourceTree = "<group>"; };
 		242A315526394BD400BCC87C /* apimodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apimodel.swift; sourceTree = "<group>"; };
+		2449DEDD263D454C004CC0C4 /* MyTown.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyTown.storyboard; sourceTree = "<group>"; };
+		2449DEE0263D4556004CC0C4 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
+		2449DEE3263D4585004CC0C4 /* MyTownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownViewController.swift; sourceTree = "<group>"; };
+		2449DEE6263D4591004CC0C4 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		2459ABEB2639B440009E3A82 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2459ABF12639B810009E3A82 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		2459ABF42639B81B009E3A82 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +178,8 @@
 				2459ABF12639B810009E3A82 /* Home.storyboard */,
 				24B3E800263ACA09001AF867 /* ItemDetail.storyboard */,
 				24F25743263D098000384542 /* ReserveDetail.storyboard */,
+				2449DEDD263D454C004CC0C4 /* MyTown.storyboard */,
+				2449DEE0263D4556004CC0C4 /* MyPage.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -231,6 +241,8 @@
 				24F25746263D099E00384542 /* ReserveDetailViewController.swift */,
 				24276F56263D3D9B002B4AB9 /* ReserveProceedingViewController.swift */,
 				24276F59263D3DA5002B4AB9 /* ReceivedViewController.swift */,
+				2449DEE3263D4585004CC0C4 /* MyTownViewController.swift */,
+				2449DEE6263D4591004CC0C4 /* MyPageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -335,8 +347,10 @@
 				242A31332639482A00BCC87C /* Assets.xcassets in Resources */,
 				24F2574C263D0C4A00384542 /* CategoryCollectionViewCell.xib in Resources */,
 				24F25757263D218900384542 /* ReserveHeaderCollectionReusableView.xib in Resources */,
+				2449DEDE263D454C004CC0C4 /* MyTown.storyboard in Resources */,
 				24B3E81F263AF3C6001AF867 /* ImageCollectionViewCell.xib in Resources */,
 				24F25744263D098000384542 /* ReserveDetail.storyboard in Resources */,
+				2449DEE1263D4556004CC0C4 /* MyPage.storyboard in Resources */,
 				242A31312639482900BCC87C /* Main.storyboard in Resources */,
 				24F25751263D141E00384542 /* ReservedCollectionViewCell.xib in Resources */,
 			);
@@ -407,8 +421,10 @@
 				242A312A2639482900BCC87C /* AppDelegate.swift in Sources */,
 				24B3E7F3263AAE8F001AF867 /* UIImageView+Extension.swift in Sources */,
 				242A312C2639482900BCC87C /* SceneDelegate.swift in Sources */,
+				2449DEE7263D4591004CC0C4 /* MyPageViewController.swift in Sources */,
 				2459AC012639C4DC009E3A82 /* UIColor+Extension.swift in Sources */,
 				2459AC042639C90F009E3A82 /* APPConstants.swift in Sources */,
+				2449DEE4263D4585004CC0C4 /* MyTownViewController.swift in Sources */,
 				24276F57263D3D9B002B4AB9 /* ReserveProceedingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
