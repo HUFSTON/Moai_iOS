@@ -24,6 +24,10 @@
 		2459AC012639C4DC009E3A82 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459AC002639C4DC009E3A82 /* UIColor+Extension.swift */; };
 		2459AC042639C90F009E3A82 /* APPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459AC032639C90F009E3A82 /* APPConstants.swift */; };
 		24B3E7F3263AAE8F001AF867 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3E7F2263AAE8F001AF867 /* UIImageView+Extension.swift */; };
+		24B3E801263ACA09001AF867 /* ItemDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B3E800263ACA09001AF867 /* ItemDetail.storyboard */; };
+		24B3E804263ACA13001AF867 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3E803263ACA13001AF867 /* ItemDetailViewController.swift */; };
+		24B3E81E263AF3C6001AF867 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3E81C263AF3C6001AF867 /* ImageCollectionViewCell.swift */; };
+		24B3E81F263AF3C6001AF867 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B3E81D263AF3C6001AF867 /* ImageCollectionViewCell.xib */; };
 		8B56229E3B65F1E7002C6057 /* Pods_Moai_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0F0D8E38431363094CB1BA /* Pods_Moai_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +51,17 @@
 		2459AC002639C4DC009E3A82 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		2459AC032639C90F009E3A82 /* APPConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPConstants.swift; sourceTree = "<group>"; };
 		24B3E7F2263AAE8F001AF867 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		24B3E800263ACA09001AF867 /* ItemDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemDetail.storyboard; sourceTree = "<group>"; };
+		24B3E803263ACA13001AF867 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		24B3E80A263AE977001AF867 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		24B3E80C263AE983001AF867 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		24B3E80E263AE98D001AF867 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		24B3E810263AE996001AF867 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		24B3E812263AE9A9001AF867 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		24B3E813263AE9B5001AF867 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		24B3E814263AE9C0001AF867 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		24B3E81C263AF3C6001AF867 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		24B3E81D263AF3C6001AF867 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		5B0F0D8E38431363094CB1BA /* Pods_Moai_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moai_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F6CF31E25082E4447645BE /* Pods-Moai_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moai_iOS.release.xcconfig"; path = "Target Support Files/Pods-Moai_iOS/Pods-Moai_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		C500E7C89DAA198CAEA182CC /* Pods-Moai_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moai_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Moai_iOS/Pods-Moai_iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +147,7 @@
 				242A312F2639482900BCC87C /* Main.storyboard */,
 				242A31342639482A00BCC87C /* LaunchScreen.storyboard */,
 				2459ABF12639B810009E3A82 /* Home.storyboard */,
+				24B3E800263ACA09001AF867 /* ItemDetail.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -157,6 +173,8 @@
 			children = (
 				2459ABFA2639BDC6009E3A82 /* HomeCollectionViewCell.swift */,
 				2459ABFB2639BDC6009E3A82 /* HomeCollectionViewCell.xib */,
+				24B3E81C263AF3C6001AF867 /* ImageCollectionViewCell.swift */,
+				24B3E81D263AF3C6001AF867 /* ImageCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -183,6 +201,7 @@
 			children = (
 				242A312D2639482900BCC87C /* ViewController.swift */,
 				2459ABF42639B81B009E3A82 /* HomeViewController.swift */,
+				24B3E803263ACA13001AF867 /* ItemDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -199,6 +218,13 @@
 		EC7315F07948F54BF63737A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24B3E814263AE9C0001AF867 /* libsqlite3.tbd */,
+				24B3E813263AE9B5001AF867 /* libxml2.tbd */,
+				24B3E812263AE9A9001AF867 /* libc++.tbd */,
+				24B3E810263AE996001AF867 /* QuartzCore.framework */,
+				24B3E80E263AE98D001AF867 /* CoreLocation.framework */,
+				24B3E80C263AE983001AF867 /* SystemConfiguration.framework */,
+				24B3E80A263AE977001AF867 /* OpenGLES.framework */,
 				5B0F0D8E38431363094CB1BA /* Pods_Moai_iOS.framework */,
 			);
 			name = Frameworks;
@@ -265,9 +291,11 @@
 			files = (
 				2459ABEC2639B440009E3A82 /* Colors.xcassets in Resources */,
 				2459ABFD2639BDC6009E3A82 /* HomeCollectionViewCell.xib in Resources */,
+				24B3E801263ACA09001AF867 /* ItemDetail.storyboard in Resources */,
 				2459ABF22639B810009E3A82 /* Home.storyboard in Resources */,
 				242A31362639482A00BCC87C /* LaunchScreen.storyboard in Resources */,
 				242A31332639482A00BCC87C /* Assets.xcassets in Resources */,
+				24B3E81F263AF3C6001AF867 /* ImageCollectionViewCell.xib in Resources */,
 				242A31312639482900BCC87C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +351,8 @@
 			files = (
 				242A314926394BB100BCC87C /* view.swift in Sources */,
 				242A312E2639482900BCC87C /* ViewController.swift in Sources */,
+				24B3E81E263AF3C6001AF867 /* ImageCollectionViewCell.swift in Sources */,
+				24B3E804263ACA13001AF867 /* ItemDetailViewController.swift in Sources */,
 				242A315326394BCB00BCC87C /* apiservices.swift in Sources */,
 				242A315626394BD400BCC87C /* apimodel.swift in Sources */,
 				2459ABFC2639BDC6009E3A82 /* HomeCollectionViewCell.swift in Sources */,

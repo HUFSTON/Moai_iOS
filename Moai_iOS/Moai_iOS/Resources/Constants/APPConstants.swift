@@ -7,20 +7,24 @@
 
 import Foundation
 
+// 오타를 줄이기 위해 사용
 struct Constants {
     
     struct Cells {
-        static let HomeCollectionViewCell: String = "HomeCollectionViewCell"
+        static let homeCollectionViewCell: String = "HomeCollectionViewCell"
+        static let imageCollectionViewCell: String = "ImageCollectionViewCell"
         
     }
     
     struct Storyboards {
-        static let Home: String = "Home"
+        static let home: String = "Home"
+        static let itemDetail: String = "ItemDetail"
         
     }
     
     struct ViewControllers {
-        static let HomeViewController : String = "HomeViewController"
+        static let homeViewController: String = "HomeViewController"
+        static let itemDetailViewController: String = "ItemDetailViewController"
         
     }
 }
