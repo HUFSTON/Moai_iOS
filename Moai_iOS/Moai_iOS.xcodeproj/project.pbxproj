@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		242164C32641006C00858529 /* ReserveStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242164C22641006C00858529 /* ReserveStatus.storyboard */; };
+		242164C62641008400858529 /* ReserveStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242164C52641008400858529 /* ReserveStatusViewController.swift */; };
 		24276F57263D3D9B002B4AB9 /* ReserveProceedingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24276F56263D3D9B002B4AB9 /* ReserveProceedingViewController.swift */; };
 		24276F5A263D3DA5002B4AB9 /* ReceivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24276F59263D3DA5002B4AB9 /* ReceivedViewController.swift */; };
 		242A312A2639482900BCC87C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A31292639482900BCC87C /* AppDelegate.swift */; };
@@ -48,6 +50,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		242164C22641006C00858529 /* ReserveStatus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReserveStatus.storyboard; sourceTree = "<group>"; };
+		242164C52641008400858529 /* ReserveStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveStatusViewController.swift; sourceTree = "<group>"; };
 		24276F56263D3D9B002B4AB9 /* ReserveProceedingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveProceedingViewController.swift; sourceTree = "<group>"; };
 		24276F59263D3DA5002B4AB9 /* ReceivedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedViewController.swift; sourceTree = "<group>"; };
 		242A31262639482900BCC87C /* Moai_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moai_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +190,7 @@
 				2449DEDD263D454C004CC0C4 /* MyTown.storyboard */,
 				2449DEE0263D4556004CC0C4 /* MyPage.storyboard */,
 				2449DEE9263D468D004CC0C4 /* Start.storyboard */,
+				242164C22641006C00858529 /* ReserveStatus.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 				24276F59263D3DA5002B4AB9 /* ReceivedViewController.swift */,
 				2449DEE3263D4585004CC0C4 /* MyTownViewController.swift */,
 				2449DEE6263D4591004CC0C4 /* MyPageViewController.swift */,
+				242164C52641008400858529 /* ReserveStatusViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -368,6 +374,7 @@
 				2449DEE1263D4556004CC0C4 /* MyPage.storyboard in Resources */,
 				242A31312639482900BCC87C /* Main.storyboard in Resources */,
 				24F25751263D141E00384542 /* ReservedCollectionViewCell.xib in Resources */,
+				242164C32641006C00858529 /* ReserveStatus.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +434,7 @@
 				24B3E81E263AF3C6001AF867 /* ImageCollectionViewCell.swift in Sources */,
 				24F25750263D141E00384542 /* ReservedCollectionViewCell.swift in Sources */,
 				24B3E804263ACA13001AF867 /* ItemDetailViewController.swift in Sources */,
+				242164C62641008400858529 /* ReserveStatusViewController.swift in Sources */,
 				242A315326394BCB00BCC87C /* apiservices.swift in Sources */,
 				242A315626394BD400BCC87C /* apimodel.swift in Sources */,
 				2459ABFC2639BDC6009E3A82 /* HomeCollectionViewCell.swift in Sources */,
