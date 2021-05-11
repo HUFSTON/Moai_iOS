@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ItemDetailViewController: UIViewController {
+class ItemDetailViewController: UIViewController, MTMapViewDelegate {
 
     // MARK: - IBOutlets
     @IBOutlet weak var imageCollectionView: UICollectionView!
@@ -33,10 +33,11 @@ class ItemDetailViewController: UIViewController {
     @IBOutlet weak var returnDetailLabel: UILabel!
     @IBOutlet weak var returnWarningLabel: UILabel!
     
-    
+    var mapView: MTMapView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initializeMTMap()
         self.initializeStyle()
         self.registerCell()
         self.registerDelegateDatasource()
@@ -48,6 +49,19 @@ class ItemDetailViewController: UIViewController {
     }
     
     // MARK: - Private Function
+    
+    private func initializeMTMap() {
+        mapView = MTMapView(frame: self.mapBackgroundView.bounds)
+        guard let map = mapView else {
+            return
+        }
+        
+        map.delegate = self
+        map.baseMapType = .standard
+        let mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.596966, longitude:  127.058972))
+        map.setMapCenter(mapPoint, zoomLevel: 1, animated: true)
+        self.mapBackgroundView.addSubview(map)
+    }
     
     // collectionView에 셀 등록
     private func registerCell() {
