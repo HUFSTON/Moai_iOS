@@ -59,7 +59,15 @@ class ItemDetailViewController: UIViewController, MTMapViewDelegate {
         map.delegate = self
         map.baseMapType = .standard
         let mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.596966, longitude:  127.058972))
-        map.setMapCenter(mapPoint, zoomLevel: 1, animated: true)
+        let marker = MTMapPOIItem()
+        marker.markerType = .customImage
+        marker.customImage = UIImage(systemName: "pencil")
+        marker.mapPoint = mapPoint
+        marker.markerSelectedType = .customImage
+        marker.customSelectedImage = UIImage(systemName: "scribble")
+        marker.customImageAnchorPointOffset = MTMapImageOffset(offsetX: 0, offsetY: 60)
+        map.addPOIItems([marker])
+        map.fitAreaToShowAllPOIItems()
         self.mapBackgroundView.addSubview(map)
     }
     
