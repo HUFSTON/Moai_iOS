@@ -86,4 +86,13 @@ extension ReserveProceedingViewController: UICollectionViewDelegateFlowLayout {
         }
         cell.itemImageView.kf.cancelDownloadTask()
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: Constants.Storyboards.reserveStatus, bundle: nil)
+        guard let vc = storyboard.instantiateViewController(identifier: Constants.ViewControllers.reserveStatusViewController) as? ReserveStatusViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
 }

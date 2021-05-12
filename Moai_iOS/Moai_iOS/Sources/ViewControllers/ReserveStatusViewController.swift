@@ -14,7 +14,7 @@ enum Status: Int {
     case Received = 3
 }
 
-class ReserveStatusViewController: UIViewController {
+class ReserveStatusViewController: UIViewController, MTMapViewDelegate {
     
     @IBOutlet var greenDots: [UIView]?
     @IBOutlet var statusImage: [UIImageView]?
@@ -28,14 +28,26 @@ class ReserveStatusViewController: UIViewController {
     @IBOutlet weak var totalPriceLabel: UILabel!
     @IBOutlet weak var receiveTimeLabel: UILabel!
     @IBOutlet weak var receivePlaceLabel: UILabel!
+    @IBOutlet var mapBackgroundView: UIView!
     
     var currentStatus: Status = .Reserved
+    var mapView: MTMapView?
+    
+    
     
     
     override func viewDidLoad() {
         roundGreenDotCorner()
         initializeViews()
         super.viewDidLoad()
+    }
+    
+    private func initializeMap() {
+        mapView = MTMapView(frame: self.mapBackgroundView.bounds)
+        guard let map = mapView else {
+            return
+        }
+        mapBackgroundView.addSubview(map)
     }
     
     private func roundGreenDotCorner() {

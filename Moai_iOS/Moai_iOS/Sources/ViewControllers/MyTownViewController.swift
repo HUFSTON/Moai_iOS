@@ -7,12 +7,15 @@
 
 import UIKit
 
-class MyTownViewController: UIViewController {
+class MyTownViewController: UIViewController, MTMapViewDelegate {
 
+    @IBOutlet var mapBackgroundView: UIView!
+    
+    var mapView: MTMapView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        initiailizeMap()
         // Do any additional setup after loading the view.
     }
     
@@ -20,15 +23,16 @@ class MyTownViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    private func initiailizeMap(){
+        mapView = MTMapView(frame: self.mapBackgroundView.bounds)
+        guard let map = mapView else {
+            return
+        }
+        map.delegate = self
+        map.baseMapType = .standard
+        map.fitAreaToShowAllPOIItems()
+        mapBackgroundView.addSubview(map)
     }
-    */
 
 }

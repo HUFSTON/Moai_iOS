@@ -329,6 +329,7 @@
                         <outlet property="itemImage" destination="aHN-ou-jcn" id="bja-Nk-DP9"/>
                         <outlet property="itemNameLabel" destination="UR8-uB-wTu" id="nGE-x3-naO"/>
                         <outlet property="itemPriceLabel" destination="cmR-KF-a4Q" id="JVB-ft-7db"/>
+                        <outlet property="mapBackgroundView" destination="MSB-FI-GLX" id="7ni-r2-Xab"/>
                         <outlet property="priceLabel" destination="vNL-6Q-loX" id="1I9-MK-IS9"/>
                         <outlet property="receivePlaceLabel" destination="4yj-KO-Ysu" id="tZV-Pm-8By"/>
                         <outlet property="receiveTimeLabel" destination="X60-tE-59i" id="kI9-w3-wBZ"/>
