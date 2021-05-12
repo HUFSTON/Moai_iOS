@@ -30,7 +30,7 @@ class ReserveStatusViewController: UIViewController, MTMapViewDelegate {
     @IBOutlet weak var receivePlaceLabel: UILabel!
     @IBOutlet var mapBackgroundView: UIView!
     
-    var currentStatus: Status = .Reserved
+    var currentStatus: Status = .Waiting
     var mapView: MTMapView?
     
 
@@ -41,6 +41,7 @@ class ReserveStatusViewController: UIViewController, MTMapViewDelegate {
         initializeViews()
         super.viewDidLoad()
         initializeNavigationController()
+        initializeMap()
     }
     
     // MARK: - private funcs
@@ -78,12 +79,12 @@ class ReserveStatusViewController: UIViewController, MTMapViewDelegate {
         }
         for idx in 0..<currentStatus.rawValue {
             dots[idx].isHidden = true
-            image[idx].image = UIImage()
+            image[idx].image = UIImage(named: "ProgressCheck-Fin")
             label[idx].attributedText = NSMutableAttributedString(string: "dsd", attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray,
                 NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12, weight: .regular)])
         }
         dots[currentStatus.rawValue].isHidden = true
-        image[currentStatus.rawValue].image = UIImage()
+        image[currentStatus.rawValue].image = UIImage(named: "ProgressCheck")
         label[currentStatus.rawValue].attributedText =
             NSMutableAttributedString(string: "dzdzzz", attributes: [NSAttributedString.Key.foregroundColor: UIColor.DarkGreen,
                 NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14, weight: .medium)])
