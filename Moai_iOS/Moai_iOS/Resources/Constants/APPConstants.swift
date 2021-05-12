@@ -15,6 +15,7 @@ struct Constants {
         static let imageCollectionViewCell: String = "ImageCollectionViewCell"
         static let categoryCollectionViewCell: String = "CategoryCollectionViewCell"
         static let reservedCollectionViewCell: String = "ReservedCollectionViewCell"
+        static let searchTableViewCell: String = "SearchTableViewCell"
         
     }
     

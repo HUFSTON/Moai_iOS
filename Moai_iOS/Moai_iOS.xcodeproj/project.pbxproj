@@ -33,6 +33,8 @@
 		2459ABFD2639BDC6009E3A82 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2459ABFB2639BDC6009E3A82 /* HomeCollectionViewCell.xib */; };
 		2459AC012639C4DC009E3A82 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459AC002639C4DC009E3A82 /* UIColor+Extension.swift */; };
 		2459AC042639C90F009E3A82 /* APPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459AC032639C90F009E3A82 /* APPConstants.swift */; };
+		2481BA61264BD8A300C04DA5 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481BA5F264BD8A300C04DA5 /* SearchTableViewCell.swift */; };
+		2481BA62264BD8A300C04DA5 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2481BA60264BD8A300C04DA5 /* SearchTableViewCell.xib */; };
 		24B3E7F3263AAE8F001AF867 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3E7F2263AAE8F001AF867 /* UIImageView+Extension.swift */; };
 		24B3E801263ACA09001AF867 /* ItemDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B3E800263ACA09001AF867 /* ItemDetail.storyboard */; };
 		24B3E804263ACA13001AF867 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3E803263ACA13001AF867 /* ItemDetailViewController.swift */; };
@@ -359,6 +361,8 @@
 		2459ABFB2639BDC6009E3A82 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		2459AC002639C4DC009E3A82 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		2459AC032639C90F009E3A82 /* APPConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPConstants.swift; sourceTree = "<group>"; };
+		2481BA5F264BD8A300C04DA5 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		2481BA60264BD8A300C04DA5 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		24B3E7F2263AAE8F001AF867 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		24B3E800263ACA09001AF867 /* ItemDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemDetail.storyboard; sourceTree = "<group>"; };
 		24B3E803263ACA13001AF867 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
@@ -796,6 +800,8 @@
 				24F2574A263D0C4A00384542 /* CategoryCollectionViewCell.xib */,
 				24F2574E263D141E00384542 /* ReservedCollectionViewCell.swift */,
 				24F2574F263D141E00384542 /* ReservedCollectionViewCell.xib */,
+				2481BA5F264BD8A300C04DA5 /* SearchTableViewCell.swift */,
+				2481BA60264BD8A300C04DA5 /* SearchTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1286,6 +1292,7 @@
 				24E4A3FD264A31FB00AF13CA /* properties_7.html in Resources */,
 				24E4A36F264A31FB00AF13CA /* info_box_tail.png in Resources */,
 				24E4A466264A31FB00AF13CA /* _m_t_map_polyline_8h.html in Resources */,
+				2481BA62264BD8A300C04DA5 /* SearchTableViewCell.xib in Resources */,
 				24E4A3B3264A31FB00AF13CA /* struct_m_t_map_image_offset.js in Resources */,
 				2459ABEC2639B440009E3A82 /* Colors.xcassets in Resources */,
 				24E4A434264A31FB00AF13CA /* close.png in Resources */,
@@ -1640,6 +1647,7 @@
 				2449DEE7263D4591004CC0C4 /* MyPageViewController.swift in Sources */,
 				2459AC012639C4DC009E3A82 /* UIColor+Extension.swift in Sources */,
 				2459AC042639C90F009E3A82 /* APPConstants.swift in Sources */,
+				2481BA61264BD8A300C04DA5 /* SearchTableViewCell.swift in Sources */,
 				2449DEE4263D4585004CC0C4 /* MyTownViewController.swift in Sources */,
 				24276F57263D3D9B002B4AB9 /* ReserveProceedingViewController.swift in Sources */,
 			);

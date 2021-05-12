@@ -6,6 +6,7 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -95,6 +96,10 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="12" scale="default"/>
                                 </state>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rx8-Uh-Ch5">
+                                <rect key="frame" x="0.0" y="79" width="414" height="783"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mWY-gF-7WR"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -106,7 +111,11 @@
                             <constraint firstItem="Sdx-W3-5Ic" firstAttribute="top" secondItem="mWY-gF-7WR" secondAttribute="top" constant="5" id="WJn-wl-KKb"/>
                             <constraint firstItem="mWY-gF-7WR" firstAttribute="trailing" secondItem="Z19-70-IQh" secondAttribute="trailing" constant="20" id="YHG-RL-P8Q"/>
                             <constraint firstItem="Sdx-W3-5Ic" firstAttribute="leading" secondItem="mWY-gF-7WR" secondAttribute="leading" constant="20" id="Z1Q-KR-zHU"/>
+                            <constraint firstItem="Rx8-Uh-Ch5" firstAttribute="top" secondItem="Sdx-W3-5Ic" secondAttribute="bottom" id="alq-Sf-KGJ"/>
                             <constraint firstItem="Z19-70-IQh" firstAttribute="top" secondItem="Sdx-W3-5Ic" secondAttribute="top" id="c2j-zU-kbS"/>
+                            <constraint firstAttribute="trailing" secondItem="Rx8-Uh-Ch5" secondAttribute="trailing" id="eHD-1t-LK1"/>
+                            <constraint firstItem="mWY-gF-7WR" firstAttribute="bottom" secondItem="Rx8-Uh-Ch5" secondAttribute="bottom" id="ebF-o7-vxP"/>
+                            <constraint firstItem="Rx8-Uh-Ch5" firstAttribute="leading" secondItem="mWY-gF-7WR" secondAttribute="leading" id="gck-qG-5Kk"/>
                             <constraint firstItem="mWY-gF-7WR" firstAttribute="bottom" secondItem="Zhw-qV-Vc7" secondAttribute="bottom" id="gor-Vw-Lxf"/>
                             <constraint firstItem="aHy-sb-Ueb" firstAttribute="leading" secondItem="mWY-gF-7WR" secondAttribute="leading" constant="20" id="hef-m8-D6Z"/>
                             <constraint firstItem="aHy-sb-Ueb" firstAttribute="top" secondItem="Sdx-W3-5Ic" secondAttribute="bottom" constant="25" id="oX0-bb-CrZ"/>
@@ -120,6 +129,7 @@
                         <outlet property="filterButton" destination="2Zg-fl-Skm" id="lUU-dg-LxW"/>
                         <outlet property="notificationButton" destination="Z19-70-IQh" id="pwc-hm-8Gq"/>
                         <outlet property="searchBackgroundView" destination="Sdx-W3-5Ic" id="4xJ-Cz-UAa"/>
+                        <outlet property="searchTableView" destination="Rx8-Uh-Ch5" id="0Tu-rv-RxT"/>
                         <outlet property="searchTextField" destination="pTX-Fo-TLZ" id="Nb4-5B-hdn"/>
                         <outlet property="totalLabel" destination="aHy-sb-Ueb" id="KAH-zn-R0L"/>
                     </connections>
@@ -142,5 +152,8 @@
         <namedColor name="LightGray3">
             <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
