@@ -35,6 +35,8 @@
 		2459AC042639C90F009E3A82 /* APPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459AC032639C90F009E3A82 /* APPConstants.swift */; };
 		2481BA61264BD8A300C04DA5 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481BA5F264BD8A300C04DA5 /* SearchTableViewCell.swift */; };
 		2481BA62264BD8A300C04DA5 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2481BA60264BD8A300C04DA5 /* SearchTableViewCell.xib */; };
+		2481BA68264BF7B400C04DA5 /* MyPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481BA66264BF7B400C04DA5 /* MyPageTableViewCell.swift */; };
+		2481BA69264BF7B400C04DA5 /* MyPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2481BA67264BF7B400C04DA5 /* MyPageTableViewCell.xib */; };
 		24B3E7F3263AAE8F001AF867 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3E7F2263AAE8F001AF867 /* UIImageView+Extension.swift */; };
 		24B3E801263ACA09001AF867 /* ItemDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B3E800263ACA09001AF867 /* ItemDetail.storyboard */; };
 		24B3E804263ACA13001AF867 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3E803263ACA13001AF867 /* ItemDetailViewController.swift */; };
@@ -363,6 +365,8 @@
 		2459AC032639C90F009E3A82 /* APPConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPConstants.swift; sourceTree = "<group>"; };
 		2481BA5F264BD8A300C04DA5 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		2481BA60264BD8A300C04DA5 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		2481BA66264BF7B400C04DA5 /* MyPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell.swift; sourceTree = "<group>"; };
+		2481BA67264BF7B400C04DA5 /* MyPageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageTableViewCell.xib; sourceTree = "<group>"; };
 		24B3E7F2263AAE8F001AF867 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		24B3E800263ACA09001AF867 /* ItemDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemDetail.storyboard; sourceTree = "<group>"; };
 		24B3E803263ACA13001AF867 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
@@ -802,6 +806,8 @@
 				24F2574F263D141E00384542 /* ReservedCollectionViewCell.xib */,
 				2481BA5F264BD8A300C04DA5 /* SearchTableViewCell.swift */,
 				2481BA60264BD8A300C04DA5 /* SearchTableViewCell.xib */,
+				2481BA66264BF7B400C04DA5 /* MyPageTableViewCell.swift */,
+				2481BA67264BF7B400C04DA5 /* MyPageTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1421,6 +1427,7 @@
 				24E4A439264A31FB00AF13CA /* interface_m_t_map_reverse_geo_coder.js in Resources */,
 				24E4A35D264A31FB00AF13CA /* map_pinup_custom@3x.png in Resources */,
 				24E4A448264A31FB00AF13CA /* classes.html in Resources */,
+				2481BA69264BF7B400C04DA5 /* MyPageTableViewCell.xib in Resources */,
 				24E4A36B264A31FB00AF13CA /* map_pin_red.png in Resources */,
 				24E4A367264A31FB00AF13CA /* map_pin_red@3x.png in Resources */,
 				24E4A36C264A31FB00AF13CA /* info_box.png in Resources */,
@@ -1647,6 +1654,7 @@
 				2449DEE7263D4591004CC0C4 /* MyPageViewController.swift in Sources */,
 				2459AC012639C4DC009E3A82 /* UIColor+Extension.swift in Sources */,
 				2459AC042639C90F009E3A82 /* APPConstants.swift in Sources */,
+				2481BA68264BF7B400C04DA5 /* MyPageTableViewCell.swift in Sources */,
 				2481BA61264BD8A300C04DA5 /* SearchTableViewCell.swift in Sources */,
 				2449DEE4263D4585004CC0C4 /* MyTownViewController.swift in Sources */,
 				24276F57263D3D9B002B4AB9 /* ReserveProceedingViewController.swift in Sources */,
