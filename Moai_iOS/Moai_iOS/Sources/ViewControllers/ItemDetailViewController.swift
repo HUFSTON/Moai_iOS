@@ -38,7 +38,7 @@ class ItemDetailViewController: UIViewController, MTMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializeMTMap()
+        self.initiailizeMap()
         self.initializeStyle()
         self.registerCell()
         self.registerDelegateDatasource()
@@ -61,26 +61,27 @@ class ItemDetailViewController: UIViewController, MTMapViewDelegate {
     }
     
     
-    
-    private func initializeMTMap() {
+    private func initiailizeMap(){
         mapView = MTMapView(frame: self.mapBackgroundView.bounds)
         guard let map = mapView else {
             return
         }
-        
         map.delegate = self
         map.baseMapType = .standard
-        let mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.596966, longitude:  127.058972))
-        let marker = MTMapPOIItem()
-        marker.markerType = .customImage
-        marker.customImage = UIImage(systemName: "pencil")
-        marker.mapPoint = mapPoint
-        marker.markerSelectedType = .customImage
-        marker.customSelectedImage = UIImage(systemName: "scribble")
-        marker.customImageAnchorPointOffset = MTMapImageOffset(offsetX: 0, offsetY: 60)
-        map.addPOIItems([marker])
+        map.addPOIItems(initializeMapMarker())
         map.fitAreaToShowAllPOIItems()
-        self.mapBackgroundView.addSubview(map)
+        map.setZoomLevel(MTMapZoomLevel(-2), animated: true)
+        mapBackgroundView.addSubview(map)
+    }
+    private func initializeMapMarker() -> [MTMapPOIItem] {
+        let marker : MTMapPOIItem = MTMapPOIItem()
+        marker.markerType = .customImage
+        marker.customImage = UIImage(named: "Location")
+        marker.mapPoint = MTMapPoint(geoCoord:MTMapPointGeo(latitude: 37.596966, longitude:  127.058972))
+        marker.markerSelectedType = .customImage
+        marker.customSelectedImage = UIImage(named: "Location")
+        
+        return [marker]
     }
     
     // collectionView에 셀 등록
