@@ -22,6 +22,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.itemImageView.layer.cornerRadius = 15;
         // Initialization code
     }
     

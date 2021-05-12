@@ -7,7 +7,13 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+enum SearchStatus: Int {
+    case Scroll = 0
+    case Appear = 1
+    case Disappear = 2
+}
+
+class HomeViewController: UIViewController{
     
     // MARK: - IBOutlets
     
@@ -17,6 +23,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var HomeCollectionView: UICollectionView!
     @IBOutlet weak var notificationButton: UIButton!
     @IBOutlet weak var filterButton: UIButton!
+    @IBOutlet var searchTableView: UITableView!
+    
+    var search: SearchStatus = .Appear
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +33,25 @@ class HomeViewController: UIViewController {
         initializeMenu()
         registerCollectionViewCell()
         registerCollectionView()
+        self.searchTableView.isHidden = true
+        registerTextField()
+        registerTableView()
+        registerTableViewCell()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if search == .Appear {
+            self.view.endEditing(true)
+        } else if search == .Scroll {
+            self.searchTableView.isHidden = true
+            search = .Appear
+        }
+        
     }
     // MARK: - Customize View
     private func initializeViewStyle() {
@@ -56,6 +79,19 @@ class HomeViewController: UIViewController {
     
     private func registerCollectionViewCell() {
         self.HomeCollectionView.register(UINib(nibName: Constants.Cells.homeCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.Cells.homeCollectionViewCell)
+    }
+    
+    private func registerTableView() {
+        self.searchTableView.delegate = self
+        self.searchTableView.dataSource = self
+    }
+    
+    private func registerTableViewCell() {
+        self.searchTableView.register((UINib(nibName: Constants.Cells.searchTableViewCell, bundle: nil)), forCellReuseIdentifier: Constants.Cells.searchTableViewCell)
+    }
+    
+    private func registerTextField() {
+        self.searchTextField.delegate = self
     }
     
     // MARK: - IBActions
@@ -116,4 +152,63 @@ extension HomeViewController: UICollectionViewDataSource {
         }
         self.navigationController?.pushViewController(vc, animated: true)
     }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        self.search = .Scroll
+        self.searchTextField.resignFirstResponder()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        searchTextField.text = "asdf"
+        if search == .Appear {
+            self.view.endEditing(true)
+        } else if search == .Scroll {
+            self.searchTableView.isHidden = true
+            search = .Appear
+        }
+    }
+}
+
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cells.searchTableViewCell) as? SearchTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.initializeCell("asdf")
+        return cell
+    }
+    
+
+    
+}
+
+extension HomeViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        if search == .Appear {
+            self.searchTableView.isHidden = true
+        }
+        search = .Disappear
+    
+    }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.searchTableView.isHidden = false
+        search = .Appear
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.searchTableView.isHidden = true
+        self.view.endEditing(true)
+        return true
+    }
+
 }
