@@ -33,13 +33,25 @@ class ReserveStatusViewController: UIViewController, MTMapViewDelegate {
     var currentStatus: Status = .Reserved
     var mapView: MTMapView?
     
-    
+
     
     
     override func viewDidLoad() {
         roundGreenDotCorner()
         initializeViews()
         super.viewDidLoad()
+        initializeNavigationController()
+    }
+    
+    // MARK: - private funcs
+    
+    private func initializeNavigationController() {
+        self.navigationController?.isNavigationBarHidden = false
+        let leftButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(popToHomeViewController))
+        leftButton.tintColor = UIColor.Black1
+        self.navigationItem.leftBarButtonItem = leftButton
+        self.navigationItem.title = "예약번호 000317"
+        
     }
     
     private func initializeMap() {
@@ -83,4 +95,10 @@ class ReserveStatusViewController: UIViewController, MTMapViewDelegate {
                 NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12, weight: .regular)])
         }
     }
+    
+    // MARK: - OBJC Func
+    @objc private func popToHomeViewController() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }

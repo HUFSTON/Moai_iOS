@@ -35,6 +35,7 @@ class ItemDetailViewController: UIViewController, MTMapViewDelegate {
     
     var mapView: MTMapView?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeMTMap()
@@ -45,10 +46,21 @@ class ItemDetailViewController: UIViewController, MTMapViewDelegate {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = false
+        initializeNavigationController()
     }
     
+    
     // MARK: - Private Function
+    
+    private func initializeNavigationController() {
+        self.navigationController?.isNavigationBarHidden = false
+        let leftButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(popToHomeViewController))
+        leftButton.tintColor = UIColor.Black1
+        self.navigationItem.leftBarButtonItem = leftButton
+        
+    }
+    
+    
     
     private func initializeMTMap() {
         mapView = MTMapView(frame: self.mapBackgroundView.bounds)
@@ -115,6 +127,11 @@ class ItemDetailViewController: UIViewController, MTMapViewDelegate {
         self.plusButton.layer.cornerRadius = 10
         self.minusButton.layer.cornerRadius = 10
         self.minusButton.isEnabled = false
+    }
+    
+    // MARK: - OBJC Func
+    @objc private func popToHomeViewController() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: - @IBActions
