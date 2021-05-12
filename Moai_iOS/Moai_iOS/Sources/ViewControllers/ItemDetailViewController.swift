@@ -38,7 +38,7 @@ class ItemDetailViewController: UIViewController, MTMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.initiailizeMap()
+        self.initializeMap()
         self.initializeStyle()
         self.registerCell()
         self.registerDelegateDatasource()
@@ -61,7 +61,7 @@ class ItemDetailViewController: UIViewController, MTMapViewDelegate {
     }
     
     
-    private func initiailizeMap(){
+    private func initializeMap(){
         mapView = MTMapView(frame: self.mapBackgroundView.bounds)
         guard let map = mapView else {
             return

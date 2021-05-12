@@ -15,7 +15,7 @@ class MyTownViewController: UIViewController, MTMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initiailizeMap()
+        initializeMap()
         // Do any additional setup after loading the view.
     }
     
@@ -24,7 +24,7 @@ class MyTownViewController: UIViewController, MTMapViewDelegate {
         self.navigationController?.isNavigationBarHidden = true
     }
     
-    private func initiailizeMap(){
+    private func initializeMap(){
         mapView = MTMapView(frame: self.mapBackgroundView.bounds)
         guard let map = mapView else {
             return

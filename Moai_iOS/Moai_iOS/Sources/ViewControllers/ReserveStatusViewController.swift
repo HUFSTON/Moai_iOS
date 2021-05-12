@@ -55,12 +55,27 @@ class ReserveStatusViewController: UIViewController, MTMapViewDelegate {
         
     }
     
-    private func initializeMap() {
+    private func initializeMap(){
         mapView = MTMapView(frame: self.mapBackgroundView.bounds)
         guard let map = mapView else {
             return
         }
+        map.delegate = self
+        map.baseMapType = .standard
+        map.addPOIItems(initializeMapMarker())
+        map.fitAreaToShowAllPOIItems()
+        map.setZoomLevel(MTMapZoomLevel(-2), animated: true)
         mapBackgroundView.addSubview(map)
+    }
+    private func initializeMapMarker() -> [MTMapPOIItem] {
+        let marker : MTMapPOIItem = MTMapPOIItem()
+        marker.markerType = .customImage
+        marker.customImage = UIImage(named: "Location")
+        marker.mapPoint = MTMapPoint(geoCoord:MTMapPointGeo(latitude: 37.596966, longitude:  127.058972))
+        marker.markerSelectedType = .customImage
+        marker.customSelectedImage = UIImage(named: "Location")
+        
+        return [marker]
     }
     
     private func roundGreenDotCorner() {
