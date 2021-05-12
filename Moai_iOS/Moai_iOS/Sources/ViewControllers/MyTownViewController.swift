@@ -31,8 +31,24 @@ class MyTownViewController: UIViewController, MTMapViewDelegate {
         }
         map.delegate = self
         map.baseMapType = .standard
+        map.addPOIItems(initializeMapMarker())
         map.fitAreaToShowAllPOIItems()
+        map.setZoomLevel(MTMapZoomLevel(-2), animated: true)
         mapBackgroundView.addSubview(map)
+    }
+    private func initializeMapMarker() -> [MTMapPOIItem] {
+        let marker : MTMapPOIItem = MTMapPOIItem()
+        marker.markerType = .customImage
+        marker.customImage = UIImage(named: "Location")
+        marker.mapPoint = MTMapPoint(geoCoord:MTMapPointGeo(latitude: 37.596966, longitude:  127.058972))
+        marker.markerSelectedType = .customImage
+        marker.customSelectedImage = UIImage(named: "Location")
+        
+        return [marker]
+    }
+    
+    func mapView(_ mapView: MTMapView!, selectedPOIItem poiItem: MTMapPOIItem!) -> Bool {
+        return false
     }
 
 }
