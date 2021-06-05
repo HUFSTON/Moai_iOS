@@ -37,6 +37,7 @@
 		2481BA62264BD8A300C04DA5 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2481BA60264BD8A300C04DA5 /* SearchTableViewCell.xib */; };
 		2481BA68264BF7B400C04DA5 /* MyPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481BA66264BF7B400C04DA5 /* MyPageTableViewCell.swift */; };
 		2481BA69264BF7B400C04DA5 /* MyPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2481BA67264BF7B400C04DA5 /* MyPageTableViewCell.xib */; };
+		24AAD63B266B82D100F30D4A /* MyTownModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AAD63A266B82D100F30D4A /* MyTownModal.storyboard */; };
 		24B3E7F3263AAE8F001AF867 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3E7F2263AAE8F001AF867 /* UIImageView+Extension.swift */; };
 		24B3E801263ACA09001AF867 /* ItemDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B3E800263ACA09001AF867 /* ItemDetail.storyboard */; };
 		24B3E804263ACA13001AF867 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3E803263ACA13001AF867 /* ItemDetailViewController.swift */; };
@@ -46,6 +47,10 @@
 		24BC731F266B514900E038C6 /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BC731D266B514900E038C6 /* PaymentViewController.xib */; };
 		24BC7322266B554400E038C6 /* PaymentPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7321266B554400E038C6 /* PaymentPresentationController.swift */; };
 		24BC7324266B565500E038C6 /* UIVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7323266B565500E038C6 /* UIVIew+Extension.swift */; };
+		24BC7327266B654200E038C6 /* MyTownModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7325266B654200E038C6 /* MyTownModalViewController.swift */; };
+		24BC732B266B66AD00E038C6 /* MyTownModalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7329266B66AD00E038C6 /* MyTownModalCollectionViewCell.swift */; };
+		24BC732C266B66AD00E038C6 /* MyTownModalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BC732A266B66AD00E038C6 /* MyTownModalCollectionViewCell.xib */; };
+		24BC732E266B6ABD00E038C6 /* MyTownModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC732D266B6ABD00E038C6 /* MyTownModalPresentationController.swift */; };
 		24E4A237264A31A500AF13CA /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E4A236264A31A500AF13CA /* Metal.framework */; };
 		24E4A359264A31FB00AF13CA /* net.daum.MobileMap.docset in Resources */ = {isa = PBXBuildFile; fileRef = 24E4A23A264A31FA00AF13CA /* net.daum.MobileMap.docset */; };
 		24E4A35A264A31FB00AF13CA /* setupDocsetDocument.rb in Resources */ = {isa = PBXBuildFile; fileRef = 24E4A23B264A31FA00AF13CA /* setupDocsetDocument.rb */; };
@@ -371,6 +376,7 @@
 		2481BA60264BD8A300C04DA5 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		2481BA66264BF7B400C04DA5 /* MyPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell.swift; sourceTree = "<group>"; };
 		2481BA67264BF7B400C04DA5 /* MyPageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageTableViewCell.xib; sourceTree = "<group>"; };
+		24AAD63A266B82D100F30D4A /* MyTownModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyTownModal.storyboard; sourceTree = "<group>"; };
 		24B3E7F2263AAE8F001AF867 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		24B3E800263ACA09001AF867 /* ItemDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemDetail.storyboard; sourceTree = "<group>"; };
 		24B3E803263ACA13001AF867 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
@@ -387,6 +393,10 @@
 		24BC731D266B514900E038C6 /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
 		24BC7321266B554400E038C6 /* PaymentPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPresentationController.swift; sourceTree = "<group>"; };
 		24BC7323266B565500E038C6 /* UIVIew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Extension.swift"; sourceTree = "<group>"; };
+		24BC7325266B654200E038C6 /* MyTownModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownModalViewController.swift; sourceTree = "<group>"; };
+		24BC7329266B66AD00E038C6 /* MyTownModalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownModalCollectionViewCell.swift; sourceTree = "<group>"; };
+		24BC732A266B66AD00E038C6 /* MyTownModalCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTownModalCollectionViewCell.xib; sourceTree = "<group>"; };
+		24BC732D266B6ABD00E038C6 /* MyTownModalPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownModalPresentationController.swift; sourceTree = "<group>"; };
 		24E4A236264A31A500AF13CA /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		24E4A23A264A31FA00AF13CA /* net.daum.MobileMap.docset */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = net.daum.MobileMap.docset; sourceTree = "<group>"; };
 		24E4A23B264A31FA00AF13CA /* setupDocsetDocument.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = setupDocsetDocument.rb; sourceTree = "<group>"; };
@@ -782,6 +792,7 @@
 				2449DEE0263D4556004CC0C4 /* MyPage.storyboard */,
 				2449DEE9263D468D004CC0C4 /* Start.storyboard */,
 				242164C22641006C00858529 /* ReserveStatus.storyboard */,
+				24AAD63A266B82D100F30D4A /* MyTownModal.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -817,6 +828,8 @@
 				2481BA60264BD8A300C04DA5 /* SearchTableViewCell.xib */,
 				2481BA66264BF7B400C04DA5 /* MyPageTableViewCell.swift */,
 				2481BA67264BF7B400C04DA5 /* MyPageTableViewCell.xib */,
+				24BC7329266B66AD00E038C6 /* MyTownModalCollectionViewCell.swift */,
+				24BC732A266B66AD00E038C6 /* MyTownModalCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -853,6 +866,7 @@
 				242164C52641008400858529 /* ReserveStatusViewController.swift */,
 				24BC731C266B514900E038C6 /* PaymentViewController.swift */,
 				24BC731D266B514900E038C6 /* PaymentViewController.xib */,
+				24BC7325266B654200E038C6 /* MyTownModalViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -869,6 +883,7 @@
 			isa = PBXGroup;
 			children = (
 				24BC7321266B554400E038C6 /* PaymentPresentationController.swift */,
+				24BC732D266B6ABD00E038C6 /* MyTownModalPresentationController.swift */,
 			);
 			path = PresentingController;
 			sourceTree = "<group>";
@@ -1475,6 +1490,7 @@
 				24E4A408264A31FB00AF13CA /* properties_7.js in Resources */,
 				24E4A41A264A31FB00AF13CA /* functions_1.js in Resources */,
 				24E4A39D264A31FB00AF13CA /* _m_t_map_location_marker_item_8h_source.html in Resources */,
+				24BC732C266B66AD00E038C6 /* MyTownModalCollectionViewCell.xib in Resources */,
 				24E4A411264A31FB00AF13CA /* variables_1.js in Resources */,
 				24E4A3DE264A31FB00AF13CA /* variables_2.html in Resources */,
 				24E4A3CD264A31FB00AF13CA /* all_3.js in Resources */,
@@ -1559,6 +1575,7 @@
 				24E4A431264A31FB00AF13CA /* functions_c.js in Resources */,
 				24E4A3D6264A31FB00AF13CA /* properties_2.html in Resources */,
 				24E4A43E264A31FB00AF13CA /* dir_3a58f908fac257e60a62a7e10a93cdbc.html in Resources */,
+				24AAD63B266B82D100F30D4A /* MyTownModal.storyboard in Resources */,
 				24E4A3A3264A31FB00AF13CA /* interface_m_t_map_p_o_i_item.html in Resources */,
 				24E4A38D264A31FB00AF13CA /* struct_m_t_map_bounds-members.html in Resources */,
 				24E4A400264A31FB00AF13CA /* all_0.html in Resources */,
@@ -1660,6 +1677,8 @@
 				24F2574B263D0C4A00384542 /* CategoryCollectionViewCell.swift in Sources */,
 				242A312E2639482900BCC87C /* ViewController.swift in Sources */,
 				24B3E81E263AF3C6001AF867 /* ImageCollectionViewCell.swift in Sources */,
+				24BC732E266B6ABD00E038C6 /* MyTownModalPresentationController.swift in Sources */,
+				24BC732B266B66AD00E038C6 /* MyTownModalCollectionViewCell.swift in Sources */,
 				24BC7324266B565500E038C6 /* UIVIew+Extension.swift in Sources */,
 				24F25750263D141E00384542 /* ReservedCollectionViewCell.swift in Sources */,
 				24B3E804263ACA13001AF867 /* ItemDetailViewController.swift in Sources */,
@@ -1682,6 +1701,7 @@
 				2481BA61264BD8A300C04DA5 /* SearchTableViewCell.swift in Sources */,
 				2449DEE4263D4585004CC0C4 /* MyTownViewController.swift in Sources */,
 				24276F57263D3D9B002B4AB9 /* ReserveProceedingViewController.swift in Sources */,
+				24BC7327266B654200E038C6 /* MyTownModalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

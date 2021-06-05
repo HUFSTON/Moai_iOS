@@ -17,6 +17,7 @@ struct Constants {
         static let reservedCollectionViewCell: String = "ReservedCollectionViewCell"
         static let searchTableViewCell: String = "SearchTableViewCell"
         static let myPageTableViewCell: String = "MyPageTableViewCell"
+        static let myTownModalCollectionViewCell: String = "MyTownModalCollectionViewCell"
         
     }
     
@@ -31,6 +32,7 @@ struct Constants {
         static let myTown: String = "MyTown"
         static let myPage: String = "MyPage"
         static let reserveStatus: String = "ReserveStatus"
+        static let myTownModal: String = "MyTownModal"
     }
     
     struct ViewControllers {
@@ -42,5 +44,6 @@ struct Constants {
         static let myTownViewController: String = "MyTownViewController"
         static let myPageViewController: String = "MyPageViewController"
         static let reserveStatusViewController: String = "ReserveStatusViewController"
+        static let myTownModalViewController: String = "MyTownModalViewController"
     }
 }
