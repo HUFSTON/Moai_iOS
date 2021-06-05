@@ -34,11 +34,13 @@ class ItemDetailViewController: UIViewController, MTMapViewDelegate {
     @IBOutlet weak var returnWarningLabel: UILabel!
     
     var mapView: MTMapView?
+    var paymentModal: PaymentViewController?
+    var count: Int = 1
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializeMTMap()
+        self.initializeMap()
         self.initializeStyle()
         self.registerCell()
         self.registerDelegateDatasource()
@@ -61,26 +63,27 @@ class ItemDetailViewController: UIViewController, MTMapViewDelegate {
     }
     
     
-    
-    private func initializeMTMap() {
+    private func initializeMap(){
         mapView = MTMapView(frame: self.mapBackgroundView.bounds)
         guard let map = mapView else {
             return
         }
-        
         map.delegate = self
         map.baseMapType = .standard
-        let mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.596966, longitude:  127.058972))
-        let marker = MTMapPOIItem()
-        marker.markerType = .customImage
-        marker.customImage = UIImage(systemName: "pencil")
-        marker.mapPoint = mapPoint
-        marker.markerSelectedType = .customImage
-        marker.customSelectedImage = UIImage(systemName: "scribble")
-        marker.customImageAnchorPointOffset = MTMapImageOffset(offsetX: 0, offsetY: 60)
-        map.addPOIItems([marker])
+        map.addPOIItems(initializeMapMarker())
         map.fitAreaToShowAllPOIItems()
-        self.mapBackgroundView.addSubview(map)
+        map.setZoomLevel(MTMapZoomLevel(-2), animated: true)
+        mapBackgroundView.addSubview(map)
+    }
+    private func initializeMapMarker() -> [MTMapPOIItem] {
+        let marker : MTMapPOIItem = MTMapPOIItem()
+        marker.markerType = .customImage
+        marker.customImage = UIImage(named: "Location")
+        marker.mapPoint = MTMapPoint(geoCoord:MTMapPointGeo(latitude: 37.596966, longitude:  127.058972))
+        marker.markerSelectedType = .customImage
+        marker.customSelectedImage = UIImage(named: "Location")
+        
+        return [marker]
     }
     
     // collectionView에 셀 등록
@@ -143,14 +146,46 @@ class ItemDetailViewController: UIViewController, MTMapViewDelegate {
     
     
     @IBAction func touchMinusButton(_ sender: Any) {
-        
+        if count - 1 >= 2 {
+            count -= 1
+            self.minusButton.isEnabled = true
+            self.plusButton.isEnabled = true
+        } else {
+            count -= 1
+            self.minusButton.isEnabled = false
+        }
+        self.countLabel.text = String(count)
     }
     
     @IBAction func touchPlusButton(_ sender: Any) {
+        if count + 1 < 10 {
+            count += 1
+            self.plusButton.isEnabled = true
+            self.minusButton.isEnabled = true
+        } else {
+            count += 1
+            self.plusButton.isEnabled = false
+        }
+        self.countLabel.text = String(count)
     }
     
     @IBAction func touchReserveButton(_ sender: Any) {
+        paymentModal = PaymentViewController()
+        guard let modal = paymentModal else {
+            return
+        }
+        modal.modalPresentationStyle = .custom
+        modal.transitioningDelegate = self
+        modal.pointOrigin =  CGPoint(x: 0,
+                                     y: self.view.frame.height - 450)
+        self.present(modal, animated: true, completion: nil)
 
+    }
+}
+
+extension ItemDetailViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        PaymentPresentationController(presentedViewController: presented, presenting: presenting)
     }
 }
 

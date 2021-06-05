@@ -42,6 +42,10 @@
 		24B3E804263ACA13001AF867 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3E803263ACA13001AF867 /* ItemDetailViewController.swift */; };
 		24B3E81E263AF3C6001AF867 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3E81C263AF3C6001AF867 /* ImageCollectionViewCell.swift */; };
 		24B3E81F263AF3C6001AF867 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B3E81D263AF3C6001AF867 /* ImageCollectionViewCell.xib */; };
+		24BC731E266B514900E038C6 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC731C266B514900E038C6 /* PaymentViewController.swift */; };
+		24BC731F266B514900E038C6 /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BC731D266B514900E038C6 /* PaymentViewController.xib */; };
+		24BC7322266B554400E038C6 /* PaymentPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7321266B554400E038C6 /* PaymentPresentationController.swift */; };
+		24BC7324266B565500E038C6 /* UIVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7323266B565500E038C6 /* UIVIew+Extension.swift */; };
 		24E4A237264A31A500AF13CA /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E4A236264A31A500AF13CA /* Metal.framework */; };
 		24E4A359264A31FB00AF13CA /* net.daum.MobileMap.docset in Resources */ = {isa = PBXBuildFile; fileRef = 24E4A23A264A31FA00AF13CA /* net.daum.MobileMap.docset */; };
 		24E4A35A264A31FB00AF13CA /* setupDocsetDocument.rb in Resources */ = {isa = PBXBuildFile; fileRef = 24E4A23B264A31FA00AF13CA /* setupDocsetDocument.rb */; };
@@ -379,6 +383,10 @@
 		24B3E814263AE9C0001AF867 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		24B3E81C263AF3C6001AF867 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		24B3E81D263AF3C6001AF867 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		24BC731C266B514900E038C6 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		24BC731D266B514900E038C6 /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
+		24BC7321266B554400E038C6 /* PaymentPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPresentationController.swift; sourceTree = "<group>"; };
+		24BC7323266B565500E038C6 /* UIVIew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Extension.swift"; sourceTree = "<group>"; };
 		24E4A236264A31A500AF13CA /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		24E4A23A264A31FA00AF13CA /* net.daum.MobileMap.docset */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = net.daum.MobileMap.docset; sourceTree = "<group>"; };
 		24E4A23B264A31FA00AF13CA /* setupDocsetDocument.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = setupDocsetDocument.rb; sourceTree = "<group>"; };
@@ -741,6 +749,7 @@
 		242A313F26394A1300BCC87C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				24BC7320266B54F600E038C6 /* PresentingController */,
 				2449DEEC263D46B1004CC0C4 /* TabBarControllers */,
 				24F25753263D217300384542 /* ReusableView */,
 				242A314726394B2B00BCC87C /* ViewControllers */,
@@ -817,6 +826,7 @@
 			children = (
 				2459AC002639C4DC009E3A82 /* UIColor+Extension.swift */,
 				24B3E7F2263AAE8F001AF867 /* UIImageView+Extension.swift */,
+				24BC7323266B565500E038C6 /* UIVIew+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -841,6 +851,8 @@
 				2449DEE3263D4585004CC0C4 /* MyTownViewController.swift */,
 				2449DEE6263D4591004CC0C4 /* MyPageViewController.swift */,
 				242164C52641008400858529 /* ReserveStatusViewController.swift */,
+				24BC731C266B514900E038C6 /* PaymentViewController.swift */,
+				24BC731D266B514900E038C6 /* PaymentViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -851,6 +863,14 @@
 				2449DEED263D46D4004CC0C4 /* StartTabBarController.swift */,
 			);
 			path = TabBarControllers;
+			sourceTree = "<group>";
+		};
+		24BC7320266B54F600E038C6 /* PresentingController */ = {
+			isa = PBXGroup;
+			children = (
+				24BC7321266B554400E038C6 /* PaymentPresentationController.swift */,
+			);
+			path = PresentingController;
 			sourceTree = "<group>";
 		};
 		24E4A238264A31FA00AF13CA /* IOS_DaumMap_SDK_1.4.0 */ = {
@@ -1404,6 +1424,7 @@
 				24E4A460264A31FB00AF13CA /* functions_prop.html in Resources */,
 				24E4A3C1264A31FB00AF13CA /* search_r.png in Resources */,
 				24E4A3BF264A31FB00AF13CA /* functions_d.js in Resources */,
+				24BC731F266B514900E038C6 /* PaymentViewController.xib in Resources */,
 				24E4A3F9264A31FB00AF13CA /* variables_0.html in Resources */,
 				24E4A382264A31FB00AF13CA /* interface_m_t_map_circle.html in Resources */,
 				24E4A35A264A31FB00AF13CA /* setupDocsetDocument.rb in Resources */,
@@ -1634,16 +1655,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				24F25756263D218900384542 /* ReserveHeaderCollectionReusableView.swift in Sources */,
+				24BC731E266B514900E038C6 /* PaymentViewController.swift in Sources */,
 				242A314926394BB100BCC87C /* view.swift in Sources */,
 				24F2574B263D0C4A00384542 /* CategoryCollectionViewCell.swift in Sources */,
 				242A312E2639482900BCC87C /* ViewController.swift in Sources */,
 				24B3E81E263AF3C6001AF867 /* ImageCollectionViewCell.swift in Sources */,
+				24BC7324266B565500E038C6 /* UIVIew+Extension.swift in Sources */,
 				24F25750263D141E00384542 /* ReservedCollectionViewCell.swift in Sources */,
 				24B3E804263ACA13001AF867 /* ItemDetailViewController.swift in Sources */,
 				242164C62641008400858529 /* ReserveStatusViewController.swift in Sources */,
 				242A315326394BCB00BCC87C /* apiservices.swift in Sources */,
 				242A315626394BD400BCC87C /* apimodel.swift in Sources */,
 				2459ABFC2639BDC6009E3A82 /* HomeCollectionViewCell.swift in Sources */,
+				24BC7322266B554400E038C6 /* PaymentPresentationController.swift in Sources */,
 				2459ABF52639B81B009E3A82 /* HomeViewController.swift in Sources */,
 				24F25747263D099E00384542 /* ReserveDetailViewController.swift in Sources */,
 				24276F5A263D3DA5002B4AB9 /* ReceivedViewController.swift in Sources */,
