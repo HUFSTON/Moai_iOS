@@ -87,7 +87,7 @@ class MyTownViewController: UIViewController, MTMapViewDelegate {
             return
         }
         addChild(vc)
-
+        vc.view.round(corners: [.topLeft, .topRight], cornerRadius: 15)
         vc.view.frame = self.containerView.bounds
         self.containerView.addSubview(vc.view)
     }
