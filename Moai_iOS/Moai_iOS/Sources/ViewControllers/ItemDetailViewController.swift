@@ -34,6 +34,8 @@ class ItemDetailViewController: UIViewController, MTMapViewDelegate {
     @IBOutlet weak var returnWarningLabel: UILabel!
     
     var mapView: MTMapView?
+    var paymentModal: PaymentViewController?
+    var count: Int = 1
     
     
     override func viewDidLoad() {
@@ -144,14 +146,46 @@ class ItemDetailViewController: UIViewController, MTMapViewDelegate {
     
     
     @IBAction func touchMinusButton(_ sender: Any) {
-        
+        if count - 1 >= 2 {
+            count -= 1
+            self.minusButton.isEnabled = true
+            self.plusButton.isEnabled = true
+        } else {
+            count -= 1
+            self.minusButton.isEnabled = false
+        }
+        self.countLabel.text = String(count)
     }
     
     @IBAction func touchPlusButton(_ sender: Any) {
+        if count + 1 < 10 {
+            count += 1
+            self.plusButton.isEnabled = true
+            self.minusButton.isEnabled = true
+        } else {
+            count += 1
+            self.plusButton.isEnabled = false
+        }
+        self.countLabel.text = String(count)
     }
     
     @IBAction func touchReserveButton(_ sender: Any) {
+        paymentModal = PaymentViewController()
+        guard let modal = paymentModal else {
+            return
+        }
+        modal.modalPresentationStyle = .custom
+        modal.transitioningDelegate = self
+        modal.pointOrigin =  CGPoint(x: 0,
+                                     y: self.view.frame.height - 450)
+        self.present(modal, animated: true, completion: nil)
 
+    }
+}
+
+extension ItemDetailViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        PaymentPresentationController(presentedViewController: presented, presenting: presenting)
     }
 }
 
