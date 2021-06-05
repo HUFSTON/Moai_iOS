@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MyTownModalCollectionViewCell" customModule="Moai_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="634" height="267"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="634" height="267"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3un-e5-sxi">
+                        <rect key="frame" x="0.0" y="0.0" width="634" height="267"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TNU-zU-sqa">
+                                <rect key="frame" x="16" y="0.0" width="14" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="Noe-Pw-A5c"/>
+                                    <constraint firstAttribute="width" constant="14" id="gpZ-xj-pmF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wut-AP-Ir7">
+                                <rect key="frame" x="40" y="0.0" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="0u9-1V-wyy"/>
+                                    <constraint firstAttribute="height" constant="80" id="ZPb-yF-3mX"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="국산콩 두부 300g" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6au-fC-eA6">
+                                <rect key="frame" x="130" y="20" width="103" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="Black1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강경욱의 푸드트럭" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WA-HW-Jx7">
+                                <rect key="frame" x="130" y="0.0" width="87" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="DarkGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhf-SB-SUT">
+                                <rect key="frame" x="130" y="42" width="28" height="12"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <color key="textColor" name="DarkGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RV5-Ty-2Lq">
+                                <rect key="frame" x="519" y="63" width="36" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="LightGray1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마감임박" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tg-Ub-QXU">
+                                <rect key="frame" x="243" y="22" width="40" height="13"/>
+                                <color key="backgroundColor" name="LightGreen"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="13" id="9Xc-7I-TI9"/>
+                                    <constraint firstAttribute="width" constant="40" id="wdV-BG-xzj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <color key="textColor" name="DarkGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7d8-Ff-qQS">
+                                <rect key="frame" x="565" y="58" width="45" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bhf-SB-SUT" firstAttribute="top" secondItem="6au-fC-eA6" secondAttribute="bottom" constant="5" id="0Ad-Dm-udp"/>
+                            <constraint firstItem="6au-fC-eA6" firstAttribute="top" secondItem="3WA-HW-Jx7" secondAttribute="bottom" constant="5" id="1kP-YI-242"/>
+                            <constraint firstItem="7d8-Ff-qQS" firstAttribute="leading" secondItem="RV5-Ty-2Lq" secondAttribute="trailing" constant="10" id="44w-Lt-Kxg"/>
+                            <constraint firstItem="RV5-Ty-2Lq" firstAttribute="bottom" secondItem="7d8-Ff-qQS" secondAttribute="bottom" id="5eR-jd-bhI"/>
+                            <constraint firstItem="wut-AP-Ir7" firstAttribute="leading" secondItem="TNU-zU-sqa" secondAttribute="trailing" constant="10" id="7HK-je-B3u"/>
+                            <constraint firstItem="5Tg-Ub-QXU" firstAttribute="leading" secondItem="6au-fC-eA6" secondAttribute="trailing" constant="10" id="N55-48-A1b"/>
+                            <constraint firstItem="TNU-zU-sqa" firstAttribute="top" secondItem="3un-e5-sxi" secondAttribute="top" id="Oaj-ev-cDe"/>
+                            <constraint firstItem="Bhf-SB-SUT" firstAttribute="leading" secondItem="wut-AP-Ir7" secondAttribute="trailing" constant="10" id="V54-W1-3fA"/>
+                            <constraint firstItem="wut-AP-Ir7" firstAttribute="top" secondItem="3un-e5-sxi" secondAttribute="top" id="XUe-AD-XhP"/>
+                            <constraint firstItem="6au-fC-eA6" firstAttribute="leading" secondItem="wut-AP-Ir7" secondAttribute="trailing" constant="10" id="Yqq-Tk-yRr"/>
+                            <constraint firstItem="7d8-Ff-qQS" firstAttribute="bottom" secondItem="wut-AP-Ir7" secondAttribute="bottom" id="bwx-Ms-bpd"/>
+                            <constraint firstItem="3WA-HW-Jx7" firstAttribute="top" secondItem="3un-e5-sxi" secondAttribute="top" id="dSP-Zt-V7K"/>
+                            <constraint firstItem="5Tg-Ub-QXU" firstAttribute="centerY" secondItem="6au-fC-eA6" secondAttribute="centerY" id="ew5-EA-51p"/>
+                            <constraint firstItem="TNU-zU-sqa" firstAttribute="leading" secondItem="3un-e5-sxi" secondAttribute="leading" constant="16" id="htp-Ak-auD"/>
+                            <constraint firstItem="3WA-HW-Jx7" firstAttribute="leading" secondItem="wut-AP-Ir7" secondAttribute="trailing" constant="10" id="kXc-yn-XDP"/>
+                            <constraint firstAttribute="trailing" secondItem="7d8-Ff-qQS" secondAttribute="trailing" constant="24" id="qnB-IS-qhG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="3un-e5-sxi" secondAttribute="trailing" id="B5g-cT-3hW"/>
+                <constraint firstItem="3un-e5-sxi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="QQM-8W-u9r"/>
+                <constraint firstItem="3un-e5-sxi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mgB-m7-qLh"/>
+                <constraint firstAttribute="bottom" secondItem="3un-e5-sxi" secondAttribute="bottom" id="ve3-m7-RNB"/>
+            </constraints>
+            <size key="customSize" width="634" height="267"/>
+            <point key="canvasLocation" x="560.86956521739137" y="182.47767857142856"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Black1">
+            <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DarkGray">
+            <color red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DarkGreen">
+            <color red="0.047058823529411764" green="0.63529411764705879" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightGray1">
+            <color red="0.67843137254901964" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightGreen">
+            <color red="0.047058823529411764" green="0.63529411764705879" blue="0.45490196078431372" alpha="0.10000000149011612" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

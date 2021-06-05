@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,17 +20,28 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCs-wC-RMh">
+                                <rect key="frame" x="0.0" y="562" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="RNU-1d-1sO"/>
+                                </constraints>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xlP-K2-dSM"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="aCs-wC-RMh" firstAttribute="trailing" secondItem="xlP-K2-dSM" secondAttribute="trailing" id="3YR-j6-OIU"/>
                             <constraint firstItem="xlP-K2-dSM" firstAttribute="trailing" secondItem="fEC-uy-dZq" secondAttribute="trailing" id="EzM-oy-sxA"/>
                             <constraint firstItem="fEC-uy-dZq" firstAttribute="top" secondItem="xlP-K2-dSM" secondAttribute="top" id="GsC-pe-vRn"/>
                             <constraint firstItem="xlP-K2-dSM" firstAttribute="bottom" secondItem="fEC-uy-dZq" secondAttribute="bottom" id="Mfb-af-Qwu"/>
+                            <constraint firstItem="xlP-K2-dSM" firstAttribute="bottom" secondItem="aCs-wC-RMh" secondAttribute="bottom" id="Vp1-yE-DAU"/>
                             <constraint firstItem="fEC-uy-dZq" firstAttribute="leading" secondItem="xlP-K2-dSM" secondAttribute="leading" id="edx-gT-4NB"/>
+                            <constraint firstItem="aCs-wC-RMh" firstAttribute="leading" secondItem="xlP-K2-dSM" secondAttribute="leading" id="fYH-k8-2we"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="aCs-wC-RMh" id="cI7-vG-bcI"/>
+                        <outlet property="containerViewHeight" destination="RNU-1d-1sO" id="onl-Ws-ppH"/>
                         <outlet property="mapBackgroundView" destination="fEC-uy-dZq" id="v5g-dL-4b4"/>
                     </connections>
                 </viewController>

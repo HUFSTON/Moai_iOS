@@ -8,12 +8,20 @@
 import UIKit
 
 class StartTabBarController: UITabBarController {
+    
+    static var height: CGFloat = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.tintColor = UIColor.DarkGreen
         setTabBar()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        StartTabBarController.height = tabBar.frame.size.height
+
     }
 
     private func setTabBar() {
