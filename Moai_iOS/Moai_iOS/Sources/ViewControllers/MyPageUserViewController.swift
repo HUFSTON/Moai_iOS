@@ -61,4 +61,7 @@ class MyPageUserViewController: UIViewController {
     
     @IBAction func touchChargeButton(_ sender: Any) {
     }
+    
+    @IBAction func touchQuitButton(_ sender: Any) {
+    }
 }

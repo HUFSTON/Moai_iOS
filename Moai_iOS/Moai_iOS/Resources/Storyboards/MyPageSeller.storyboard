@@ -59,15 +59,18 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hmi-YT-tqv">
-                                        <rect key="frame" x="16" y="170.5" width="382" height="27"/>
+                                        <rect key="frame" x="16" y="170.5" width="382" height="37.5"/>
                                         <color key="backgroundColor" name="LightGray2"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="프로필 수정">
                                             <color key="titleColor" name="DarkGray"/>
                                         </state>
+                                        <connections>
+                                            <action selector="touchEditProfileButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tOB-iN-Nkn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="sd6-MN-8tE" firstAttribute="top" secondItem="OZD-M1-AWx" secondAttribute="top" constant="30" id="02O-7j-aJh"/>
                                     <constraint firstItem="rzV-ud-VOW" firstAttribute="leading" secondItem="OZD-M1-AWx" secondAttribute="leading" constant="16" id="02f-qQ-aV8"/>
@@ -77,6 +80,7 @@
                                     <constraint firstItem="sd6-MN-8tE" firstAttribute="leading" secondItem="OZD-M1-AWx" secondAttribute="leading" constant="16" id="9hD-bo-o0g"/>
                                     <constraint firstItem="z13-GL-dek" firstAttribute="top" secondItem="OZD-M1-AWx" secondAttribute="top" constant="41" id="Ils-gJ-WHQ"/>
                                     <constraint firstItem="QUg-GL-xll" firstAttribute="leading" secondItem="z13-GL-dek" secondAttribute="trailing" constant="13" id="OV0-oL-est"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hmi-YT-tqv" secondAttribute="bottom" constant="20" id="PnH-jH-QdQ"/>
                                     <constraint firstItem="Hmi-YT-tqv" firstAttribute="top" secondItem="rzV-ud-VOW" secondAttribute="bottom" constant="20" id="WZk-vv-E5u"/>
                                     <constraint firstItem="hLz-Gu-38p" firstAttribute="top" secondItem="z13-GL-dek" secondAttribute="bottom" id="duP-Nl-V5W"/>
                                     <constraint firstItem="rzV-ud-VOW" firstAttribute="top" secondItem="P86-3b-Nwd" secondAttribute="bottom" constant="5" id="gDi-9j-Ztv"/>
@@ -113,6 +117,9 @@
                                         <state key="normal" title="충전하기">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="touchChargeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="X9T-aQ-mtE"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="포인트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyx-ha-xN7">
                                         <rect key="frame" x="74.5" y="53" width="32" height="15"/>
@@ -121,7 +128,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="9Yb-KI-9rx" firstAttribute="centerY" secondItem="O4a-0g-vCr" secondAttribute="centerY" id="0fb-kT-gwN"/>
                                     <constraint firstItem="Pyx-ha-xN7" firstAttribute="bottom" secondItem="O4a-0g-vCr" secondAttribute="bottom" constant="-3" id="Q5h-fF-rZA"/>
@@ -150,11 +157,19 @@
                                         <color key="textColor" name="Black1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yo-YQ-h58">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="8yo-YQ-h58" secondAttribute="bottom" id="4UN-9D-c7g"/>
+                                    <constraint firstAttribute="trailing" secondItem="8yo-YQ-h58" secondAttribute="trailing" id="6TU-68-9wV"/>
                                     <constraint firstItem="XE1-a7-Tus" firstAttribute="leading" secondItem="wxg-UQ-s8F" secondAttribute="leading" constant="16" id="Bqp-Do-TIK"/>
                                     <constraint firstAttribute="height" constant="60" id="FNF-6T-zjl"/>
+                                    <constraint firstItem="8yo-YQ-h58" firstAttribute="leading" secondItem="wxg-UQ-s8F" secondAttribute="leading" id="FsC-qR-hYN"/>
+                                    <constraint firstItem="8yo-YQ-h58" firstAttribute="top" secondItem="wxg-UQ-s8F" secondAttribute="top" id="GUl-6i-eXs"/>
                                     <constraint firstItem="cYG-iU-eB3" firstAttribute="centerY" secondItem="XE1-a7-Tus" secondAttribute="centerY" id="NKx-Xo-vwp"/>
                                     <constraint firstItem="cYG-iU-eB3" firstAttribute="leading" secondItem="XE1-a7-Tus" secondAttribute="trailing" constant="10" id="mh4-7a-sj8"/>
                                     <constraint firstItem="XE1-a7-Tus" firstAttribute="centerY" secondItem="wxg-UQ-s8F" secondAttribute="centerY" id="s6M-3t-tPo"/>
@@ -173,6 +188,16 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="touchQuitButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oIj-yN-yEM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C11-sV-5Xs">
+                                <rect key="frame" x="184" y="812" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="touchRegisterButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="EsN-Ck-aD5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -181,16 +206,32 @@
                             <constraint firstItem="cjJ-VL-gbX" firstAttribute="top" secondItem="OZD-M1-AWx" secondAttribute="bottom" constant="10" id="7yH-ef-bw9"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OZD-M1-AWx" secondAttribute="trailing" id="IPN-C5-QQ8"/>
                             <constraint firstItem="wxg-UQ-s8F" firstAttribute="top" secondItem="cjJ-VL-gbX" secondAttribute="bottom" constant="10" id="LBO-Tt-jya"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="C11-sV-5Xs" secondAttribute="bottom" constant="20" id="a2D-fP-G8R"/>
                             <constraint firstItem="wxg-UQ-s8F" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="cnC-Yb-Hc4"/>
                             <constraint firstItem="3fO-nc-fld" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="dmd-aO-JxH"/>
                             <constraint firstItem="3fO-nc-fld" firstAttribute="top" secondItem="wxg-UQ-s8F" secondAttribute="bottom" constant="23" id="gl7-EI-WQy"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wxg-UQ-s8F" secondAttribute="trailing" id="hbI-sh-VFH"/>
+                            <constraint firstItem="3fO-nc-fld" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="kLq-2e-tZe"/>
                             <constraint firstItem="OZD-M1-AWx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="lUx-hT-HJT"/>
                             <constraint firstItem="cjJ-VL-gbX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="nAZ-Gx-rMv"/>
+                            <constraint firstItem="C11-sV-5Xs" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="xVF-jp-83b"/>
                             <constraint firstItem="OZD-M1-AWx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="yna-H2-T5h"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cjJ-VL-gbX" secondAttribute="trailing" id="z7l-VD-sW8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="rzV-ud-VOW" id="pBp-xa-hjl"/>
+                        <outlet property="chargeButton" destination="9Yb-KI-9rx" id="uTs-xm-ax9"/>
+                        <outlet property="editProfileButton" destination="Hmi-YT-tqv" id="x13-7u-YwE"/>
+                        <outlet property="emailLabel" destination="hLz-Gu-38p" id="K46-cl-JdV"/>
+                        <outlet property="nameLabel" destination="z13-GL-dek" id="h6N-R1-9o5"/>
+                        <outlet property="phoneLabel" destination="P86-3b-Nwd" id="B0r-Vg-Tdr"/>
+                        <outlet property="pointLabel" destination="O4a-0g-vCr" id="yvB-9M-ATf"/>
+                        <outlet property="profileImage" destination="sd6-MN-8tE" id="c1I-IY-Ebe"/>
+                        <outletCollection property="UIViews" destination="OZD-M1-AWx" collectionClass="NSMutableArray" id="ysI-gE-V4q"/>
+                        <outletCollection property="UIViews" destination="cjJ-VL-gbX" collectionClass="NSMutableArray" id="osq-Jc-yPs"/>
+                        <outletCollection property="UIViews" destination="8yo-YQ-h58" collectionClass="NSMutableArray" id="JQK-rL-E1g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

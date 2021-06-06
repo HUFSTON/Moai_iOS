@@ -200,6 +200,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="touchQuitButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="al8-tO-FIf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
