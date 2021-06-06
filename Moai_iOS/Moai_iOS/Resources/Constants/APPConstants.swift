@@ -35,6 +35,8 @@ struct Constants {
         static let myTownModal: String = "MyTownModal"
         static let login: String = "Login"
         static let start: String = "Start"
+        static let myPageSeller: String = "MyPageSeller"
+        static let myPageUser: String = "MyPageUser"
     }
     
     struct ViewControllers {
@@ -48,5 +50,7 @@ struct Constants {
         static let reserveStatusViewController: String = "ReserveStatusViewController"
         static let myTownModalViewController: String = "MyTownModalViewController"
         static let loginViewController: String = "LoginViewController"
+        static let myPageUserViewController: String = "MyPageUserViewController"
+        static let myPageSellerViewController: String = "MyPageSellerViewController"
     }
 }

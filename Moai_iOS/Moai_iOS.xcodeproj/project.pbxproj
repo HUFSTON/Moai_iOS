@@ -40,6 +40,10 @@
 		2481BA68264BF7B400C04DA5 /* MyPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481BA66264BF7B400C04DA5 /* MyPageTableViewCell.swift */; };
 		2481BA69264BF7B400C04DA5 /* MyPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2481BA67264BF7B400C04DA5 /* MyPageTableViewCell.xib */; };
 		24AAD63B266B82D100F30D4A /* MyTownModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AAD63A266B82D100F30D4A /* MyTownModal.storyboard */; };
+		24ADAEC4266CBCDF00ECB21E /* MyPageUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24ADAEC3266CBCDF00ECB21E /* MyPageUser.storyboard */; };
+		24ADAEC6266CBCEC00ECB21E /* MyPageSeller.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24ADAEC5266CBCEC00ECB21E /* MyPageSeller.storyboard */; };
+		24ADAEC8266CBCFB00ECB21E /* MyPageUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADAEC7266CBCFB00ECB21E /* MyPageUserViewController.swift */; };
+		24ADAECA266CBD0300ECB21E /* MyPageSellerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADAEC9266CBD0300ECB21E /* MyPageSellerViewController.swift */; };
 		24B3E7F3263AAE8F001AF867 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3E7F2263AAE8F001AF867 /* UIImageView+Extension.swift */; };
 		24B3E801263ACA09001AF867 /* ItemDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B3E800263ACA09001AF867 /* ItemDetail.storyboard */; };
 		24B3E804263ACA13001AF867 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3E803263ACA13001AF867 /* ItemDetailViewController.swift */; };
@@ -381,6 +385,10 @@
 		2481BA66264BF7B400C04DA5 /* MyPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell.swift; sourceTree = "<group>"; };
 		2481BA67264BF7B400C04DA5 /* MyPageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageTableViewCell.xib; sourceTree = "<group>"; };
 		24AAD63A266B82D100F30D4A /* MyTownModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyTownModal.storyboard; sourceTree = "<group>"; };
+		24ADAEC3266CBCDF00ECB21E /* MyPageUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPageUser.storyboard; sourceTree = "<group>"; };
+		24ADAEC5266CBCEC00ECB21E /* MyPageSeller.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPageSeller.storyboard; sourceTree = "<group>"; };
+		24ADAEC7266CBCFB00ECB21E /* MyPageUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageUserViewController.swift; sourceTree = "<group>"; };
+		24ADAEC9266CBD0300ECB21E /* MyPageSellerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSellerViewController.swift; sourceTree = "<group>"; };
 		24B3E7F2263AAE8F001AF867 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		24B3E800263ACA09001AF867 /* ItemDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemDetail.storyboard; sourceTree = "<group>"; };
 		24B3E803263ACA13001AF867 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
@@ -798,6 +806,8 @@
 				242164C22641006C00858529 /* ReserveStatus.storyboard */,
 				24AAD63A266B82D100F30D4A /* MyTownModal.storyboard */,
 				246E8D45266BBB4000AA990A /* Login.storyboard */,
+				24ADAEC3266CBCDF00ECB21E /* MyPageUser.storyboard */,
+				24ADAEC5266CBCEC00ECB21E /* MyPageSeller.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -873,6 +883,8 @@
 				24BC731D266B514900E038C6 /* PaymentViewController.xib */,
 				24BC7325266B654200E038C6 /* MyTownModalViewController.swift */,
 				246E8D47266BBB5000AA990A /* LoginViewController.swift */,
+				24ADAEC7266CBCFB00ECB21E /* MyPageUserViewController.swift */,
+				24ADAEC9266CBD0300ECB21E /* MyPageSellerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1348,6 +1360,7 @@
 				24E4A3FB264A31FB00AF13CA /* functions_e.html in Resources */,
 				24E4A44D264A31FB00AF13CA /* dir_3a58f908fac257e60a62a7e10a93cdbc.js in Resources */,
 				24E4A397264A31FB00AF13CA /* interface_m_t_map_polyline-members.html in Resources */,
+				24ADAEC6266CBCEC00ECB21E /* MyPageSeller.storyboard in Resources */,
 				24E4A3FA264A31FB00AF13CA /* properties_2.js in Resources */,
 				24E4A35B264A31FB00AF13CA /* OpenSourceNotice.md in Resources */,
 				24E4A373264A31FB00AF13CA /* map_present.png in Resources */,
@@ -1378,6 +1391,7 @@
 				24E4A37E264A31FB00AF13CA /* splitbar.png in Resources */,
 				24E4A3B8264A31FB00AF13CA /* navtree.css in Resources */,
 				24E4A44A264A31FB00AF13CA /* interface_m_t_map_location_marker_item.js in Resources */,
+				24ADAEC4266CBCDF00ECB21E /* MyPageUser.storyboard in Resources */,
 				24E4A455264A31FB00AF13CA /* functions_type.html in Resources */,
 				24E4A440264A31FB00AF13CA /* globals_func.html in Resources */,
 				24E4A38F264A31FB00AF13CA /* _m_t_map_geometry_8h.js in Resources */,
@@ -1678,6 +1692,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24ADAECA266CBD0300ECB21E /* MyPageSellerViewController.swift in Sources */,
 				24F25756263D218900384542 /* ReserveHeaderCollectionReusableView.swift in Sources */,
 				24BC731E266B514900E038C6 /* PaymentViewController.swift in Sources */,
 				242A314926394BB100BCC87C /* view.swift in Sources */,
@@ -1698,6 +1713,7 @@
 				2459ABF52639B81B009E3A82 /* HomeViewController.swift in Sources */,
 				24F25747263D099E00384542 /* ReserveDetailViewController.swift in Sources */,
 				24276F5A263D3DA5002B4AB9 /* ReceivedViewController.swift in Sources */,
+				24ADAEC8266CBCFB00ECB21E /* MyPageUserViewController.swift in Sources */,
 				242A312A2639482900BCC87C /* AppDelegate.swift in Sources */,
 				2449DEEE263D46D4004CC0C4 /* StartTabBarController.swift in Sources */,
 				24B3E7F3263AAE8F001AF867 /* UIImageView+Extension.swift in Sources */,
