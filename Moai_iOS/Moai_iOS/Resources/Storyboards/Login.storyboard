@@ -22,34 +22,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SMu-gm-bSw">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="132"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAq-Sg-GvA">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="56"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0o-yX-WEt">
-                                                        <rect key="frame" x="20" y="10" width="35" height="12"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <color key="textColor" name="LightGray1"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l3I-d5-gmF">
-                                                        <rect key="frame" x="20" y="27" width="342" height="19"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                                                    </textField>
-                                                </subviews>
-                                                <color key="backgroundColor" name="LightGray2"/>
-                                                <constraints>
-                                                    <constraint firstItem="l3I-d5-gmF" firstAttribute="leading" secondItem="cAq-Sg-GvA" secondAttribute="leading" constant="20" id="3Q2-J3-N3v"/>
-                                                    <constraint firstAttribute="height" constant="56" id="B5c-SV-wcm"/>
-                                                    <constraint firstItem="l3I-d5-gmF" firstAttribute="top" secondItem="t0o-yX-WEt" secondAttribute="bottom" constant="5" id="ErN-Ut-3A4"/>
-                                                    <constraint firstAttribute="bottom" secondItem="l3I-d5-gmF" secondAttribute="bottom" constant="10" id="QsA-WB-w1i"/>
-                                                    <constraint firstItem="t0o-yX-WEt" firstAttribute="top" secondItem="cAq-Sg-GvA" secondAttribute="top" constant="10" id="VsL-v5-tfr"/>
-                                                    <constraint firstItem="t0o-yX-WEt" firstAttribute="leading" secondItem="cAq-Sg-GvA" secondAttribute="leading" constant="20" id="gIE-Wx-z32"/>
-                                                    <constraint firstAttribute="trailing" secondItem="l3I-d5-gmF" secondAttribute="trailing" constant="20" id="j7F-GA-QQS"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPk-7M-dcD">
-                                                <rect key="frame" x="0.0" y="76" width="382" height="56"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="56"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이디" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4p-IC-TAE">
                                                         <rect key="frame" x="20" y="10" width="26" height="12"/>
@@ -72,6 +46,32 @@
                                                     <constraint firstAttribute="bottom" secondItem="jbs-Xe-ER5" secondAttribute="bottom" constant="10" id="GXB-mG-4f5"/>
                                                     <constraint firstItem="E4p-IC-TAE" firstAttribute="top" secondItem="BPk-7M-dcD" secondAttribute="top" constant="10" id="MVL-bL-snP"/>
                                                     <constraint firstAttribute="trailing" secondItem="jbs-Xe-ER5" secondAttribute="trailing" constant="20" id="PUA-Ph-d1U"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAq-Sg-GvA">
+                                                <rect key="frame" x="0.0" y="76" width="382" height="56"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0o-yX-WEt">
+                                                        <rect key="frame" x="20" y="10" width="35" height="12"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <color key="textColor" name="LightGray1"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l3I-d5-gmF">
+                                                        <rect key="frame" x="20" y="27" width="342" height="19"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" name="LightGray2"/>
+                                                <constraints>
+                                                    <constraint firstItem="l3I-d5-gmF" firstAttribute="leading" secondItem="cAq-Sg-GvA" secondAttribute="leading" constant="20" id="3Q2-J3-N3v"/>
+                                                    <constraint firstAttribute="height" constant="56" id="B5c-SV-wcm"/>
+                                                    <constraint firstItem="l3I-d5-gmF" firstAttribute="top" secondItem="t0o-yX-WEt" secondAttribute="bottom" constant="5" id="ErN-Ut-3A4"/>
+                                                    <constraint firstAttribute="bottom" secondItem="l3I-d5-gmF" secondAttribute="bottom" constant="10" id="QsA-WB-w1i"/>
+                                                    <constraint firstItem="t0o-yX-WEt" firstAttribute="top" secondItem="cAq-Sg-GvA" secondAttribute="top" constant="10" id="VsL-v5-tfr"/>
+                                                    <constraint firstItem="t0o-yX-WEt" firstAttribute="leading" secondItem="cAq-Sg-GvA" secondAttribute="leading" constant="20" id="gIE-Wx-z32"/>
+                                                    <constraint firstAttribute="trailing" secondItem="l3I-d5-gmF" secondAttribute="trailing" constant="20" id="j7F-GA-QQS"/>
                                                 </constraints>
                                             </view>
                                         </subviews>

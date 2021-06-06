@@ -53,4 +53,8 @@ struct Constants {
         static let myPageUserViewController: String = "MyPageUserViewController"
         static let myPageSellerViewController: String = "MyPageSellerViewController"
     }
+    
+    struct TabbarControllers {
+        static let startTabBarController: String = "StartTabBarController"
+    }
 }
