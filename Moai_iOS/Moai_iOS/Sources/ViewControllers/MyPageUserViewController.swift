@@ -28,14 +28,14 @@ class MyPageUserViewController: UIViewController {
     // MARK: - Private Function
     private func initializeViews() {
         UIViews.forEach{
-            $0.layer.borderWidth = 1
-            $0.layer.borderColor = UIColor.LightGray1.cgColor
+            $0.layer.borderWidth = 0.5
+            $0.layer.borderColor = UIColor(red: 219/255, green: 219/255, blue: 219/255, alpha: 1.0).cgColor
         }
     }
     
     private func initializeButtons() {
-        self.chargeButton.layer.cornerRadius = 15
-        self.profileEditButton.layer.cornerRadius = 15
+        self.chargeButton.layer.cornerRadius = 7
+        self.profileEditButton.layer.cornerRadius = 7
         
     }
     
