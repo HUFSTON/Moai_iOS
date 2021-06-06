@@ -8,22 +8,48 @@
 import UIKit
 
 class SignupViewController: UIViewController {
-
+    
+    // MARK: - IBOutlet
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var pwTextField: UITextField!
+    @IBOutlet var confirmPwTextField: UITextField!
+    @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var phoneTextField: UITextField!
+    @IBOutlet var UIViews: [UIView]!
+    @IBOutlet var signupButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.initializeViews()
+        self.registerDelegate()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
-    */
+    
+    private func initializeViews() {
+        UIViews.forEach{
+            $0.layer.cornerRadius = 15
+        }
+        self.signupButton.layer.cornerRadius = 15
+    }
+    
+    private func registerDelegate() {
+        self.emailTextField.delegate = self
+        self.pwTextField.delegate = self
+        self.confirmPwTextField.delegate = self
+        self.nameTextField.delegate = self
+        self.phoneTextField.delegate = self
+    }
+    
+    @IBAction func touchSignupButton(_ sender: Any) {
+    }
+    
+}
 
+extension SignupViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
 }

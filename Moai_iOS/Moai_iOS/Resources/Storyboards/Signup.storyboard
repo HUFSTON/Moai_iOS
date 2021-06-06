@@ -59,7 +59,7 @@
                                                 <rect key="frame" x="20" y="27" width="342" height="19"/>
                                                 <color key="textColor" name="Black1"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" name="LightGray2"/>
@@ -86,7 +86,7 @@
                                                 <rect key="frame" x="20" y="27" width="342" height="19"/>
                                                 <color key="textColor" name="Black1"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" name="LightGray2"/>
@@ -185,6 +185,9 @@
                                 <state key="normal" title="회원가입">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchSignupButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ddd-Al-zD0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -198,6 +201,19 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Xqb-bL-wyo" secondAttribute="trailing" constant="16" id="sCN-CE-r92"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="confirmPwTextField" destination="jmU-T0-RNR" id="ccp-M9-Rri"/>
+                        <outlet property="emailTextField" destination="Uyw-Fl-jSN" id="qNe-nF-JDI"/>
+                        <outlet property="nameTextField" destination="4oJ-Jb-0iV" id="dLH-Q0-1ki"/>
+                        <outlet property="phoneTextField" destination="232-id-Y1r" id="wYs-U0-WoZ"/>
+                        <outlet property="pwTextField" destination="Lad-rx-GTz" id="aXZ-ev-a5j"/>
+                        <outlet property="signupButton" destination="Xqb-bL-wyo" id="4rb-e3-RFR"/>
+                        <outletCollection property="UIViews" destination="IB6-0q-M2y" collectionClass="NSMutableArray" id="hjf-hw-rvp"/>
+                        <outletCollection property="UIViews" destination="H3W-Wy-aKr" collectionClass="NSMutableArray" id="FCz-fN-cRH"/>
+                        <outletCollection property="UIViews" destination="IzE-pZ-aii" collectionClass="NSMutableArray" id="sNp-kU-Vv8"/>
+                        <outletCollection property="UIViews" destination="2Et-QA-anT" collectionClass="NSMutableArray" id="w5T-6I-2Xb"/>
+                        <outletCollection property="UIViews" destination="8Y1-P5-Tjb" collectionClass="NSMutableArray" id="pge-5I-7ZX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
