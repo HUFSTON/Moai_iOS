@@ -23,6 +23,8 @@
 		24432366266D533900E38C68 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24432365266D533900E38C68 /* UIViewController + Extension.swift */; };
 		24432368266D53DC00E38C68 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24432367266D53DC00E38C68 /* UsersAPI.swift */; };
 		2443236A266D542D00E38C68 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24432369266D542D00E38C68 /* LoginModel.swift */; };
+		2443236C266D59D000E38C68 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2443236B266D59D000E38C68 /* Signup.storyboard */; };
+		2443236E266D59DE00E38C68 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443236D266D59DE00E38C68 /* SignupViewController.swift */; };
 		2449DEDE263D454C004CC0C4 /* MyTown.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2449DEDD263D454C004CC0C4 /* MyTown.storyboard */; };
 		2449DEE1263D4556004CC0C4 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2449DEE0263D4556004CC0C4 /* MyPage.storyboard */; };
 		2449DEE4263D4585004CC0C4 /* MyTownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2449DEE3263D4585004CC0C4 /* MyTownViewController.swift */; };
@@ -371,6 +373,8 @@
 		24432365266D533900E38C68 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		24432367266D53DC00E38C68 /* UsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
 		24432369266D542D00E38C68 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		2443236B266D59D000E38C68 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
+		2443236D266D59DE00E38C68 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		2449DEDD263D454C004CC0C4 /* MyTown.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyTown.storyboard; sourceTree = "<group>"; };
 		2449DEE0263D4556004CC0C4 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		2449DEE3263D4585004CC0C4 /* MyTownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownViewController.swift; sourceTree = "<group>"; };
@@ -814,6 +818,7 @@
 				246E8D45266BBB4000AA990A /* Login.storyboard */,
 				24ADAEC3266CBCDF00ECB21E /* MyPageUser.storyboard */,
 				24ADAEC5266CBCEC00ECB21E /* MyPageSeller.storyboard */,
+				2443236B266D59D000E38C68 /* Signup.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -894,6 +899,7 @@
 				246E8D47266BBB5000AA990A /* LoginViewController.swift */,
 				24ADAEC7266CBCFB00ECB21E /* MyPageUserViewController.swift */,
 				24ADAEC9266CBD0300ECB21E /* MyPageSellerViewController.swift */,
+				2443236D266D59DE00E38C68 /* SignupViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1600,6 +1606,7 @@
 				24E4A3D0264A31FB00AF13CA /* all_b.html in Resources */,
 				24B3E81F263AF3C6001AF867 /* ImageCollectionViewCell.xib in Resources */,
 				24E4A43A264A31FB00AF13CA /* interface_m_t_map_p_o_i_item-members.html in Resources */,
+				2443236C266D59D000E38C68 /* Signup.storyboard in Resources */,
 				24E4A42F264A31FB00AF13CA /* all_7.html in Resources */,
 				24E4A444264A31FB00AF13CA /* interface_m_t_map_p_o_i_item.js in Resources */,
 				24E4A431264A31FB00AF13CA /* functions_c.js in Resources */,
@@ -1709,6 +1716,7 @@
 				24F2574B263D0C4A00384542 /* CategoryCollectionViewCell.swift in Sources */,
 				242A312E2639482900BCC87C /* ViewController.swift in Sources */,
 				24B3E81E263AF3C6001AF867 /* ImageCollectionViewCell.swift in Sources */,
+				2443236E266D59DE00E38C68 /* SignupViewController.swift in Sources */,
 				24BC732E266B6ABD00E038C6 /* MyTownModalPresentationController.swift in Sources */,
 				24BC732B266B66AD00E038C6 /* MyTownModalCollectionViewCell.swift in Sources */,
 				24BC7324266B565500E038C6 /* UIVIew+Extension.swift in Sources */,
