@@ -51,6 +51,9 @@
                                         <state key="normal" title="프로필 수정">
                                             <color key="titleColor" name="DarkGray"/>
                                         </state>
+                                        <connections>
+                                            <action selector="touchProfileEditButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6B6-6j-9wo"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -98,6 +101,9 @@
                                         <state key="normal" title="충전하기">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="touchChargeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hAu-be-Pr0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -123,19 +129,27 @@
                                             <constraint firstAttribute="width" constant="25" id="rpp-Mh-7bM"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용자등록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5S-Xw-EB0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="판매자등록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5S-Xw-EB0">
                                         <rect key="frame" x="51" y="21.5" width="61" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" name="Black1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xb5-dN-dEs">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="5ID-Az-nbk"/>
+                                    <constraint firstItem="xb5-dN-dEs" firstAttribute="top" secondItem="Rak-NA-iXf" secondAttribute="top" id="6ha-By-eJq"/>
                                     <constraint firstItem="K5S-Xw-EB0" firstAttribute="leading" secondItem="2y3-aW-KTO" secondAttribute="trailing" constant="10" id="7O9-ig-aNN"/>
+                                    <constraint firstAttribute="trailing" secondItem="xb5-dN-dEs" secondAttribute="trailing" id="FWe-1r-kXm"/>
+                                    <constraint firstAttribute="bottom" secondItem="xb5-dN-dEs" secondAttribute="bottom" id="FZE-j8-Svh"/>
                                     <constraint firstItem="K5S-Xw-EB0" firstAttribute="centerY" secondItem="2y3-aW-KTO" secondAttribute="centerY" id="IVi-aQ-D5c"/>
                                     <constraint firstItem="2y3-aW-KTO" firstAttribute="centerY" secondItem="Rak-NA-iXf" secondAttribute="centerY" id="cyk-FC-wVg"/>
+                                    <constraint firstItem="xb5-dN-dEs" firstAttribute="leading" secondItem="Rak-NA-iXf" secondAttribute="leading" id="gyL-vr-pRW"/>
                                     <constraint firstItem="2y3-aW-KTO" firstAttribute="leading" secondItem="Rak-NA-iXf" secondAttribute="leading" constant="16" id="w9q-Dz-E61"/>
                                 </constraints>
                             </view>
@@ -155,13 +169,21 @@
                                         <color key="textColor" name="Black1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Eh-Dm-GBu">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="3Eh-Dm-GBu" secondAttribute="bottom" id="0NV-eY-NZU"/>
                                     <constraint firstItem="xYL-6n-5nl" firstAttribute="centerY" secondItem="e2G-2X-Y8Y" secondAttribute="centerY" id="7Fe-eK-nhC"/>
                                     <constraint firstItem="1Na-cH-cqT" firstAttribute="leading" secondItem="e2G-2X-Y8Y" secondAttribute="leading" constant="16" id="7cr-tq-SBd"/>
+                                    <constraint firstItem="3Eh-Dm-GBu" firstAttribute="leading" secondItem="e2G-2X-Y8Y" secondAttribute="leading" id="AmL-Jm-Gjr"/>
                                     <constraint firstAttribute="height" constant="60" id="M5m-3E-ieR"/>
+                                    <constraint firstItem="3Eh-Dm-GBu" firstAttribute="top" secondItem="e2G-2X-Y8Y" secondAttribute="top" id="QE6-Ey-fMA"/>
                                     <constraint firstItem="1Na-cH-cqT" firstAttribute="centerY" secondItem="e2G-2X-Y8Y" secondAttribute="centerY" id="Qgt-nn-IMU"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Eh-Dm-GBu" secondAttribute="trailing" id="Zbi-Ge-Oas"/>
                                     <constraint firstItem="xYL-6n-5nl" firstAttribute="leading" secondItem="1Na-cH-cqT" secondAttribute="trailing" constant="10" id="ipN-q8-ZAr"/>
                                 </constraints>
                             </view>
@@ -192,6 +214,18 @@
                             <constraint firstItem="Rak-NA-iXf" firstAttribute="top" secondItem="1fm-cv-stX" secondAttribute="bottom" constant="10" id="txM-yn-dHh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chargeButton" destination="JQh-WE-aDu" id="owx-uC-b25"/>
+                        <outlet property="emailLabel" destination="VMU-CA-CyH" id="e2I-PH-60k"/>
+                        <outlet property="nameLabel" destination="MTN-Nk-h4A" id="Uuk-z0-YOu"/>
+                        <outlet property="pointLabel" destination="0di-Jx-PDB" id="iVw-HL-xOh"/>
+                        <outlet property="profileEditButton" destination="r7T-bW-TJ8" id="F1S-tT-BRc"/>
+                        <outlet property="profileImageView" destination="sNO-yB-jdW" id="qFs-IM-sdj"/>
+                        <outletCollection property="UIViews" destination="vxE-eh-9j0" collectionClass="NSMutableArray" id="1gj-AF-1KW"/>
+                        <outletCollection property="UIViews" destination="1fm-cv-stX" collectionClass="NSMutableArray" id="aAY-en-5cp"/>
+                        <outletCollection property="UIViews" destination="xb5-dN-dEs" collectionClass="NSMutableArray" id="vHB-sI-PXC"/>
+                        <outletCollection property="UIViews" destination="3Eh-Dm-GBu" collectionClass="NSMutableArray" id="lfc-05-lIO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
