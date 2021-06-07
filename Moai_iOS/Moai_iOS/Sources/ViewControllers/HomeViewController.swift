@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Moya
 
 enum SearchStatus: Int {
     case Scroll = 0
@@ -19,13 +20,16 @@ class HomeViewController: UIViewController{
     
     @IBOutlet weak var searchBackgroundView: UIView!
     @IBOutlet weak var searchTextField: UITextField!
-    @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var HomeCollectionView: UICollectionView!
     @IBOutlet weak var notificationButton: UIButton!
     @IBOutlet weak var filterButton: UIButton!
     @IBOutlet var searchTableView: UITableView!
+    @IBOutlet var totalLabel: UILabel!
+    
+    var listData: [ProductsListModel] = []
     
     var search: SearchStatus = .Appear
+    var service = MoyaProvider<ProductsAPI>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +46,7 @@ class HomeViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
+        self.getProducts()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -71,6 +76,17 @@ class HomeViewController: UIViewController{
         }
     }
     
+    private func updateListCollectionView() {
+        self.HomeCollectionView.reloadData()
+    }
+    
+    // MARK: - Unwrap Server Data
+    private func unwrapServerData(data: [ProductsListModel]?) {
+        guard let data = data else {
+            return
+        }
+        self.listData = data
+    }
     // MARK: - Register Delegate and DataSource
     private func registerCollectionView() {
         self.HomeCollectionView.delegate = self
@@ -92,6 +108,42 @@ class HomeViewController: UIViewController{
     
     private func registerTextField() {
         self.searchTextField.delegate = self
+    }
+    
+    private func updateData() {
+        self.totalLabel.text = "총 \(listData.count)개의 상품"
+    }
+    
+    
+    // MARK: - Server
+    
+    private func getProducts() {
+        service.request(ProductsAPI.getProducts) { [weak self] result in
+            guard let self = self else {
+                return
+            }
+            switch result{
+            case .success(let response):
+                print(response)
+                do {
+                    let data = try JSONDecoder().decode(GetProductsModel.self, from: response.data)
+                    print(data)
+                    self.unwrapServerData(data: data.results)
+                    self.updateListCollectionView()
+                    self.updateData()
+            
+                    
+                } catch(let err) {
+                    self.makeAlert(title: "서버 오류", message: "서버통신이 원활하지 않습니다", okAction: nil, completion: nil)
+                    print(err.localizedDescription)
+
+                }
+                
+            case .failure(let error):
+                self.makeAlert(title: "서버 오류", message: "서버통신이 원활하지 않습니다", okAction: nil, completion: nil)
+                print(error.localizedDescription)
+            }
+        }
     }
     
     // MARK: - IBActions
@@ -134,14 +186,15 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - UICollectionView DataSource
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return listData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Cells.homeCollectionViewCell, for: indexPath) as? HomeCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.initializeView("https://cdn.pixabay.com/photo/2018/07/18/19/12/spaghetti-3547078__340.jpg")
+//        cell.initializeView("https://cdn.pixabay.com/photo/2018/07/18/19/12/spaghetti-3547078__340.jpg")
+        cell.initializeView(listData[indexPath.item])
         return cell
     }
     
@@ -150,6 +203,8 @@ extension HomeViewController: UICollectionViewDataSource {
         guard let vc = storyboard.instantiateViewController(identifier: Constants.ViewControllers.itemDetailViewController) as? ItemDetailViewController else {
             return
         }
+        vc.isImpending = !listData[indexPath.item].impending
+        vc.productId = listData[indexPath.item].productNo
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

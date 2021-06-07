@@ -138,10 +138,19 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6,000 원" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKu-tm-umI">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKu-tm-umI">
                                                 <rect key="frame" x="270" y="515.5" width="45.5" height="14.5"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
-                                                <color key="textColor" name="LightGray1"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="6,000 원">
+                                                        <attributes>
+                                                            <color key="NSColor" name="LightGray1"/>
+                                                            <font key="NSFont" size="12" name="AppleSDGothicNeo-Medium"/>
+                                                            <font key="NSOriginalFont" size="12" name="AppleSDGothicNeo-Medium"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            <integer key="NSStrikethrough" value="1"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="! 재고 소진시 1,000원 환급 예정" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaE-Mk-cSG">
@@ -177,8 +186,11 @@
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vvq-1D-QWd">
                                                 <rect key="frame" x="20" y="698" width="374" height="318"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                                <color key="textColor" systemColor="labelColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="318" id="G9t-rR-ysU"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" name="Black1"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
@@ -210,7 +222,7 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SzH-ad-Zzi">
                                                 <rect key="frame" x="20" y="1220" width="374" height="128"/>
-                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="o1A-9M-f9P"/>
                                                 </constraints>
@@ -245,12 +257,20 @@
                                                 <color key="textColor" name="DarkGray"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sellerIcon" translatesAutoresizingMaskIntoConstraints="NO" id="SYo-26-jS5">
+                                                <rect key="frame" x="202" y="1117" width="13" height="12"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="12" id="IJO-ne-ERv"/>
+                                                    <constraint firstAttribute="width" constant="13" id="wVf-HL-5w8"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="MXS-79-wHu" secondAttribute="trailing" constant="20" id="047-wW-Dyy"/>
                                             <constraint firstItem="Pd4-wH-wYC" firstAttribute="centerY" secondItem="LvI-IO-Sw0" secondAttribute="centerY" id="0vC-1c-Sh5"/>
                                             <constraint firstItem="SzH-ad-Zzi" firstAttribute="top" secondItem="TNO-Ep-jYC" secondAttribute="bottom" constant="10" id="1U0-wa-TuJ"/>
+                                            <constraint firstItem="SYo-26-jS5" firstAttribute="centerY" secondItem="Pd4-wH-wYC" secondAttribute="centerY" id="1b0-OP-onP"/>
                                             <constraint firstItem="nSs-cs-WFh" firstAttribute="leading" secondItem="8IE-F6-uev" secondAttribute="leading" constant="20" id="1eU-00-Z1S"/>
                                             <constraint firstItem="Z4y-Zg-v6f" firstAttribute="leading" secondItem="8IE-F6-uev" secondAttribute="leading" constant="20" id="3KI-qX-FEt"/>
                                             <constraint firstItem="gn8-V7-be1" firstAttribute="leading" secondItem="8IE-F6-uev" secondAttribute="leading" constant="20" id="3br-nZ-I87"/>
@@ -276,6 +296,7 @@
                                             <constraint firstItem="dDK-KO-Pgq" firstAttribute="leading" secondItem="8IE-F6-uev" secondAttribute="leading" constant="20" id="MAP-gz-iPl"/>
                                             <constraint firstItem="vvq-1D-QWd" firstAttribute="leading" secondItem="8IE-F6-uev" secondAttribute="leading" constant="20" id="OWv-xQ-g9a"/>
                                             <constraint firstItem="48Y-b4-Zg7" firstAttribute="centerY" secondItem="vRq-WE-41P" secondAttribute="centerY" id="Od1-k1-0GQ"/>
+                                            <constraint firstItem="SYo-26-jS5" firstAttribute="leading" secondItem="Pd4-wH-wYC" secondAttribute="trailing" constant="10" id="OrT-kO-Aa9"/>
                                             <constraint firstItem="kl7-co-34a" firstAttribute="centerY" secondItem="SwI-CQ-tsS" secondAttribute="centerY" id="QEz-Ws-Qc4"/>
                                             <constraint firstItem="dDK-KO-Pgq" firstAttribute="top" secondItem="Uz8-lU-UBX" secondAttribute="bottom" constant="10" id="SSL-ZU-EuF"/>
                                             <constraint firstItem="Pd4-wH-wYC" firstAttribute="leading" secondItem="LvI-IO-Sw0" secondAttribute="trailing" constant="10" id="Sbx-mf-hFW"/>
@@ -334,6 +355,7 @@
                     <connections>
                         <outlet property="countLabel" destination="vRq-WE-41P" id="DLe-pT-JGH"/>
                         <outlet property="descriptionTextView" destination="vvq-1D-QWd" id="GhG-4y-BvD"/>
+                        <outlet property="descriptionTextViewHeight" destination="G9t-rR-ysU" id="Af6-st-UKB"/>
                         <outlet property="discountPrice" destination="Ut3-Ep-AYj" id="lrf-mQ-U9w"/>
                         <outlet property="discountRateLabel" destination="Dve-7N-F9X" id="bAL-fo-hwY"/>
                         <outlet property="imageCollectionView" destination="klB-38-5LN" id="Kbi-d6-MeM"/>
@@ -363,6 +385,7 @@
     </scenes>
     <resources>
         <image name="alarm" catalog="system" width="124" height="128"/>
+        <image name="sellerIcon" width="16.5" height="16.5"/>
         <image name="smiley" catalog="system" width="128" height="121"/>
         <namedColor name="Black1">
             <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -388,14 +411,8 @@
         <namedColor name="LightRed">
             <color red="0.8784313725490196" green="0.15686274509803921" blue="0.15686274509803921" alpha="0.10000000149011612" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -37,6 +37,7 @@ struct Constants {
         static let start: String = "Start"
         static let myPageSeller: String = "MyPageSeller"
         static let myPageUser: String = "MyPageUser"
+        static let signup: String = "Signup"
     }
     
     struct ViewControllers {
@@ -52,5 +53,18 @@ struct Constants {
         static let loginViewController: String = "LoginViewController"
         static let myPageUserViewController: String = "MyPageUserViewController"
         static let myPageSellerViewController: String = "MyPageSellerViewController"
+        static let signupViewController: String = "SignupViewController"
+    }
+    
+    struct TabbarControllers {
+        static let startTabBarController: String = "StartTabBarController"
+    }
+    
+    struct Images {
+        static let ranking1: String = "ranking1"
+        static let ranking2: String = "ranking2"
+        static let ranking3: String = "ranking3"
+        static let ranking4: String = "ranking4"
+        static let ranking5: String = "ranking5"
     }
 }

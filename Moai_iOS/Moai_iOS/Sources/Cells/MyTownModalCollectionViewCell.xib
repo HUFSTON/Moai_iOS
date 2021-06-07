@@ -21,42 +21,46 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3un-e5-sxi">
                         <rect key="frame" x="0.0" y="0.0" width="426" height="92"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TNU-zU-sqa">
-                                <rect key="frame" x="16" y="0.0" width="14" height="14"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="14" id="Noe-Pw-A5c"/>
-                                    <constraint firstAttribute="width" constant="14" id="gpZ-xj-pmF"/>
-                                </constraints>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wut-AP-Ir7">
-                                <rect key="frame" x="40" y="0.0" width="80" height="80"/>
+                                <rect key="frame" x="50" y="0.0" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="0u9-1V-wyy"/>
                                     <constraint firstAttribute="height" constant="80" id="ZPb-yF-3mX"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="국산콩 두부 300g" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6au-fC-eA6">
-                                <rect key="frame" x="130" y="30.5" width="117.5" height="19.5"/>
+                                <rect key="frame" x="140" y="30.5" width="117.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <color key="textColor" name="Black1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vm5-BS-5oe">
-                                <rect key="frame" x="257.5" y="34" width="13" height="12"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sellerIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Vm5-BS-5oe">
+                                <rect key="frame" x="267.5" y="34" width="13" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="13" id="9wK-rj-szf"/>
                                     <constraint firstAttribute="height" constant="12" id="IdS-ad-dun"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28r-45-rX7">
+                                <rect key="frame" x="24" y="0.0" width="16" height="16"/>
+                                <color key="backgroundColor" name="DarkGreen"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="6Qe-Ih-l1L"/>
+                                    <constraint firstAttribute="width" constant="16" id="veZ-l1-e1Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="wut-AP-Ir7" firstAttribute="leading" secondItem="TNU-zU-sqa" secondAttribute="trailing" constant="10" id="7HK-je-B3u"/>
                             <constraint firstItem="Vm5-BS-5oe" firstAttribute="leading" secondItem="6au-fC-eA6" secondAttribute="trailing" constant="10" id="8PU-Mu-c9f"/>
-                            <constraint firstItem="TNU-zU-sqa" firstAttribute="top" secondItem="3un-e5-sxi" secondAttribute="top" id="Oaj-ev-cDe"/>
+                            <constraint firstItem="wut-AP-Ir7" firstAttribute="leading" secondItem="28r-45-rX7" secondAttribute="trailing" constant="10" id="HjN-bN-MaW"/>
+                            <constraint firstItem="28r-45-rX7" firstAttribute="top" secondItem="3un-e5-sxi" secondAttribute="top" id="Kve-7L-2Tr"/>
+                            <constraint firstItem="28r-45-rX7" firstAttribute="leading" secondItem="3un-e5-sxi" secondAttribute="leading" constant="24" id="PLT-sY-Y1j"/>
                             <constraint firstItem="wut-AP-Ir7" firstAttribute="top" secondItem="3un-e5-sxi" secondAttribute="top" id="XUe-AD-XhP"/>
                             <constraint firstItem="6au-fC-eA6" firstAttribute="leading" secondItem="wut-AP-Ir7" secondAttribute="trailing" constant="10" id="Yqq-Tk-yRr"/>
-                            <constraint firstItem="TNU-zU-sqa" firstAttribute="leading" secondItem="3un-e5-sxi" secondAttribute="leading" constant="16" id="htp-Ak-auD"/>
                             <constraint firstItem="6au-fC-eA6" firstAttribute="centerY" secondItem="wut-AP-Ir7" secondAttribute="centerY" id="ig5-yE-0ht"/>
                             <constraint firstItem="Vm5-BS-5oe" firstAttribute="centerY" secondItem="6au-fC-eA6" secondAttribute="centerY" id="k3r-f4-RGH"/>
                         </constraints>
@@ -73,15 +77,19 @@
             <size key="customSize" width="426" height="92"/>
             <connections>
                 <outlet property="profileImageView" destination="wut-AP-Ir7" id="Nq9-Z2-hrq"/>
-                <outlet property="rankingImageView" destination="TNU-zU-sqa" id="9lQ-dk-Iwl"/>
+                <outlet property="rankingLabel" destination="28r-45-rX7" id="JZL-oy-13T"/>
                 <outlet property="storeNameLabel" destination="6au-fC-eA6" id="ZkA-cf-8z8"/>
             </connections>
-            <point key="canvasLocation" x="407" y="125"/>
+            <point key="canvasLocation" x="405.79710144927537" y="124.55357142857142"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="sellerIcon" width="16.5" height="16.5"/>
         <namedColor name="Black1">
             <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DarkGreen">
+            <color red="0.047058823529411764" green="0.63529411764705879" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
