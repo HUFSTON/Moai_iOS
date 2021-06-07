@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct APIServices {
+    static let baseURL = URL(string: "http://52.78.125.101:3000")
+}

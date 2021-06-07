@@ -8,12 +8,12 @@
 import Foundation
 
 struct Login: Codable {
-//    let token: String
-//    let isSeller: Bool
-//
-//    enum CodingKeys: String, CodingKey {
-//        case token
-//        case isSeller = "is_seller"
-//    }
-    let shopToken: String
+    let token: String?
+    let isSeller: Bool?
+
+    enum CodingKeys: String, CodingKey {
+        case token
+        case isSeller = "is_seller"
+    }
+//    let shopToken: String
 }

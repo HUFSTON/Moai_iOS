@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2406507B266DBCA900D692C9 /* LocationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2406507A266DBCA900D692C9 /* LocationAPI.swift */; };
 		242164C32641006C00858529 /* ReserveStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242164C22641006C00858529 /* ReserveStatus.storyboard */; };
 		242164C62641008400858529 /* ReserveStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242164C52641008400858529 /* ReserveStatusViewController.swift */; };
 		24276F57263D3D9B002B4AB9 /* ReserveProceedingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24276F56263D3D9B002B4AB9 /* ReserveProceedingViewController.swift */; };
@@ -355,6 +356,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2406507A266DBCA900D692C9 /* LocationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAPI.swift; sourceTree = "<group>"; };
 		242164C22641006C00858529 /* ReserveStatus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReserveStatus.storyboard; sourceTree = "<group>"; };
 		242164C52641008400858529 /* ReserveStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveStatusViewController.swift; sourceTree = "<group>"; };
 		24276F56263D3D9B002B4AB9 /* ReserveProceedingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveProceedingViewController.swift; sourceTree = "<group>"; };
@@ -837,6 +839,7 @@
 			children = (
 				242A315226394BCB00BCC87C /* apiservices.swift */,
 				24432367266D53DC00E38C68 /* UsersAPI.swift */,
+				2406507A266DBCA900D692C9 /* LocationAPI.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -1733,6 +1736,7 @@
 				24276F5A263D3DA5002B4AB9 /* ReceivedViewController.swift in Sources */,
 				24ADAEC8266CBCFB00ECB21E /* MyPageUserViewController.swift in Sources */,
 				242A312A2639482900BCC87C /* AppDelegate.swift in Sources */,
+				2406507B266DBCA900D692C9 /* LocationAPI.swift in Sources */,
 				2449DEEE263D46D4004CC0C4 /* StartTabBarController.swift in Sources */,
 				24B3E7F3263AAE8F001AF867 /* UIImageView+Extension.swift in Sources */,
 				242A312C2639482900BCC87C /* SceneDelegate.swift in Sources */,
