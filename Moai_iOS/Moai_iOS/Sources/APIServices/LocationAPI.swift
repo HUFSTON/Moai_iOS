@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 enum LocationAPI {
-    case Location
+    case getLocation
 }
 
 extension LocationAPI: TargetType {
@@ -34,7 +34,7 @@ extension LocationAPI: TargetType {
     
     var task: Task {
         switch  self {
-        case .Location:
+        case .getLocation:
             return .requestPlain
         default:
             print("needed to be added")

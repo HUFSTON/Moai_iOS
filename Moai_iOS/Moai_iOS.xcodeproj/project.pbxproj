@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2406507B266DBCA900D692C9 /* LocationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2406507A266DBCA900D692C9 /* LocationAPI.swift */; };
+		2406507D266DC0A700D692C9 /* ChangeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2406507C266DC0A700D692C9 /* ChangeAPI.swift */; };
 		242164C32641006C00858529 /* ReserveStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242164C22641006C00858529 /* ReserveStatus.storyboard */; };
 		242164C62641008400858529 /* ReserveStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242164C52641008400858529 /* ReserveStatusViewController.swift */; };
 		24276F57263D3D9B002B4AB9 /* ReserveProceedingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24276F56263D3D9B002B4AB9 /* ReserveProceedingViewController.swift */; };
@@ -357,6 +358,7 @@
 
 /* Begin PBXFileReference section */
 		2406507A266DBCA900D692C9 /* LocationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAPI.swift; sourceTree = "<group>"; };
+		2406507C266DC0A700D692C9 /* ChangeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAPI.swift; sourceTree = "<group>"; };
 		242164C22641006C00858529 /* ReserveStatus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReserveStatus.storyboard; sourceTree = "<group>"; };
 		242164C52641008400858529 /* ReserveStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveStatusViewController.swift; sourceTree = "<group>"; };
 		24276F56263D3D9B002B4AB9 /* ReserveProceedingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveProceedingViewController.swift; sourceTree = "<group>"; };
@@ -840,6 +842,7 @@
 				242A315226394BCB00BCC87C /* apiservices.swift */,
 				24432367266D53DC00E38C68 /* UsersAPI.swift */,
 				2406507A266DBCA900D692C9 /* LocationAPI.swift */,
+				2406507C266DC0A700D692C9 /* ChangeAPI.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -1745,6 +1748,7 @@
 				2459AC042639C90F009E3A82 /* APPConstants.swift in Sources */,
 				2481BA68264BF7B400C04DA5 /* MyPageTableViewCell.swift in Sources */,
 				2481BA61264BD8A300C04DA5 /* SearchTableViewCell.swift in Sources */,
+				2406507D266DC0A700D692C9 /* ChangeAPI.swift in Sources */,
 				2443236A266D542D00E38C68 /* LoginModel.swift in Sources */,
 				24432366266D533900E38C68 /* UIViewController + Extension.swift in Sources */,
 				2449DEE4263D4585004CC0C4 /* MyTownViewController.swift in Sources */,
