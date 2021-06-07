@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Town Modal View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MyTownModalViewController" id="Y6W-OH-hqX" customClass="MyTownModalViewController" customModule="Moai_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="근처 가게 TOP 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxj-tF-eci">
+                                <rect key="frame" x="24" y="74" width="103" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4d-Vr-hq2">
+                                <rect key="frame" x="258" y="74" width="132" height="17"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="500m">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="14" name="AppleSDGothicNeo-Medium"/>
+                                            <font key="NSOriginalFont" size="14" name="AppleSDGothicNeo-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" 반경 판매량 기준">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="AppleSDGothicNeo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KR4-Ii-bJU">
+                                <rect key="frame" x="194.5" y="54" width="25" height="1"/>
+                                <color key="backgroundColor" name="DarkGray"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="NNu-o0-b1k"/>
+                                    <constraint firstAttribute="width" constant="25" id="OOs-vz-JXx"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="D0x-YV-2jB">
+                                <rect key="frame" x="0.0" y="102" width="414" height="794"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KKe-xx-24j">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jxj-tF-eci" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="IlK-0E-i5x"/>
+                            <constraint firstItem="D0x-YV-2jB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="YSp-pl-Gnc"/>
+                            <constraint firstItem="KR4-Ii-bJU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Z0i-2I-zbn"/>
+                            <constraint firstItem="jxj-tF-eci" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="hce-QE-js3"/>
+                            <constraint firstItem="KR4-Ii-bJU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="kxR-Re-f5W"/>
+                            <constraint firstItem="K4d-Vr-hq2" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="nKO-af-ZPh"/>
+                            <constraint firstAttribute="bottom" secondItem="D0x-YV-2jB" secondAttribute="bottom" id="rGA-2p-lWm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="K4d-Vr-hq2" secondAttribute="trailing" constant="24" id="t2Y-5s-Jxe"/>
+                            <constraint firstItem="D0x-YV-2jB" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="wh9-Af-NnI"/>
+                            <constraint firstItem="D0x-YV-2jB" firstAttribute="top" secondItem="jxj-tF-eci" secondAttribute="bottom" constant="10" id="zc8-h3-kYz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myTownModalCollectionView" destination="D0x-YV-2jB" id="Kif-JG-Kot"/>
+                        <outlet property="rangeLabel" destination="K4d-Vr-hq2" id="HVB-XW-Thy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="95"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="DarkGray">
+            <color red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
