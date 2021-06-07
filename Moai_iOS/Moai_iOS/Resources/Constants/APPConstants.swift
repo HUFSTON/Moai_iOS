@@ -59,4 +59,12 @@ struct Constants {
     struct TabbarControllers {
         static let startTabBarController: String = "StartTabBarController"
     }
+    
+    struct Images {
+        static let ranking1: String = "ranking1"
+        static let ranking2: String = "ranking2"
+        static let ranking3: String = "ranking3"
+        static let ranking4: String = "ranking4"
+        static let ranking5: String = "ranking5"
+    }
 }

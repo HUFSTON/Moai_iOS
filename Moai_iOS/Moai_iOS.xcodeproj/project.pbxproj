@@ -48,6 +48,9 @@
 		246E8D46266BBB4000AA990A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246E8D45266BBB4000AA990A /* Login.storyboard */; };
 		246E8D48266BBB5000AA990A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E8D47266BBB5000AA990A /* LoginViewController.swift */; };
 		2477029E266E574300B04DC7 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2477029D266E574300B04DC7 /* SignupModel.swift */; };
+		247702A0266E6DF500B04DC7 /* MyTownAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2477029F266E6DF500B04DC7 /* MyTownAPI.swift */; };
+		247702A2266E708800B04DC7 /* MyTownModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247702A1266E708800B04DC7 /* MyTownModel.swift */; };
+		247702A4266E752C00B04DC7 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247702A3266E752B00B04DC7 /* UIImage+Extension.swift */; };
 		2481BA61264BD8A300C04DA5 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481BA5F264BD8A300C04DA5 /* SearchTableViewCell.swift */; };
 		2481BA62264BD8A300C04DA5 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2481BA60264BD8A300C04DA5 /* SearchTableViewCell.xib */; };
 		2481BA68264BF7B400C04DA5 /* MyPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481BA66264BF7B400C04DA5 /* MyPageTableViewCell.swift */; };
@@ -406,6 +409,9 @@
 		246E8D45266BBB4000AA990A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		246E8D47266BBB5000AA990A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2477029D266E574300B04DC7 /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
+		2477029F266E6DF500B04DC7 /* MyTownAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownAPI.swift; sourceTree = "<group>"; };
+		247702A1266E708800B04DC7 /* MyTownModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownModel.swift; sourceTree = "<group>"; };
+		247702A3266E752B00B04DC7 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		2481BA5F264BD8A300C04DA5 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		2481BA60264BD8A300C04DA5 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		2481BA66264BF7B400C04DA5 /* MyPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell.swift; sourceTree = "<group>"; };
@@ -848,6 +854,7 @@
 				24065084266DDBD500D692C9 /* ProductsListModel.swift */,
 				24065086266DFC6B00D692C9 /* ProductDetail.swift */,
 				2477029D266E574300B04DC7 /* SignupModel.swift */,
+				247702A1266E708800B04DC7 /* MyTownModel.swift */,
 			);
 			path = APIModels;
 			sourceTree = "<group>";
@@ -861,6 +868,7 @@
 				2406507C266DC0A700D692C9 /* ChangeAPI.swift */,
 				2406507E266DC83B00D692C9 /* MyPageAPI.swift */,
 				24065080266DCA7B00D692C9 /* ProductsAPI.swift */,
+				2477029F266E6DF500B04DC7 /* MyTownAPI.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -893,6 +901,7 @@
 				24B3E7F2263AAE8F001AF867 /* UIImageView+Extension.swift */,
 				24BC7323266B565500E038C6 /* UIVIew+Extension.swift */,
 				24432365266D533900E38C68 /* UIViewController + Extension.swift */,
+				247702A3266E752B00B04DC7 /* UIImage+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1759,6 +1768,7 @@
 				24F25747263D099E00384542 /* ReserveDetailViewController.swift in Sources */,
 				24276F5A263D3DA5002B4AB9 /* ReceivedViewController.swift in Sources */,
 				24ADAEC8266CBCFB00ECB21E /* MyPageUserViewController.swift in Sources */,
+				247702A2266E708800B04DC7 /* MyTownModel.swift in Sources */,
 				242A312A2639482900BCC87C /* AppDelegate.swift in Sources */,
 				24065085266DDBD500D692C9 /* ProductsListModel.swift in Sources */,
 				2406507B266DBCA900D692C9 /* LocationAPI.swift in Sources */,
@@ -1767,6 +1777,7 @@
 				242A312C2639482900BCC87C /* SceneDelegate.swift in Sources */,
 				2449DEE7263D4591004CC0C4 /* MyPageViewController.swift in Sources */,
 				2459AC012639C4DC009E3A82 /* UIColor+Extension.swift in Sources */,
+				247702A4266E752C00B04DC7 /* UIImage+Extension.swift in Sources */,
 				2459AC042639C90F009E3A82 /* APPConstants.swift in Sources */,
 				2481BA68264BF7B400C04DA5 /* MyPageTableViewCell.swift in Sources */,
 				2481BA61264BD8A300C04DA5 /* SearchTableViewCell.swift in Sources */,
@@ -1774,6 +1785,7 @@
 				2443236A266D542D00E38C68 /* LoginModel.swift in Sources */,
 				24432366266D533900E38C68 /* UIViewController + Extension.swift in Sources */,
 				24065081266DCA7B00D692C9 /* ProductsAPI.swift in Sources */,
+				247702A0266E6DF500B04DC7 /* MyTownAPI.swift in Sources */,
 				2449DEE4263D4585004CC0C4 /* MyTownViewController.swift in Sources */,
 				2477029E266E574300B04DC7 /* SignupModel.swift in Sources */,
 				24276F57263D3D9B002B4AB9 /* ReserveProceedingViewController.swift in Sources */,

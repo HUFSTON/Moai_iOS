@@ -6,23 +6,32 @@
 //
 
 import UIKit
-
+import Moya
 class MyTownViewController: UIViewController, MTMapViewDelegate {
+    
+    let service = MoyaProvider<MyTownAPI>()
+    let rankingIcon: [UIImage] = [UIImage.ranking1,
+                                  UIImage.ranking2,
+                                  UIImage.ranking3,
+                                  UIImage.ranking4,
+                                  UIImage.ranking5]
 
-    @IBOutlet var mapBackgroundView: UIView!
-    @IBOutlet var containerView: UIView!
-    @IBOutlet var containerViewHeight: NSLayoutConstraint!
+    var MyTownData: [MyTownModel] = []
     
     var mapView: MTMapView?
     var modalView: MyTownModalViewController?
 
     var maximumHeight: CGFloat?
     var minimumHeight: CGFloat?
+
+    @IBOutlet var mapBackgroundView: UIView!
+    @IBOutlet var containerView: UIView!
+    @IBOutlet var containerViewHeight: NSLayoutConstraint!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializeMap()
-        ModalView()
         initializeData()
         expandContainerView(maximumHeight ?? 0)
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
@@ -33,6 +42,7 @@ class MyTownViewController: UIViewController, MTMapViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
+        self.getMyTown()
     }
     
     private func initializeData() {
@@ -54,6 +64,42 @@ class MyTownViewController: UIViewController, MTMapViewDelegate {
             self.containerView.layoutIfNeeded()
         }
     }
+    
+    private func getMyTown() {
+        service.request(MyTownAPI.getMyTown) { [weak self] result in
+            guard let self = self else {
+                return 
+            }
+            switch result{
+            case .success(let response):
+         
+                do {
+                    let data = try JSONDecoder().decode([MyTownModel].self, from: response.data)
+                    self.MyTownData = data
+                    self.initializeMap()
+                    self.ModalView()
+                    
+                } catch(let err) {
+        
+                    print(err.localizedDescription)
+                }
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+            
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     @objc func panGestureRecognizerAction(sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: view)
@@ -88,6 +134,7 @@ class MyTownViewController: UIViewController, MTMapViewDelegate {
         }
         addChild(vc)
         vc.view.round(corners: [.topLeft, .topRight], cornerRadius: 15)
+        vc.MyTownData = MyTownData
         vc.view.frame = self.containerView.bounds
         self.containerView.addSubview(vc.view)
     }
@@ -97,23 +144,32 @@ class MyTownViewController: UIViewController, MTMapViewDelegate {
         guard let map = mapView else {
             return
         }
+                
+        mapBackgroundView.addSubview(map)
+        
         map.delegate = self
         map.baseMapType = .standard
         map.addPOIItems(initializeMapMarker())
+        map.clipsToBounds = true
         map.fitAreaToShowAllPOIItems()
-        map.setZoomLevel(MTMapZoomLevel(-2), animated: true)
-        mapBackgroundView.addSubview(map)
+        map.zoomOut(animated: true)
+        map.setZoomLevel(map.zoomLevel + MTMapZoomLevel(1.0), animated: true)
     }
     
     private func initializeMapMarker() -> [MTMapPOIItem] {
-        let marker : MTMapPOIItem = MTMapPOIItem()
-        marker.markerType = .customImage
-        marker.customImage = UIImage(named: "Location")
-        marker.mapPoint = MTMapPoint(geoCoord:MTMapPointGeo(latitude: 37.596966, longitude:  127.058972))
-        marker.markerSelectedType = .customImage
-        marker.customSelectedImage = UIImage(named: "Location")
+        var mapItem: [MTMapPOIItem] = []
+        for i in 0..<MyTownData.count {
+            let marker : MTMapPOIItem = MTMapPOIItem()
+            marker.markerType = .customImage
+            marker.customImage = rankingIcon[i]
+            marker.mapPoint = .init(geoCoord: .init(latitude: MyTownData[i].latitude, longitude: MyTownData[i].longitude))
+            marker.markerSelectedType = .customImage
+            marker.customSelectedImage = rankingIcon[i]
+            marker.tag = i
+            mapItem.append(marker)
+        }
         
-        return [marker]
+        return mapItem
     }
     
     func mapView(_ mapView: MTMapView!, selectedPOIItem poiItem: MTMapPOIItem!) -> Bool {

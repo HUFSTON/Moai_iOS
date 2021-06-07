@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SignupModel: Decodable {
+struct SignupModel: Codable {
     let email: String
     let message: String
 }

@@ -24,8 +24,13 @@ class LoginViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializeViewShape()
-        assignDelegate()
+        if UserDefaults.standard.object(forKey: "token") != nil {
+            pushToStart()
+        } else {
+            initializeViewShape()
+            assignDelegate()
+        }
+        
     }
         
     override func viewWillAppear(_ animated: Bool) {
