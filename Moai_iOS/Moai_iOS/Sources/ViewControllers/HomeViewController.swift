@@ -20,11 +20,11 @@ class HomeViewController: UIViewController{
     
     @IBOutlet weak var searchBackgroundView: UIView!
     @IBOutlet weak var searchTextField: UITextField!
-    @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var HomeCollectionView: UICollectionView!
     @IBOutlet weak var notificationButton: UIButton!
     @IBOutlet weak var filterButton: UIButton!
     @IBOutlet var searchTableView: UITableView!
+    @IBOutlet var totalLabel: UILabel!
     
     var listData: [ProductsListModel] = []
     
@@ -110,6 +110,10 @@ class HomeViewController: UIViewController{
         self.searchTextField.delegate = self
     }
     
+    private func updateData() {
+        self.totalLabel.text = "총 \(listData.count)개의 상품"
+    }
+    
     
     // MARK: - Server
     
@@ -126,6 +130,7 @@ class HomeViewController: UIViewController{
                     print(data)
                     self.unwrapServerData(data: data.results)
                     self.updateListCollectionView()
+                    self.updateData()
             
                     
                 } catch(let err) {

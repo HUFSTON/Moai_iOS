@@ -131,7 +131,7 @@
                         <outlet property="searchBackgroundView" destination="Sdx-W3-5Ic" id="4xJ-Cz-UAa"/>
                         <outlet property="searchTableView" destination="Rx8-Uh-Ch5" id="0Tu-rv-RxT"/>
                         <outlet property="searchTextField" destination="pTX-Fo-TLZ" id="Nb4-5B-hdn"/>
-                        <outlet property="totalLabel" destination="aHy-sb-Ueb" id="KAH-zn-R0L"/>
+                        <outlet property="totalLabel" destination="aHy-sb-Ueb" id="syY-13-eMG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RqS-00-zTq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
