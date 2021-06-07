@@ -19,6 +19,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var originalPriceLabel: UILabel!
     @IBOutlet weak var discountPriceLabel: UILabel!
     @IBOutlet weak var discountRateLabel: UILabel!
+    @IBOutlet var impendingButton: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,9 +33,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         self.SellerNameLabel.text = data.briefDescription
         self.originalPriceLabel.text = String(data.discountedPrice) + " 원"
         self.discountPriceLabel.text = String(data.regularPrice) + " 원"
-//        self.discountRateLabel.text = String(Int((1-(data.discountedPrice/data.regularPrice))*100))
-        print(data.discountedPrice)
-        print(data.regularPrice)
+        self.impendingButton.isHidden = !data.impending
         self.discountRateLabel.text = String(Int(((1-(Float(data.discountedPrice)/Float(data.regularPrice)))*100.0).rounded()))+" %"
         
     }

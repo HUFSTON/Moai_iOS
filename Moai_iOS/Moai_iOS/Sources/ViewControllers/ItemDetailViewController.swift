@@ -177,6 +177,7 @@ class ItemDetailViewController: UIViewController, MTMapViewDelegate {
             case .success(let response):
                 do {
                     let data = try JSONDecoder().decode(ProductDetail.self, from: response.data)
+                    print(data)
                     self.productDetailData = data
                     print(data)
                     self.updateData()

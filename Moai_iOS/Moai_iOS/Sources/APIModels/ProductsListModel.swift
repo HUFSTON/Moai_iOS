@@ -13,7 +13,8 @@ struct ProductsListModel: Codable {
     let productName, briefDescription: String
     let regularPrice, discountedPrice: Int
     let expiryDatetime, image: String
-    let imageNo, imageSort: Int
+    let imageNo: Int
+    let impending: Bool
 
     enum CodingKeys: String, CodingKey {
         case distance
@@ -27,7 +28,7 @@ struct ProductsListModel: Codable {
         case expiryDatetime = "expiry_datetime"
         case image
         case imageNo = "image_no"
-        case imageSort = "image_sort"
+        case impending
     }
 }
 
