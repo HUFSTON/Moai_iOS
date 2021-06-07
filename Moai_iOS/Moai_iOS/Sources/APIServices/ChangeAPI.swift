@@ -9,7 +9,8 @@ import Foundation
 import Moya
 
 enum ChangeAPI {
-    case postChange(userNo: String, chargedValue: String)
+    case postChange(chargedValue: String)
+    case getChange
 }
 
 extension ChangeAPI: TargetType {
@@ -25,6 +26,8 @@ extension ChangeAPI: TargetType {
         switch self {
         case .postChange:
             return "/change"
+        case .getChange:
+            return "/account"
         default:
             print("needed to be added")
         }
@@ -34,6 +37,8 @@ extension ChangeAPI: TargetType {
         switch self {
         case .postChange:
             return .post
+        case .getChange:
+            return .get
         default:
             print("needed to be added")
         }
@@ -45,17 +50,26 @@ extension ChangeAPI: TargetType {
     
     var task: Task {
         switch self {
-        case .postChange(let userNo, let chargedValue):
-            return .requestParameters(parameters: ["user_no": userNo, "charged_value": chargedValue], encoding: JSONEncoding.default)
+        case .postChange(let chargedValue):
+            return .requestParameters(parameters: ["charged_value": chargedValue], encoding: JSONEncoding.default)
+        case .getChange:
+            return .requestPlain
         default:
             print("needed to be added")
         }
     }
     
     var headers: [String : String]? {
-        return ["Content-Type": "application/json",
-                "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25vIjo1LCJzaG9wX25vIjo0LCJpYXQiOjE2MjI5NTk2ODIsImV4cCI6MTYyMzA0NjA4MiwiaXNzIjoiTU9BSSJ9.HOz4BdHB13BGnd9DT2hU3Lkp3nYCItKSLgz327ZOqgM"]
+        guard let token = UserDefaults.standard.value(forKey: "token") as? String else {
+            print("no token")
+            return nil
+        }
+        switch self {
+        case .getChange:
+            return ["Authorization": token]
+        case .postChange:
+            return ["Content-Type": "application/json",
+                    "Authorization": token]
+        }
     }
-    
-    
 }

@@ -51,6 +51,7 @@
 		247702A0266E6DF500B04DC7 /* MyTownAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2477029F266E6DF500B04DC7 /* MyTownAPI.swift */; };
 		247702A2266E708800B04DC7 /* MyTownModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247702A1266E708800B04DC7 /* MyTownModel.swift */; };
 		247702A4266E752C00B04DC7 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247702A3266E752B00B04DC7 /* UIImage+Extension.swift */; };
+		247702A6266EB67000B04DC7 /* GetChangeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247702A5266EB67000B04DC7 /* GetChangeModel.swift */; };
 		2481BA61264BD8A300C04DA5 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481BA5F264BD8A300C04DA5 /* SearchTableViewCell.swift */; };
 		2481BA62264BD8A300C04DA5 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2481BA60264BD8A300C04DA5 /* SearchTableViewCell.xib */; };
 		2481BA68264BF7B400C04DA5 /* MyPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481BA66264BF7B400C04DA5 /* MyPageTableViewCell.swift */; };
@@ -412,6 +413,7 @@
 		2477029F266E6DF500B04DC7 /* MyTownAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownAPI.swift; sourceTree = "<group>"; };
 		247702A1266E708800B04DC7 /* MyTownModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownModel.swift; sourceTree = "<group>"; };
 		247702A3266E752B00B04DC7 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		247702A5266EB67000B04DC7 /* GetChangeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChangeModel.swift; sourceTree = "<group>"; };
 		2481BA5F264BD8A300C04DA5 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		2481BA60264BD8A300C04DA5 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		2481BA66264BF7B400C04DA5 /* MyPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell.swift; sourceTree = "<group>"; };
@@ -855,6 +857,7 @@
 				24065086266DFC6B00D692C9 /* ProductDetail.swift */,
 				2477029D266E574300B04DC7 /* SignupModel.swift */,
 				247702A1266E708800B04DC7 /* MyTownModel.swift */,
+				247702A5266EB67000B04DC7 /* GetChangeModel.swift */,
 			);
 			path = APIModels;
 			sourceTree = "<group>";
@@ -1753,6 +1756,7 @@
 				2443236E266D59DE00E38C68 /* SignupViewController.swift in Sources */,
 				2406507F266DC83B00D692C9 /* MyPageAPI.swift in Sources */,
 				24065087266DFC6B00D692C9 /* ProductDetail.swift in Sources */,
+				247702A6266EB67000B04DC7 /* GetChangeModel.swift in Sources */,
 				24BC732E266B6ABD00E038C6 /* MyTownModalPresentationController.swift in Sources */,
 				24BC732B266B66AD00E038C6 /* MyTownModalCollectionViewCell.swift in Sources */,
 				24BC7324266B565500E038C6 /* UIVIew+Extension.swift in Sources */,

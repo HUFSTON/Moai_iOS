@@ -11,11 +11,12 @@ import Moya
 class ItemDetailViewController: UIViewController, MTMapViewDelegate {
     
     let service = MoyaProvider<ProductsAPI>()
-    var productDetailData: ProductDetail = ProductDetail(no: 0, userNo: 0, shopNo: 0, name: "", briefDescription: "", detailDescription: "", currentQuantity: 0, expectedQuantity: 0, actualQuantity: nil, regularPrice: 0, discountedPrice: 0, returnPrice: 0, expiryDatetime: "", createdDatetime: "", modifiedDatetime: "", removedDatetime: nil, enabled: 0)
+    var productDetailData: ProductDetail = ProductDetail(productName: "", detailDescription: "", currentQuantity: 0, expectedQuantity: 0, regularPrice: 0, discountedPrice: 0, returnPrice: 0, expiryDatetime: "", shopImage: "", images: [], shopNo: 0, shopName: "", roadAddress: "", detailAddress: "", latitude: 0.0, longitude: 0.0)
     var mapView: MTMapView?
     var paymentModal: PaymentViewController?
     var count: Int = 1
     var productId: Int = 0
+    var isImpending: Bool = false
 
     // MARK: - IBOutlets
     @IBOutlet weak var imageCollectionView: UICollectionView!
@@ -47,10 +48,10 @@ class ItemDetailViewController: UIViewController, MTMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.initializeMap()
         self.initializeStyle()
         self.registerCell()
         self.registerDelegateDatasource()
+        self.initializeNavigationBarColor()
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -67,28 +68,39 @@ class ItemDetailViewController: UIViewController, MTMapViewDelegate {
         let leftButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(popToHomeViewController))
         leftButton.tintColor = UIColor.Black1
         self.navigationItem.leftBarButtonItem = leftButton
-        
     }
+    
+    private func initializeNavigationBarColor() {
+            self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+            self.navigationController!.navigationBar.shadowImage = UIImage()
+            self.navigationController!.navigationBar.isTranslucent = true
+        }
     
     private func updateData() {
         
-        self.itemNameLabel.text = self.productDetailData.name
+        self.itemNameLabel.text = self.productDetailData.productName
         self.discountRateLabel.text = String(Int(((1-(Float(self.productDetailData.discountedPrice)/Float(self.productDetailData.regularPrice)))*100.0).rounded()))+" %"
         self.invenLabel.text = "재고: \(self.productDetailData.currentQuantity)개 남음"
         self.originalPrice.text = "\(self.productDetailData.regularPrice) 원"
         self.discountPrice.text = "\(self.productDetailData.discountedPrice) 원"
         self.returnAlertLabel.text = "! 재고 소진시 \(self.productDetailData.returnPrice)원 환급 예정"
-//        self.descriptionTextView.text = self.productDetailData.detailDescription
+        self.sellerNameLabel.text = self.productDetailData.shopName
+        self.pickupTimeLabel.text = self.productDetailData.expiryDatetime + " 이후"
+        self.pickupPlaceLabel.text = "\(self.productDetailData.roadAddress) \(self.productDetailData.detailAddress)"
+        self.soldOutLabel.isHidden = self.isImpending
+        
+        
+        // dynamic Height 설정
         self.descriptionTextView.text = self.productDetailData.detailDescription
         let estimatedSize = self.descriptionTextView.sizeThatFits(CGSize(width: self.descriptionTextView.frame.width, height: .infinity))
         self.descriptionTextViewHeight.constant = estimatedSize.height
         
         // AttributedString 처리
-        let temp = "재고 부족 및 기타 매장 상황으로 인해 예약하신 \(self.productDetailData.name) 상품을 받지 못하는 경우 총 \(self.productDetailData.returnPrice)원을 환급해드립니다."
+        let temp = "재고 부족 및 기타 매장 상황으로 인해 예약하신 \(self.productDetailData.productName) 상품을 받지 못하는 경우 총 \(self.productDetailData.returnPrice)원을 환급해드립니다."
         let attributedString = NSMutableAttributedString(string: temp)
         attributedString.addAttribute(.foregroundColor,
                                       value: UIColor.DarkGreen,
-                                      range: (temp as NSString).range(of: self.productDetailData.name))
+                                      range: (temp as NSString).range(of: self.productDetailData.productName))
                                       
         attributedString.addAttribute(.foregroundColor,
                                       value: UIColor.DarkGreen,
@@ -115,7 +127,8 @@ class ItemDetailViewController: UIViewController, MTMapViewDelegate {
         let marker : MTMapPOIItem = MTMapPOIItem()
         marker.markerType = .customImage
         marker.customImage = UIImage(named: "Location")
-        marker.mapPoint = MTMapPoint(geoCoord:MTMapPointGeo(latitude: 37.596966, longitude:  127.058972))
+        marker.mapPoint = MTMapPoint(geoCoord:MTMapPointGeo(latitude: self.productDetailData.latitude,
+                                              longitude:  self.productDetailData.longitude))
         marker.markerSelectedType = .customImage
         marker.customSelectedImage = UIImage(named: "Location")
         
@@ -177,10 +190,9 @@ class ItemDetailViewController: UIViewController, MTMapViewDelegate {
             case .success(let response):
                 do {
                     let data = try JSONDecoder().decode(ProductDetail.self, from: response.data)
-                    print(data)
                     self.productDetailData = data
-                    print(data)
                     self.updateData()
+                    self.initializeMap()
                 } catch(let err) {
                     print(err.localizedDescription)
                 }
@@ -236,9 +248,12 @@ class ItemDetailViewController: UIViewController, MTMapViewDelegate {
         }
         modal.modalPresentationStyle = .custom
         modal.transitioningDelegate = self
-        
         modal.pointOrigin =  CGPoint(x: 0,
                                      y: self.view.frame.height - 450)
+        modal.address = "\(self.productDetailData.roadAddress) \(self.productDetailData.detailAddress)"
+        modal.discoutedPrice = self.productDetailData.discountedPrice
+        modal.refundPrice = self.productDetailData.returnPrice
+            
         self.present(modal, animated: true, completion: nil)
 
     }
@@ -259,7 +274,7 @@ extension ItemDetailViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Cells.imageCollectionViewCell, for: indexPath) as? ImageCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.updateImageView("https://cdn.pixabay.com/photo/2018/07/18/19/12/spaghetti-3547078__340.jpg")
+//        cell.updateImageView("https://cdn.pixabay.com/photo/2018/07/18/19/12/spaghetti-3547078__340.jpg")
         return cell
     }
     
