@@ -26,8 +26,17 @@ class HomeCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func initializeView(_ imagePath: String) {
-        self.itemImageView.updateServerImage(imagePath)
+    func initializeView(_ data: ProductsListModel) {
+//        self.itemImageView.updateServerImage(data.image)
+        self.itemNameLabel.text = data.productName
+        self.SellerNameLabel.text = data.briefDescription
+        self.originalPriceLabel.text = String(data.discountedPrice) + " 원"
+        self.discountPriceLabel.text = String(data.regularPrice) + " 원"
+//        self.discountRateLabel.text = String(Int((1-(data.discountedPrice/data.regularPrice))*100))
+        print(data.discountedPrice)
+        print(data.regularPrice)
+        self.discountRateLabel.text = String(Int(((1-(Float(data.discountedPrice)/Float(data.regularPrice)))*100.0).rounded()))+" %"
+        
     }
     
     

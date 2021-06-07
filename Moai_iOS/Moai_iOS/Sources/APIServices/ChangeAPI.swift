@@ -14,12 +14,11 @@ enum ChangeAPI {
 
 extension ChangeAPI: TargetType {
     var baseURL: URL {
-        var baseURL: URL {
-            guard let url = APIServices.baseURL else {
-                fatalError()
-            }
-            return url
+        guard let url = APIServices.baseURL else {
+            fatalError()
         }
+        return url
+
     }
     
     var path: String {

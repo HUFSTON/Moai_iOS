@@ -71,14 +71,14 @@ class LoginViewController: UIViewController {
             switch result {
             case .success(let response):
                 do {
-                    dump(response.data)
                     let login = try JSONDecoder().decode(Login.self, from: response.data)
-//                  print(login.token)
-//                  print(login.isSeller)
-                    print(login)
+                    print(login.token)
+                    print(login.isSeller)
+                    UserDefaults.standard.setValue(login.token, forKey: "token")
+                    UserDefaults.standard.setValue(login.isSeller, forKey: "isSeller")
+        
                     self.pushToStart()
                 } catch(let err) {
-                    print(5)
                     self.makeAlert(title: "로그인 실패", message: "정보가 유효하지 않습니다", okAction: nil, completion: nil)
                     print(err.localizedDescription)
                 }
