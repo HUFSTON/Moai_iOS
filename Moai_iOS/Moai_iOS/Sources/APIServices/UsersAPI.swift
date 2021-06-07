@@ -8,13 +8,13 @@
 import UIKit
 import Moya
 
-enum UserAPI {
+enum UsersAPI {
     case register(email: String, password: String, name: String, phone: String)
     case login(email: String, password: String)
     case registerSeller
 }
 
-extension UserAPI: TargetType {
+extension UsersAPI: TargetType {
     var baseURL: URL {
 //        guard let url = URL(string: "http://ec2-3-35-233-132.ap-northeast-2.compute.amazonaws.com:3000") else {
 //            fatalError()

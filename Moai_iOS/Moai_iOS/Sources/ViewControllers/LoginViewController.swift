@@ -10,7 +10,7 @@ import Moya
 
 class LoginViewController: UIViewController {
 
-    let service = MoyaProvider<UserAPI>()
+    let service = MoyaProvider<UsersAPI>()
     
     @IBOutlet var idView: UIView!
     @IBOutlet var pwView: UIView!
@@ -64,7 +64,7 @@ class LoginViewController: UIViewController {
     }
         
     private func LoginAPI(email: String, password: String) {
-        service.request(UserAPI.login(email: email, password: password)) { [weak self] result in
+        service.request(UsersAPI.login(email: email, password: password)) { [weak self] result in
             guard let self = self else {
                 return
             }

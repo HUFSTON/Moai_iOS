@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="ezl-5R-h9S">
-                                <rect key="frame" x="16" y="307.5" width="382" height="281"/>
+                                <rect key="frame" x="16" y="194" width="382" height="281"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IB6-0q-M2y">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="56"/>
@@ -176,7 +176,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqb-bL-wyo">
-                                <rect key="frame" x="16" y="618.5" width="382" height="56"/>
+                                <rect key="frame" x="16" y="505" width="382" height="56"/>
                                 <color key="backgroundColor" name="DarkGreen"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="Bhb-O9-sT5"/>
@@ -194,11 +194,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ezl-5R-h9S" secondAttribute="trailing" constant="16" id="3fb-vR-3pP"/>
-                            <constraint firstItem="ezl-5R-h9S" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="DeD-tK-An2"/>
                             <constraint firstItem="Xqb-bL-wyo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="KSt-Py-SGc"/>
                             <constraint firstItem="Xqb-bL-wyo" firstAttribute="top" secondItem="ezl-5R-h9S" secondAttribute="bottom" constant="30" id="asv-wB-3li"/>
                             <constraint firstItem="ezl-5R-h9S" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="hAY-Ag-kqr"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Xqb-bL-wyo" secondAttribute="trailing" constant="16" id="sCN-CE-r92"/>
+                            <constraint firstItem="ezl-5R-h9S" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="150" id="y8X-aq-98Z"/>
                         </constraints>
                     </view>
                     <connections>
