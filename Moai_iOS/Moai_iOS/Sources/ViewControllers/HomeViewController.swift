@@ -198,6 +198,7 @@ extension HomeViewController: UICollectionViewDataSource {
         guard let vc = storyboard.instantiateViewController(identifier: Constants.ViewControllers.itemDetailViewController) as? ItemDetailViewController else {
             return
         }
+        vc.productId = listData[indexPath.item].productNo
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

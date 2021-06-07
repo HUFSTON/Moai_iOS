@@ -76,7 +76,7 @@ extension ProductsAPI: TargetType {
             
         
         case .getProductsDetail(let productNo):
-            return .requestParameters(parameters: ["product_no": productNo], encoding: JSONEncoding.default)
+            return .requestParameters(parameters: ["product_no": productNo], encoding: URLEncoding.queryString)
         
         case .getProductsSearch(let query):
             return .requestParameters(parameters: ["q": query], encoding: URLEncoding.queryString)
@@ -95,7 +95,6 @@ extension ProductsAPI: TargetType {
         }
         switch self {
         case .getProducts, .getProductsSearch, .getProductsDetail:
-            
             return ["Authorization": token]
         default:
             return ["Content-Type": "application/json",

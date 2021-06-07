@@ -13,6 +13,7 @@
 		24065081266DCA7B00D692C9 /* ProductsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24065080266DCA7B00D692C9 /* ProductsAPI.swift */; };
 		24065083266DDBA900D692C9 /* GetProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24065082266DDBA800D692C9 /* GetProductsModel.swift */; };
 		24065085266DDBD500D692C9 /* ProductsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24065084266DDBD500D692C9 /* ProductsListModel.swift */; };
+		24065087266DFC6B00D692C9 /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24065086266DFC6B00D692C9 /* ProductDetail.swift */; };
 		242164C32641006C00858529 /* ReserveStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242164C22641006C00858529 /* ReserveStatus.storyboard */; };
 		242164C62641008400858529 /* ReserveStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242164C52641008400858529 /* ReserveStatusViewController.swift */; };
 		24276F57263D3D9B002B4AB9 /* ReserveProceedingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24276F56263D3D9B002B4AB9 /* ReserveProceedingViewController.swift */; };
@@ -367,6 +368,7 @@
 		24065080266DCA7B00D692C9 /* ProductsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsAPI.swift; sourceTree = "<group>"; };
 		24065082266DDBA800D692C9 /* GetProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductsModel.swift; sourceTree = "<group>"; };
 		24065084266DDBD500D692C9 /* ProductsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListModel.swift; sourceTree = "<group>"; };
+		24065086266DFC6B00D692C9 /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
 		242164C22641006C00858529 /* ReserveStatus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReserveStatus.storyboard; sourceTree = "<group>"; };
 		242164C52641008400858529 /* ReserveStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveStatusViewController.swift; sourceTree = "<group>"; };
 		24276F56263D3D9B002B4AB9 /* ReserveProceedingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveProceedingViewController.swift; sourceTree = "<group>"; };
@@ -842,6 +844,7 @@
 				24432369266D542D00E38C68 /* LoginModel.swift */,
 				24065082266DDBA800D692C9 /* GetProductsModel.swift */,
 				24065084266DDBD500D692C9 /* ProductsListModel.swift */,
+				24065086266DFC6B00D692C9 /* ProductDetail.swift */,
 			);
 			path = APIModels;
 			sourceTree = "<group>";
@@ -1737,6 +1740,7 @@
 				24B3E81E263AF3C6001AF867 /* ImageCollectionViewCell.swift in Sources */,
 				2443236E266D59DE00E38C68 /* SignupViewController.swift in Sources */,
 				2406507F266DC83B00D692C9 /* MyPageAPI.swift in Sources */,
+				24065087266DFC6B00D692C9 /* ProductDetail.swift in Sources */,
 				24BC732E266B6ABD00E038C6 /* MyTownModalPresentationController.swift in Sources */,
 				24BC732B266B66AD00E038C6 /* MyTownModalCollectionViewCell.swift in Sources */,
 				24BC7324266B565500E038C6 /* UIVIew+Extension.swift in Sources */,

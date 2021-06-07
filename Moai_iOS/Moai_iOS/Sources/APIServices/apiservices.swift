@@ -8,5 +8,6 @@
 import Foundation
 
 struct APIServices {
-    static let baseURL = URL(string: "http://52.78.125.101:3000")
+//    static let baseURL = URL(string: "http://52.78.125.101:3000")
+    static let baseURL = URL(string: "http://3.36.240.145:3000")
 }
